@@ -84,39 +84,75 @@ export const IMAGENS = {
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     {
         id: 1,
-        title: "FLORA OBSCURA",
+        title: "Black works",
         placement: "Antebraço",
-        image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=800&auto=format&fit=crop"
+        image: "/black-work/jaguar.jpg",
+        description: "Um estilo que usa e abusa apenas da tinta preta para criar diversos desenhos que podem variar de padrões a ilustrações elaboradas. Trabalhando o contraste do espaço pintado e o negativo, criando uma profundidade e complexidade na arte. o projeto não precisa ser necessariamente grande, a meta aqui é ele ser especial, pensado para seguir o formato do seu corpo,eternizado pela tinta",
+        gallery: [
+            "/black-work/jaguar.jpg",
+            "/black-work/Copy-of-06.jpg",
+            "/black-work/Copy-of-20260207_195712.jpg",
+            "/black-work/Copy-of-20260207_220529.jpg"
+        ]
     },
     {
         id: 2,
-        title: "ATLAS",
+        title: "Neotradicional",
         placement: "Costas",
-        image: "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=800&auto=format&fit=crop"
+        image: "/Neotradicional/Copy-of-IMG_20260210_222305.jpg",
+        description: "Um estilo que ainda está sendo escrito na história da tatuagem, um estilo que bebe do estilo Old school (linhas grossas e cores primárias) e traz consigo os avanços tecnológicos, como agulhas mais delicadas e uma paleta de cores diversificada, com isso o neotradicional não tem limitações, o estilo perfeito para tirar a ideia da sua cabeça e aplicarmos na sua pele.",
+        gallery: [
+            "/Neotradicional/Copy-of-Srexer.jpg",
+            "/Neotradicional/Copy-of-4.jpg",
+            "/Neotradicional/Copy-of-IMG_20260210_222305.jpg",
+            "/Neotradicional/WhatsApp-Image-2026-06-22-at-23.59.24.jpeg"
+        ]
     },
     {
         id: 3,
-        title: "GEOMETRIA SACRA",
+        title: "Pontilhismo",
         placement: "Ombro",
-        image: "https://images.unsplash.com/photo-1565431665671-55447a06f35b?q=80&w=800&auto=format&fit=crop"
+        image: "/Pontilhismo/3362fab3998990d7a91d11d6a156342e.jpg",
+        description: "O estilo perfeito para a primeira tatuagem pois o estilo exige uma técnica menos agressiva, machucando menos a pele. Em vez de riscar a pele do cliente, cada ponto é feito um de cada vez, de ponto em ponto surge o desenho.\n\nUma experiência vendo de longe e outra vendo de perto, um estilo sofisticado e de grande impacto visual. A técnica permite uma abrangência de representações desde figuras geométricas, animais, símbolos, minimalistas, um estilo versátil e marcante.",
+        gallery: [
+            "/Pontilhismo/Copy-of-05.jpg",
+            "/Pontilhismo/Copy-of-IMG_20250308_183730.jpg",
+            "/Pontilhismo/32fe2662abee44eb7c4a716000540853.jpg",
+            "/Pontilhismo/3362fab3998990d7a91d11d6a156342e.jpg",
+            "/Pontilhismo/WhatsApp-Image-2026-06-23-at-00.07.13.jpeg"
+        ]
     },
     {
         id: 4,
-        title: "SERPENTINE",
+        title: "Poke tattoo",
         placement: "Braço",
-        image: "https://images.unsplash.com/photo-1590246296335-e11dd82eb619?q=80&w=800&auto=format&fit=crop"
+        image: "/Poke-tattoo/20-Sem-Título6_20260623001035.jpg",
+        description: "O estilo perfeito para a primeira tatuagem pois o estilo exige uma técnica menos agressiva, machucando menos a pele. Em vez de riscar a pele do cliente, cada ponto é feito um de cada vez, de ponto em ponto surge o desenho.\n\nUma experiência vendo de longe e outra vendo de perto, um estilo sofisticado e de grande impacto visual. A técnica permite uma abrangência de representações desde figuras geométricas, animais, símbolos, minimalistas, um estilo versátil e marcante.",
+        gallery: [
+            "/Poke-tattoo/15-Sem-Título2_20260623001111.jpg",
+            "/Poke-tattoo/20-Sem-Título5_20260623001212.jpg",
+            "/Poke-tattoo/20-Sem-Título6_20260623001035.jpg",
+            "/Poke-tattoo/20-Sem-Título7_20260623000938.jpg",
+            "/Poke-tattoo/Copy-of-Copy-of-IMG_20250308_183730.jpg",
+            "/Poke-tattoo/Copy-of-WhatsApp-Image-2026-06-23-at-00.07.13.jpeg"
+        ]
     },
     {
         id: 5,
-        title: "MEMENTO MORI",
+        title: "Flashes",
         placement: "Peito",
-        image: "https://images.unsplash.com/photo-1590520637380-60df0897b77f?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        id: 6,
-        title: "ETHEREAL HANDS",
-        placement: "Costela",
-        image: "https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=800&auto=format&fit=crop"
+        image: "/Flashes/Copy-of-03.jpg",
+        description: "Você chega com a vontade de tatuar e nós chegamos com o desenho.\nFlashes são desenhos prontos a disposição para quem chegar e escolher, pronto vamos tatuar.\nVenha conhecer nosso cardápio de desenhos, servimos conceito, humor e o que mais você quiser, mesmo que você esteja lá para uma tatuagem planejada, sempre vale a pena dar aquela conferida nosso ‘’cardápio’’.\n\nse você for uma pessoa gulosa hehehe o Flash day é para você.\nO dia inteiro dedicado ao seu dispor para tatuar quantas tattoos couberem nas 6 horas do flash day, claro com intervalos para descanso e pausa para o café, (não contabilizados nas 6 horas), fazemos a lista e a ordem de execução para sair do estúdio como um gibi humano rsrsrs.",
+        gallery: [
+            "/Flashes/Copy-of-03.jpg",
+            "/Flashes/Copy-of-01.jpg",
+            "/Flashes/Copy-of-IMG_20250203_205253.jpg",
+            "/Flashes/Copy-of-IMG_20250324_002943.jpg",
+            "/Flashes/Copy-of-IMG_20250324_003006.jpg",
+            "/Flashes/Copy-of-IMG_20250324_003041.jpg",
+            "/Flashes/Copy-of-IMG_20250909_220640_1.jpg",
+            "/Flashes/Copy-of-IMG_20251119_210511.jpg"
+        ]
     }
 ];
 

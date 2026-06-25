@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface ProgressiveImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -15,9 +15,17 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
   ...props 
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
-  // Parse low-res thumbnail from Unsplash source link
-  const lowResSrc = `${src}&w=20&q=10`;
+  useEffect(() => {
+    if (imgRef.current && imgRef.current.complete) {
+      setIsLoaded(true);
+    }
+  }, [src]);
+
+  // Parse low-res thumbnail from Unsplash source link se for externo
+  const isExternal = src.startsWith('http');
+  const lowResSrc = isExternal ? `${src}&w=20&q=10` : src;
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -32,6 +40,7 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
       />
       {/* Actual image */}
       <img
+        ref={imgRef}
         src={src}
         alt={alt}
         onLoad={() => setIsLoaded(true)}

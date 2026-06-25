@@ -35,4 +35,6 @@ export interface PortfolioItem {
   title: string;
   placement: string;
   image: string;
+  quote?: string;
+  description?: string;
 }

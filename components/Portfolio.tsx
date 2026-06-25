@@ -25,11 +25,11 @@ const PortfolioItemComponent: React.FC<PortfolioItemProps> = ({ item, onClick, i
     >
         <div className={`relative overflow-hidden w-full bg-gray-200 dark:bg-gray-800 transition-all duration-700 ${isLarge ? 'aspect-[16/9]' : 'aspect-[4/5] md:aspect-[3/4]'}`}>
             <ProgressiveImage 
-                src={`${item.image}&auto=format&fit=crop`}
-                srcSet={`${item.image}&w=400&auto=format&fit=crop 400w, ${item.image}&w=800&auto=format&fit=crop 800w, ${item.image}&w=1200&auto=format&fit=crop 1200w`}
+                src={item.image.startsWith('http') ? `${item.image}&auto=format&fit=crop` : item.image}
+                srcSet={item.image.startsWith('http') ? `${item.image}&w=400&auto=format&fit=crop 400w, ${item.image}&w=800&auto=format&fit=crop 800w, ${item.image}&w=1200&auto=format&fit=crop 1200w` : undefined}
                 sizes={isLarge ? "(max-width: 1024px) 100vw, 80vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
                 alt={`${item.title} tattoo on ${item.placement}`}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] scale-100 group-hover:scale-105 grayscale group-hover:grayscale-0 will-change-transform"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] scale-100 group-hover:scale-105 will-change-transform"
             />
             
             <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -93,7 +93,7 @@ const Portfolio: React.FC = () => {
           </div>
           <div className="lg:col-span-3 lg:col-start-10 hidden lg:block border-l border-ink-light dark:border-white/5 pl-8 py-12">
             <p className="font-serif italic text-lg leading-relaxed text-ink-medium dark:text-gray-400">
-              "A beleza reside na precisão da sombra e na impermanência do traço."
+              "Traduzindo ideias para o papel, do papel para a pele"
             </p>
           </div>
         </div>
@@ -117,11 +117,8 @@ const Portfolio: React.FC = () => {
 
         {/* ROW 4: Dynamic Alternate Offset */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
-          <div className="lg:col-span-5 lg:col-start-1">
+          <div className="lg:col-span-5 lg:col-start-4 lg:mt-12">
             <PortfolioItemComponent item={PORTFOLIO_ITEMS[4]} onClick={setSelectedItem} />
-          </div>
-          <div className="lg:col-span-5 lg:col-start-7 lg:mt-24">
-            <PortfolioItemComponent item={PORTFOLIO_ITEMS[5]} onClick={setSelectedItem} />
           </div>
         </div>
 

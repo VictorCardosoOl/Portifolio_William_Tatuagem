@@ -1,12 +1,14 @@
-import React from 'react';
-import { X } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface LightboxProps {
   imageSrc: string;
   onClose: () => void;
+  onNext?: () => void;
+  onPrev?: () => void;
 }
 
-export const Lightbox: React.FC<LightboxProps> = ({ imageSrc, onClose }) => {
+export const Lightbox: React.FC<LightboxProps> = ({ imageSrc, onClose, onNext, onPrev }) => {
   return (
     <div 
       className="fixed inset-0 z-[110] bg-black/95 backdrop-blur-md flex items-center justify-center p-4 md:p-12 transition-opacity duration-300 ease-out"
@@ -23,14 +25,34 @@ export const Lightbox: React.FC<LightboxProps> = ({ imageSrc, onClose }) => {
       >
         <X size={24} strokeWidth={1.5} />
       </button>
+
+      {onPrev && (
+        <button
+          onClick={(e) => { e.stopPropagation(); onPrev(); }}
+          className="absolute left-6 text-white hover:text-gray-300 transition-colors p-3 z-50 bg-white/10 hover:bg-white/20 rounded-full border border-white/10 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Imagem anterior"
+        >
+          <ChevronLeft size={32} strokeWidth={1.5} />
+        </button>
+      )}
       
       <div className="relative max-w-full max-h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
         <img 
-          src={imageSrc} 
+          src={imageSrc.startsWith('http') ? `${imageSrc}&auto=format&fit=crop` : imageSrc} 
           alt="Expanded project view" 
-          className="max-w-full max-h-[85vh] object-contain shadow-2xl select-none transition-transform duration-300 ease-out" 
+          className="max-w-[90vw] max-h-[85vh] object-contain shadow-2xl select-none transition-transform duration-300 ease-out" 
         />
       </div>
+
+      {onNext && (
+        <button
+          onClick={(e) => { e.stopPropagation(); onNext(); }}
+          className="absolute right-6 text-white hover:text-gray-300 transition-colors p-3 z-50 bg-white/10 hover:bg-white/20 rounded-full border border-white/10 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Próxima imagem"
+        >
+          <ChevronRight size={32} strokeWidth={1.5} />
+        </button>
+      )}
     </div>
   );
 };
