@@ -51,7 +51,7 @@ const FlashSection: React.FC = () => {
   }, { scope: containerRef });
 
   return (
-    <section id="flash" ref={containerRef} className="bg-paper-light dark:bg-black py-16 md:py-24 px-6 border-y border-ink-light dark:border-white/10 transition-colors duration-500">
+    <section id="flash" ref={containerRef} className="bg-paper-light dark:bg-black py-16 md:py-24 px-8 md:px-12 lg:px-16 border-y border-ink-light dark:border-white/10 transition-colors duration-500">
       <div className="max-w-screen-3xl mx-auto">
         
         <div className="flash-header flex flex-col md:flex-row justify-between items-end mb-12 border-b border-ink-light dark:border-white/10 pb-6">

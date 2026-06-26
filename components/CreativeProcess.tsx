@@ -17,8 +17,8 @@ const CreativeProcess: React.FC = () => {
   }, { scope: contentRef, dependencies: [activeProcess] });
 
   return (
-    <section className="bg-paper-light dark:bg-[#121212] py-12 md:py-20 px-6 md:px-12 transition-colors duration-500">
-        <div className="max-w-7xl mx-auto">
+    <section className="bg-paper-light dark:bg-[#121212] py-12 md:py-20 px-8 md:px-12 lg:px-16 transition-colors duration-500">
+        <div className="max-w-screen-3xl mx-auto">
             <div className="flex items-center gap-4 mb-8 md:mb-10">
                 <div className="w-2.5 h-2.5 border border-ink-medium dark:border-white/60 rounded-full"></div> 
                 <h3 className="font-sans text-xs tracking-[0.3em] uppercase font-bold text-ink-medium dark:text-white/80">

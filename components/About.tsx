@@ -74,7 +74,7 @@ const About: React.FC = () => {
   }, { scope: containerRef });
 
   return (
-    <section id="about" ref={containerRef} className="bg-paper-light dark:bg-background-dark py-16 md:py-24 px-6 w-full overflow-hidden">
+    <section id="about" ref={containerRef} className="bg-paper-light dark:bg-background-dark py-16 md:py-24 px-8 md:px-12 lg:px-16 w-full overflow-hidden">
       <div className="max-w-screen-3xl mx-auto">
         
         {/* Top Section: Text Content - Aligned to RIGHT */}

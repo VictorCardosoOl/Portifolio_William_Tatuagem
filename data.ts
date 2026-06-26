@@ -164,13 +164,13 @@ export const PROCESSO_CRIATIVO: ProcessoCriativoItem[] = [
     id: 1,
     titulo: "Briefing",
     subtitulo: "Você traz a ideia. A gente transforma em desenho.",
-    descricao: "Você conta sua ideia, referências, sentimentos e intenções. A partir disso, transformamos sua história em um conceito visual único, criado exclusivamente para você."
+    descricao: "Você conta sua ideia, referências, sentimentos e intenções, nós criamos uma arte exclusivamente para você."
   },
   {
     id: 2,
     titulo: "Estudo Anatômico",
-    subtitulo: "Cada corpo é único, e o nosso desenho precisa respeitar isso.",
-    descricao: "Em alguns casos, solicitamos fotos da região a ser tatuada para desenvolver o projeto com melhor encaixe anatômico e, quando necessário, apresentar uma simulação no corpo, ajudando você a visualizar o resultado final."
+    subtitulo: "Cada corpo é único — e o nosso desenho precisa respeitar isso.",
+    descricao: "Em alguns casos, solicitamos fotos da região a ser tatuada para desenvolver o projeto com melhor encaixe anatômico e, apresentamos um mockup no corpo, ajudando a visualizar o resultado."
   },
   {
     id: 3,

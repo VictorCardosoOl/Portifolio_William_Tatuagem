@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* 3. MAIN GRID CONTENT */}
-      <div className="relative z-10 max-w-screen-4xl mx-auto border-t border-[#1A1A1A]/10 dark:border-white/10">
+      <div className="relative z-10 max-w-screen-3xl mx-auto border-t border-[#1A1A1A]/10 dark:border-white/10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
           {/* COL 1: IDENTITY */}
@@ -153,7 +153,7 @@ const Footer: React.FC = () => {
       
       {/* BOTTOM BAR */}
       <div className="relative z-10 border-t border-[#1A1A1A]/10 dark:border-[#292524] py-6 px-6 md:px-12 bg-[#F6F5F0] dark:bg-[#0c0a09]">
-        <div className="max-w-screen-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs uppercase tracking-[0.2em] font-sans text-[#8C8C8C] dark:text-[#57534e]">
+        <div className="max-w-screen-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs uppercase tracking-[0.2em] font-sans text-[#8C8C8C] dark:text-[#57534e]">
            
            <a 
              href="https://victor-cardoso-dev.vercel.app/" 

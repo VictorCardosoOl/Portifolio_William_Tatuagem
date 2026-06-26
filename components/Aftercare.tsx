@@ -52,8 +52,8 @@ const Aftercare: React.FC = () => {
   }, { scope: containerRef });
 
   return (
-    <section id="cuidados" ref={containerRef} className="py-24 md:py-32 px-6 bg-paper-light dark:bg-paper-dark transition-colors duration-500 overflow-hidden">
-      <div className="max-w-screen-2xl mx-auto">
+    <section id="cuidados" ref={containerRef} className="py-24 md:py-32 px-8 md:px-12 lg:px-16 bg-paper-light dark:bg-paper-dark transition-colors duration-500 overflow-hidden">
+      <div className="max-w-screen-3xl mx-auto">
         
         {/* HEADER SECTION */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 gap-8 border-b border-ink-black/10 dark:border-white/10 pb-8">

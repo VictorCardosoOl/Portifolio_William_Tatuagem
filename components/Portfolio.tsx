@@ -70,7 +70,7 @@ const Portfolio: React.FC = () => {
   }, { scope: containerRef });
 
   return (
-    <section id="work" ref={containerRef} className="w-full bg-paper-light dark:bg-paper-dark py-20 md:py-28 px-6 relative border-t border-ink-light dark:border-white/5">
+    <section id="work" ref={containerRef} className="w-full bg-paper-light dark:bg-paper-dark py-20 md:py-28 px-8 md:px-12 lg:px-16 relative border-t border-ink-light dark:border-white/5">
       
       {/* Title / Section Header */}
       <div className="max-w-screen-3xl mx-auto mb-20 border-b border-ink-light dark:border-white/5 pb-6 flex flex-col md:flex-row justify-between items-end">

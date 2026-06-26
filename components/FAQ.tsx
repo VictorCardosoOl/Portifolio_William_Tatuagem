@@ -42,7 +42,7 @@ const FAQ: React.FC = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=Olá%2C%20gostaria%20de%20tirar%20uma%20dúvida.`;
 
   return (
-    <section id="faq" ref={containerRef} className="py-24 md:py-32 px-6 bg-[#EBE9E4] dark:bg-[#0a0a0a] transition-colors duration-1000 ease-in-out">
+    <section id="faq" ref={containerRef} className="py-24 md:py-32 px-8 md:px-12 lg:px-16 bg-[#EBE9E4] dark:bg-[#0a0a0a] transition-colors duration-1000 ease-in-out">
       <div className="max-w-screen-3xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         
         {/* LEFT COLUMN - STICKY HEADER */}

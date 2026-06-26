@@ -50,7 +50,7 @@ const Concept: React.FC = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full py-16 md:py-24 px-6 md:px-12 bg-paper-light dark:bg-[#181818] transition-colors duration-1000">
+    <section ref={containerRef} className="relative w-full py-16 md:py-24 px-8 md:px-12 lg:px-16 bg-paper-light dark:bg-[#181818] transition-colors duration-1000">
       
       <div className="max-w-screen-3xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20">
         

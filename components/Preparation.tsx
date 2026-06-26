@@ -24,7 +24,7 @@ const Preparation: React.FC = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="min-h-screen flex flex-col bg-paper-light dark:bg-[#1a1a1a] py-20 md:py-32 px-6 md:px-12 w-full transition-colors duration-500 border-t border-ink-light dark:border-white/5 relative">
+    <section ref={containerRef} className="min-h-screen flex flex-col bg-paper-light dark:bg-[#1a1a1a] py-20 md:py-32 px-8 md:px-12 lg:px-16 w-full transition-colors duration-500 border-t border-ink-light dark:border-white/5 relative">
       <div className="max-w-screen-3xl mx-auto w-full my-auto">
         
         <div className="mb-16 md:mb-24">

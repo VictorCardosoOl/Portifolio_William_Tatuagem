@@ -53,10 +53,10 @@ const Manifesto: React.FC = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="bg-paper-light dark:bg-[#121212] transition-colors duration-500 overflow-hidden">
+    <section ref={containerRef} className="bg-paper-light dark:bg-[#121212] px-8 md:px-12 lg:px-16 transition-colors duration-500 overflow-hidden">
         <div className="w-full border-t border-ink-black/5 dark:border-white/5">
             {/* WIDE CONTAINER */}
-            <div className="max-w-screen-4xl mx-auto grid grid-cols-1 md:grid-cols-12 min-h-screen">
+            <div className="max-w-screen-3xl mx-auto grid grid-cols-1 md:grid-cols-12 min-h-screen">
                 
                 <div className="hidden md:flex md:col-span-1 border-r border-ink-black/5 dark:border-white/5 justify-center py-12">
                      <span className="writing-mode-vertical text-xs uppercase tracking-[0.4em] text-ink-medium dark:text-white/40 font-bold rotate-180">
