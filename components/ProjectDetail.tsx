@@ -9,6 +9,7 @@ import { useScroll } from '../context/ScrollContext';
 import { useFocusTrap } from '../hooks/useFocusTrap';
 import { Lightbox } from './Lightbox';
 import { ProgressiveImage } from './ProgressiveImage';
+import { useGalleryNavigation } from '../hooks/useGalleryNavigation';
 
 interface ProjectDetailProps {
   item: PortfolioItem;
@@ -66,6 +67,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
 
     const modalLenis = new Lenis({
       wrapper: containerRef.current,
+      content: containerRef.current.firstElementChild as HTMLElement,
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
@@ -112,46 +114,12 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
     }
   }, [onClose]);
 
-  const handleNextImage = useCallback(() => {
-    if (!activeImage) return;
-    const gallery = item.gallery || [item.image];
-    const currentIndex = gallery.indexOf(activeImage);
-    if (currentIndex !== -1) {
-      const nextIndex = (currentIndex + 1) % gallery.length;
-      setActiveImage(gallery[nextIndex]);
-    }
-  }, [activeImage, item]);
-
-  const handlePrevImage = useCallback(() => {
-    if (!activeImage) return;
-    const gallery = item.gallery || [item.image];
-    const currentIndex = gallery.indexOf(activeImage);
-    if (currentIndex !== -1) {
-      const prevIndex = (currentIndex - 1 + gallery.length) % gallery.length;
-      setActiveImage(gallery[prevIndex]);
-    }
-  }, [activeImage, item]);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (activeImage !== null) {
-        if (e.key === 'Escape') {
-          setActiveImage(null);
-        } else if (e.key === 'ArrowRight') {
-          handleNextImage();
-        } else if (e.key === 'ArrowLeft') {
-          handlePrevImage();
-        }
-      } else {
-        if (e.key === 'Escape') {
-          handleClose();
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleClose, activeImage, handleNextImage, handlePrevImage]);
+  const { handleNextImage, handlePrevImage } = useGalleryNavigation({
+    activeImage,
+    setActiveImage,
+    gallery: item.gallery || [item.image],
+    onClose: handleClose
+  });
 
 
   return (
@@ -189,23 +157,14 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
               <div className="hidden lg:block space-y-12">
                 <div className="space-y-6 modal-text-anim">
                     <div className="w-12 h-px bg-ink-black dark:bg-white mb-6"></div>
-                    {item.quote ? (
+                    {item.quote && (
                       <p className="font-serif text-2xl italic leading-relaxed text-ink-dark dark:text-gray-300">
                           {item.quote}
                       </p>
-                    ) : (
-                      <p className="font-serif text-2xl italic leading-relaxed text-ink-dark dark:text-gray-300">
-                          "O contraste perfeito revela a essência oculta do corpo."
-                      </p>
                     )}
-                    {item.description ? (
+                    {item.description && (
                       <p className="font-sans text-xs leading-loose uppercase tracking-widest text-ink-medium dark:text-gray-400 max-w-sm normal-case">
                           {item.description}
-                      </p>
-                    ) : (
-                      <p className="font-sans text-xs leading-loose uppercase tracking-widest text-ink-medium dark:text-gray-400 max-w-sm">
-                          Capturado para respeitar a fluidez e as sombras naturais da anatomia.
-                          Desenho autoral que emula as gradações e a textura granulada das revelações cinematográficas clássicas.
                       </p>
                     )}
                 </div>

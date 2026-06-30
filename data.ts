@@ -88,6 +88,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
         placement: "Antebraço",
         image: "/black-work/jaguar.jpg",
         description: "Um estilo que usa e abusa apenas da tinta preta para criar diversos desenhos que podem variar de padrões a ilustrações elaboradas. Trabalhando o contraste do espaço pintado e o negativo, criando uma profundidade e complexidade na arte. o projeto não precisa ser necessariamente grande, a meta aqui é ele ser especial, pensado para seguir o formato do seu corpo,eternizado pela tinta",
+        quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
             "/black-work/jaguar.jpg",
             "/black-work/Copy-of-06.jpg",
@@ -101,6 +102,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
         placement: "Costas",
         image: "/Neotradicional/Copy-of-IMG_20260210_222305.jpg",
         description: "Um estilo que ainda está sendo escrito na história da tatuagem, um estilo que bebe do estilo Old school (linhas grossas e cores primárias) e traz consigo os avanços tecnológicos, como agulhas mais delicadas e uma paleta de cores diversificada, com isso o neotradicional não tem limitações, o estilo perfeito para tirar a ideia da sua cabeça e aplicarmos na sua pele.",
+        quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
             "/Neotradicional/Copy-of-Srexer.jpg",
             "/Neotradicional/Copy-of-4.jpg",
@@ -114,6 +116,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
         placement: "Ombro",
         image: "/Pontilhismo/3362fab3998990d7a91d11d6a156342e.jpg",
         description: "O estilo perfeito para a primeira tatuagem pois o estilo exige uma técnica menos agressiva, machucando menos a pele. Em vez de riscar a pele do cliente, cada ponto é feito um de cada vez, de ponto em ponto surge o desenho.\n\nUma experiência vendo de longe e outra vendo de perto, um estilo sofisticado e de grande impacto visual. A técnica permite uma abrangência de representações desde figuras geométricas, animais, símbolos, minimalistas, um estilo versátil e marcante.",
+        quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
             "/Pontilhismo/Copy-of-05.jpg",
             "/Pontilhismo/Copy-of-IMG_20250308_183730.jpg",
@@ -128,6 +131,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
         placement: "Braço",
         image: "/Poke-tattoo/20-Sem-Título6_20260623001035.jpg",
         description: "O estilo perfeito para a primeira tatuagem pois o estilo exige uma técnica menos agressiva, machucando menos a pele. Em vez de riscar a pele do cliente, cada ponto é feito um de cada vez, de ponto em ponto surge o desenho.\n\nUma experiência vendo de longe e outra vendo de perto, um estilo sofisticado e de grande impacto visual. A técnica permite uma abrangência de representações desde figuras geométricas, animais, símbolos, minimalistas, um estilo versátil e marcante.",
+        quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
             "/Poke-tattoo/15-Sem-Título2_20260623001111.jpg",
             "/Poke-tattoo/20-Sem-Título5_20260623001212.jpg",
@@ -143,6 +147,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
         placement: "Peito",
         image: "/Flashes/Copy-of-03.jpg",
         description: "Você chega com a vontade de tatuar e nós chegamos com o desenho.\nFlashes são desenhos prontos a disposição para quem chegar e escolher, pronto vamos tatuar.\nVenha conhecer nosso cardápio de desenhos, servimos conceito, humor e o que mais você quiser, mesmo que você esteja lá para uma tatuagem planejada, sempre vale a pena dar aquela conferida nosso ‘’cardápio’’.\n\nse você for uma pessoa gulosa hehehe o Flash day é para você.\nO dia inteiro dedicado ao seu dispor para tatuar quantas tattoos couberem nas 6 horas do flash day, claro com intervalos para descanso e pausa para o café, (não contabilizados nas 6 horas), fazemos a lista e a ordem de execução para sair do estúdio como um gibi humano rsrsrs.",
+        quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
             "/Flashes/Copy-of-03.jpg",
             "/Flashes/Copy-of-01.jpg",
