@@ -209,6 +209,21 @@ export const CUIDADOS_POS = [
   "Alimentação: coma o que está habituado sem exageros, evite alimentos que te deem sensibilidade ou alergia"
 ];
 
+export const ITENS_CUIDADOS = [
+  {
+    fase: "FASE 01",
+    titulo: "Pré-Tatuagem",
+    descricao: "O preparo começa antes do estúdio. Uma tela bem cuidada garante uma arte mais duradoura e uma sessão mais tranquila.",
+    lista: CUIDADOS_PRE
+  },
+  {
+    fase: "FASE 02",
+    titulo: "Pós-Tatuagem",
+    descricao: "A tatuagem é uma ferida aberta. O cuidado nos primeiros dias é vitalício para a integridade da sua arte.",
+    lista: CUIDADOS_POS
+  }
+];
+
 // ==========================================
 // FAQ
 // ==========================================

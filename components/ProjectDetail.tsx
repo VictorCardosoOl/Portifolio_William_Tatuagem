@@ -163,7 +163,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
       aria-labelledby="project-title"
       tabIndex={-1}
     >
-      <div className="flex flex-col lg:flex-row w-full h-full relative">
+      <div className="flex flex-col lg:flex-row w-full min-h-full relative">
             
             {/* LEFT PANEL: TEXT & INFO */}
             <div className="lg:w-[35%] w-full lg:fixed lg:left-0 lg:top-0 lg:h-full bg-paper-light dark:bg-paper-dark text-ink-black dark:text-paper-light flex flex-col justify-between p-8 md:p-12 border-r border-ink-light dark:border-white/5 z-20 shrink-0">
