@@ -187,66 +187,26 @@ export const PROCESSO_CRIATIVO: ProcessoCriativoItem[] = [
 ];
 
 // ==========================================
-// PREPARO (NOVO)
+// CUIDADOS PRÉ E PÓS
 // ==========================================
-export const ITENS_PREPARO: PreparoItem[] = [
-  {
-    id: 1,
-    titulo: "Hidratação",
-    descricao: "Sua pele é nossa base.\n Beba bastante água ao longo da semana anterior à sessão e hidrate a região a ser tatuada de 2 a 3 vezes ao dia."
-  },
-  {
-    id: 2,
-    titulo: "Descanso",
-    descricao: "Durma bem na noite anterior e esteja bem alimentado.\n Uma refeição reforçada ajuda a evitar quedas de pressão."
-  },
-  {
-    id: 3,
-    titulo: "Zero Álcool",
-    descricao: "Não consuma bebidas alcoólicas 24h antes. O álcool afina o sangue, aumentando o sangramento durante o processo, o que expulsa o pigmento e dificulta o trabalho."
-  },
-  {
-    id: 4,
-    titulo: "Vestimenta",
-    descricao: "Venha com roupas confortáveis, pretas ou escuras (tinta pode respingar). Garanta fácil acesso à área a ser tatuada sem comprimir o local e permitindo a circulação."
-  }
+export const CUIDADOS_PRE = [
+  "Pele bem hidratada é o maior segredo!",
+  "Beba bastante água ao longo da semana anterior à sessão",
+  "Hidrate a região a ser tatuada de 2 a 3 vezes ao dia",
+  "Durma bem na noite anterior",
+  "Esteja bem alimentado",
+  "Venha com roupas confortáveis, leves e folgadas"
 ];
 
-// ==========================================
-// PROTOCOLO DE CUIDADOS (AFTERCARE)
-// ==========================================
-export const ITENS_CUIDADOS: ProtocoloItem[] = [
-  {
-    fase: 'FASE I',
-    titulo: 'A Cicatrização',
-    descricao: 'Mantenha o curativo original por pelo menos 6 a 12 horas. Este é o período crítico onde a pele inicia o processo de vedação.',
-    lista: [
-      'Lave com cuidado e hidrate 2 a 3x ao dia',
-      'Não coce, não puxe casquinhas',
-      'Evite sol e roupas apertadas',
-      'Protetor solar sempre que exposta'
-    ]
-  },
-  {
-    fase: 'FASE II',
-    titulo: 'Hidratação',
-    descricao: 'A partir do segundo dia, aplique uma camada fina de pomada específica. O excesso de umidade pode prejudicar tanto quanto o ressecamento.',
-    lista: [
-      'Aplique 2 a 3 vezes ao dia',
-      'Jamais remova as crostas (casquinhas)',
-      'Permita que a pele respire naturalmente'
-    ]
-  },
-  {
-    fase: 'FASE III',
-    titulo: 'Proteção',
-    descricao: 'A proteção a longo prazo garante que as linhas permaneçam nítidas e os pigmentos vibrantes por décadas.',
-    lista: [
-      'Sem sol, mar ou piscina por 15 dias',
-      'Use protetor solar FPS 50+ após 30 dias',
-      'Mantenha a hidratação corporal diária'
-    ]
-  }
+export const CUIDADOS_POS = [
+  "Retire o “curativo” após 6 a 12h",
+  "Lave com cuidado, sem esfregar",
+  "Hidrate a região duas vezes ao dia com cremes hipoalergênicos",
+  "Não coce, não puxe casquinhas (caso haja incômodos, passe um paninho umedecido ou dê leves batidinhas)",
+  "Evite sol e roupas apertadas",
+  "Protetor solar sempre que a pele tatuada estiver exposta",
+  "Evite multidões e contato direto com a pele",
+  "Alimentação: coma o que está habituado sem exageros, evite alimentos que te deem sensibilidade ou alergia"
 ];
 
 // ==========================================
@@ -275,7 +235,7 @@ export const ITENS_FAQ: FAQItem[] = [
   {
     id: 3,
     pergunta: "Dói muito?",
-    resposta: "A dor é psicológica e física. O ambiente é preparado para minimizá-la.",
+    resposta: "Cada corpo reage de um jeito. Consulte o mapa de dor para ter uma noção. O mapa é para apenas dar uma ideia, mas não é uma regra há pessoas que tem áreas mais sensíveis que as outras",
     detalhes: [
       "Mãos leves e máquinas modernas",
       "Anestésicos tópicos disponíveis (opcional)",
@@ -285,7 +245,7 @@ export const ITENS_FAQ: FAQItem[] = [
   {
     id: 4,
     pergunta: "Posso levar acompanhante?",
-    resposta: "O estúdio é um ambiente de foco e intimidade.",
+    resposta: "O estúdio é um ambiente de foco e intimidade. Permitido um acompanhante por sessão desde que seja maior de 18 anos e avisado com antecedência.",
     detalhes: [
       "Permitido 1 acompanhante maior de idade",
       "Não permitimos crianças ou animais",
@@ -295,17 +255,71 @@ export const ITENS_FAQ: FAQItem[] = [
   {
     id: 5,
     pergunta: "Uso tinta vegana?",
-    resposta: "Não trabalhamos com tintas veganas, pois até o momento não há opções autorizadas pela ANVISA.",
+    resposta: "Todos os materiais utilizados são aprovados pelas normas da ANVISA, tintas veganas devem ser solicitadas no momento do orçamento.",
     detalhes: []
   },
   {
     id: 6,
+    pergunta: "Há cobrança para realizar um orçamento?",
+    resposta: "Não, Orçamento tem um prazo de 30 dias corridos, após esse tempo será gerado um novo orçamento",
+    detalhes: []
+  },
+  {
+    id: 7,
+    pergunta: "Primeira tatuagem?",
+    resposta: "Recomendamos que o desenho seja pequeno, consulte nosso mapa de dor para evitar lugares muito sensíveis na primeira vez",
+    detalhes: []
+  },
+  {
+    id: 8,
+    pergunta: "Cicatrização",
+    resposta: "A tatuagem leva de 21 a 45 dias para cicatrização total, variando de acordo com parte do corpo, idade e saúde da pessoa.",
+    detalhes: []
+  },
+  {
+    id: 9,
+    pergunta: "Retoques",
+    resposta: "Nem sempre a necessidade de um retorno, motivos que podem levar a isso são\nCorpo reagindo a tinta\nCuidados com a tatuagem no período de cicatrização",
+    detalhes: []
+  },
+  {
+    id: 10,
+    pergunta: "Cor mudando ao longo do tempo",
+    resposta: "A tattoo pode ficar mais clara depois de cicatrizada,é natural, mudanças maiores se deve por falta de cuidados a longo prazo, falta de hidratação e excessiva exposição solar.",
+    detalhes: []
+  },
+  {
+    id: 11,
+    pergunta: "Depilação a laser e tatuagem",
+    resposta: "Esse tipo de depilação deve ser evitada em regiões tatuadas pois o processo pode acarretar em queimaduras e desbotamento da região tatuada.",
+    detalhes: []
+  },
+  {
+    id: 12,
+    pergunta: "Posso doar sangue?",
+    resposta: "Após 12 meses",
+    detalhes: []
+  },
+  {
+    id: 13,
+    pergunta: "Tenho diabetes posso tatuar?",
+    resposta: "Consulte seu médico antes de tatuar, de modo geral com diabetes controlada é seguro tatuar.",
+    detalhes: []
+  },
+  {
+    id: 14,
+    pergunta: "Pessoas grávidas podem tatuar?",
+    resposta: "Não, apenas autorizado tatuar após o desmame da criança.",
+    detalhes: []
+  },
+  {
+    id: 15,
     pergunta: "Para sua tattoo ficar sempre impecável",
     resposta: "Mantenha-se hidratado: beba água e use hidratante regularmente",
     detalhes: []
   },
   {
-    id: 7,
+    id: 16,
     pergunta: "Quer realçar a tattoo?",
     resposta: "Antes de sair, aplique hidratante, protetor solar (durante o dia) e finalize com um toque de vaselina, o resultado é brilho e definição instantânea",
     detalhes: []

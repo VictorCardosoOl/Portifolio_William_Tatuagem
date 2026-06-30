@@ -6,9 +6,8 @@ import Manifesto from './components/Manifesto';
 import About from './components/About';
 import Concept from './components/Concept';
 import CreativeProcess from './components/CreativeProcess';
-import Preparation from './components/Preparation';
+import PreparationAndAftercare from './components/Preparation';
 import FlashSection from './components/FlashSection';
-import Aftercare from './components/Aftercare';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
@@ -55,9 +54,8 @@ const App: React.FC = () => {
           <Manifesto />
           <Concept />
           <CreativeProcess />
-          <Preparation />
+          <PreparationAndAftercare />
           <FlashSection />
-          <Aftercare />
           <About />
           <FAQ />
         </main>

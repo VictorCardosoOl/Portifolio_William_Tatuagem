@@ -42,45 +42,29 @@ const FAQ: React.FC = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=Olá%2C%20gostaria%20de%20tirar%20uma%20dúvida.`;
 
   return (
-    <section id="faq" ref={containerRef} className="py-24 md:py-32 px-8 md:px-12 lg:px-16 bg-[#EBE9E4] dark:bg-[#0a0a0a] transition-colors duration-1000 ease-in-out">
-      <div className="max-w-screen-3xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+    <section id="faq" ref={containerRef} className="py-16 md:py-20 px-8 md:px-12 lg:px-16 bg-[#EBE9E4] dark:bg-[#0a0a0a] transition-colors duration-1000 ease-in-out">
+      <div className="max-w-screen-3xl mx-auto flex flex-col gap-10 lg:gap-16">
         
-        {/* LEFT COLUMN - STICKY HEADER */}
-        <div className="lg:col-span-4 relative">
-            <div className="lg:sticky lg:top-1/3 faq-sticky-content will-change-transform">
-                <div className="flex items-center gap-4 mb-6">
-                    <span className="w-12 h-px bg-ink-black dark:bg-white/30"></span>
-                    <span className="font-sans text-[10px] tracking-[0.25em] uppercase font-bold text-ink-medium">
-                        SUPORTE
-                    </span>
-                </div>
-                
-                <h2 className="font-serif text-fluid-h2 text-ink-black dark:text-white leading-[0.85] mb-8">
-                    Dúvidas <br/>
-                    <span className="text-ink-medium/50 italic font-light">Frequentes</span>
-                </h2>
+        {/* CENTERED HEADER */}
+        <div className="text-center flex flex-col items-center faq-sticky-content will-change-transform">
+            <h2 className="font-serif text-fluid-h2 text-ink-black dark:text-white leading-[0.85] mb-6 md:mb-8">
+                Dúvidas <span className="text-ink-medium/50 italic font-light">Frequentes</span>
+            </h2>
 
-                <p className="font-sans text-sm leading-relaxed text-ink-dark dark:text-gray-400 max-w-sm mb-12 font-light tracking-wide border-l border-ink-black/10 dark:border-white/10 pl-4">
-                    A transparência é fundamental para um processo criativo fluido. Aqui estão as respostas para as questões mais comuns.
-                </p>
-
-                <div className="hidden lg:block">
-                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-ink-black dark:text-white border-b border-ink-black/30 dark:border-white/30 pb-2 hover:opacity-60 transition-all duration-500 hover:border-ink-black dark:hover:border-white group">
-                        Falar no WhatsApp <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform duration-500 ease-out" />
-                     </a>
-                </div>
-            </div>
+            <p className="font-sans text-sm leading-relaxed text-ink-dark dark:text-gray-400 max-w-md mb-4 font-light tracking-wide px-4">
+                A transparência é fundamental para um processo criativo fluido. Aqui estão as respostas para as questões mais comuns.
+            </p>
         </div>
 
-        {/* RIGHT COLUMN - ACCORDION LIST */}
-        <div className="lg:col-span-7 lg:col-start-6 faq-list-container">
+        {/* TWO COLUMN ACCORDION LIST */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-24 gap-y-0 faq-list-container">
             {ITENS_FAQ.map((item, index) => {
                 const isOpen = openIndex === index;
                 
                 return (
                     <div 
                         key={item.id} 
-                        className="faq-item border-b border-ink-black/10 dark:border-white/10 last:border-0 overflow-hidden"
+                        className="faq-item border-b border-ink-black/10 dark:border-white/10 overflow-hidden"
                     >
                         <button 
                             id={`faq-btn-${item.id}`}
@@ -145,13 +129,6 @@ const FAQ: React.FC = () => {
                     </div>
                 )
             })}
-            
-            {/* Mobile Footer CTA */}
-            <div className="mt-16 lg:hidden">
-                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-ink-black dark:text-white border-b border-ink-black/30 dark:border-white/30 pb-2">
-                    Falar no WhatsApp <ArrowRight size={14} />
-                 </a>
-            </div>
         </div>
 
       </div>
