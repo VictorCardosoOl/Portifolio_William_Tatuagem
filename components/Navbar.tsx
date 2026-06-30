@@ -1,5 +1,5 @@
 import React from 'react';
-import { REDES_SOCIAIS } from '../data';
+import { REDES_SOCIAIS } from '@/data';
 import { StaggeredMenu } from './StaggeredMenu';
 
 interface MenuItem {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TEXTOS_GERAIS, REDES_SOCIAIS } from '../data';
+import { TEXTOS_GERAIS, REDES_SOCIAIS } from '@/data';
 import { ArrowUpRight, Instagram, Mail, MessageCircle, MapPin, Copyright } from 'lucide-react';
 
 const Footer: React.FC = () => {

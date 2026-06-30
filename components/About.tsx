@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { TEXTOS_GERAIS } from '../data';
+import { TEXTOS_GERAIS } from '@/data';
 import { ArrowRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -110,34 +110,17 @@ const About: React.FC = () => {
         {/* Bottom Section: Image Grid (Maintained) */}
         <div className="about-grid grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 3xl:gap-8">
           {sobre.imagens.map((item, index) => (
-            <div key={index} className="about-image-card aspect-[3/4] overflow-hidden w-full relative group cursor-crosshair will-change-transform">
+            <div key={index} className="about-image-card aspect-[3/4] overflow-hidden w-full relative will-change-transform">
               
-              {/* Layer 1: Grayscale Base with Parallax Wrapper */}
+              {/* Image with Parallax Wrapper */}
               <div className="w-full h-[120%] -mt-[10%] relative">
                  <img 
                     src={item.url} 
                     alt={item.alt}
                     loading="lazy" 
                     decoding="async"
-                    className="absolute inset-0 w-full h-full object-cover grayscale contrast-125 opacity-90 will-change-transform"
+                    className="absolute inset-0 w-full h-full object-cover will-change-transform"
                  />
-              </div>
-
-              {/* Layer 2: Color Reveal Overlay */}
-              <div className="absolute inset-0 w-full h-full transition-[clip-path] duration-500 ease-out [clip-path:inset(0_100%_0_0)] group-hover:[clip-path:inset(0_0_0_0)] z-10 overflow-hidden">
-                 <div className="w-full h-[120%] -mt-[10%] relative">
-                    <img 
-                      src={item.url} 
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
-                    />
-                 </div>
-              </div>
-              
-              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                <span className="font-sans text-[9px] tracking-[0.3em] bg-primary text-white px-3 py-1 uppercase font-bold">Fig. 0{index + 1}</span>
               </div>
 
             </div>

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { PORTFOLIO_ITEMS } from '../data';
-import { PortfolioItem } from '../types';
+import { PORTFOLIO_ITEMS } from '@/data';
+import { PortfolioItem } from '@/types';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';

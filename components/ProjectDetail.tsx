@@ -1,15 +1,15 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { PORTFOLIO_ITEMS } from '../data';
-import { PortfolioItem } from '../types';
+import { PORTFOLIO_ITEMS } from '@/data';
+import { PortfolioItem } from '@/types';
 import { X, ArrowRight, ArrowDown } from 'lucide-react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useScroll } from '../context/ScrollContext';
-import { useFocusTrap } from '../hooks/useFocusTrap';
+import { useScroll } from '@/context/ScrollContext';
+import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { Lightbox } from './Lightbox';
 import { ProgressiveImage } from './ProgressiveImage';
-import { useGalleryNavigation } from '../hooks/useGalleryNavigation';
+import { useGalleryNavigation } from '@/hooks/useGalleryNavigation';
 
 interface ProjectDetailProps {
   item: PortfolioItem;

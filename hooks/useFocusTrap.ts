@@ -1,6 +1,6 @@
 import { useEffect, RefObject } from 'react';
 
-export const useFocusTrap = (ref: RefObject<HTMLElement>, isActive: boolean) => {
+export const useFocusTrap = (ref: RefObject<HTMLElement | null>, isActive: boolean) => {
   useEffect(() => {
     if (!isActive || !ref.current) return;
 

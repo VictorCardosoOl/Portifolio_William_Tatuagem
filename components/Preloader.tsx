@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { TEXTOS_GERAIS } from '../data';
+import { TEXTOS_GERAIS } from '@/data';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 

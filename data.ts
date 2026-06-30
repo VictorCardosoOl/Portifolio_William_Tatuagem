@@ -43,15 +43,15 @@ export const TEXTOS_GERAIS = {
     paragrafo2: "Especialização em Neo Tradicional e Pontilhismo, com projetos autorais desenvolvidos a partir da sua narrativa, respeitando a anatomia do corpo e a essência de cada cliente.\nAqui, suas ideias ganham forma e passam a fazer parte de você.",
     imagens: [
       {
-        url: "https://images.unsplash.com/photo-1550625624-2c49c71607a9?q=80&w=800&auto=format&fit=crop",
+        url: "/about/esquerda.png",
         alt: "Artista tatuando em estúdio com iluminação focada"
       },
       {
-        url: "https://images.unsplash.com/photo-1572978398450-4886e0624d55?q=80&w=800&auto=format&fit=crop",
+        url: "/about/centro.png",
         alt: "Detalhe de tatuagem geométrica em processo"
       },
       {
-        url: "https://images.unsplash.com/photo-1440635592348-167b1b30296f?q=80&w=800&auto=format&fit=crop",
+        url: "/about/direita.jpg",
         alt: "Ambiente do estúdio com arte na parede e atmosfera calma"
       }
     ]

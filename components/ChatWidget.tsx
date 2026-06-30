@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, ArrowRight } from 'lucide-react';
-import { useChatEngine } from '../hooks/useChatEngine';
-import { useFocusTrap } from '../hooks/useFocusTrap';
+import { useChatEngine } from '@/hooks/useChatEngine';
+import { useFocusTrap } from '@/hooks/useFocusTrap';
 
 const ChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

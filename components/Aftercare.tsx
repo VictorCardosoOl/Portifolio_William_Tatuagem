@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { TEXTOS_GERAIS, ITENS_CUIDADOS } from '../data';
+import { TEXTOS_GERAIS, ITENS_CUIDADOS } from '@/data';
 import { Plus, Minus, ShieldCheck, Droplet, Sun } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

@@ -44,13 +44,12 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
         src={src}
         alt={alt}
         onLoad={() => setIsLoaded(true)}
-        className={`w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+        className={`transition-opacity duration-1000 ease-in-out ${
           isLoaded ? 'opacity-100' : 'opacity-0'
-        } ${imgClassName}`}
-        {...props}
+        } ${imgClassName || 'w-full h-full object-cover'}`}
+        {...(props as any)}
       />
     </div>
   );
 };
 export default ProgressiveImage;
-

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { CUIDADOS_PRE, CUIDADOS_POS } from '../data';
+import { CUIDADOS_PRE, CUIDADOS_POS } from '@/data';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -35,7 +35,7 @@ const PreparationAndAftercare: React.FC = () => {
           {/* LADO PRÉ */}
           <div 
             ref={preRef}
-            className={`flex flex-col justify-center p-8 md:p-16 lg:p-24 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer bg-paper-light dark:bg-[#161616] relative overflow-hidden
+            className={`flex flex-col justify-center p-8 md:p-16 lg:p-24 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer bg-paper-light dark:bg-[#161616] relative
               ${hoveredSide === 'pre' ? 'md:flex-[1.8] shadow-2xl z-10' : hoveredSide === 'pos' ? 'md:flex-[0.6] opacity-50 blur-[3px] grayscale' : 'md:flex-1'}
               w-full min-h-[50vh] md:min-h-screen border-b md:border-b-0 md:border-r border-ink-light dark:border-white/10
             `}
@@ -83,7 +83,7 @@ const PreparationAndAftercare: React.FC = () => {
           {/* LADO PÓS */}
           <div 
             ref={posRef}
-            className={`flex flex-col justify-center p-8 md:p-16 lg:p-24 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer bg-[#e8e6e1] dark:bg-[#0a0a0a] relative overflow-hidden
+            className={`flex flex-col justify-center p-8 md:p-16 lg:p-24 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer bg-[#e8e6e1] dark:bg-[#0a0a0a] relative
               ${hoveredSide === 'pos' ? 'md:flex-[1.8] shadow-2xl z-10' : hoveredSide === 'pre' ? 'md:flex-[0.6] opacity-50 blur-[3px] grayscale' : 'md:flex-1'}
               w-full min-h-[50vh] md:min-h-screen
             `}

@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { WHATSAPP_PHONE } from '../data';
+import { WHATSAPP_PHONE } from '@/data';
 
 export interface Message {
   id: string;
