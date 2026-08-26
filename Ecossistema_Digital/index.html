@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Victor Cardoso — Creative Developer &amp; Tech Enthusiast. Confira meus projetos e entre em contato."
+    />
+    <meta name="author" content="Victor Cardoso" />
+    <meta name="theme-color" content="#eaeaeb" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://victorcardoso.com/" />
+    <meta property="og:title" content="Victor Cardoso | Editorial Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore meu ecossistema digital. Projetos, contatos e redes sociais em uma experiência minimalista."
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Victor Cardoso | Links</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+
+  <body data-page="home">
+    <!-- 
+    ========================================================================
+      Olá, Recrutador(a) / Dev Curioso! 👀
+
+      Que legal ver você inspecionando meu DOM. Gosta do que vê?
+      Repositório limpo, CSS enxuto, tipagem rigorosa e arquitetura sólida. 🚀
+      
+      Vamos conversar! Me chama no WhatsApp ali no formulário ou nos links.
+      
+          /\_/\  
+         ( o.o ) 
+          > ^ <  
+    ========================================================================
+    -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <!-- Container principal -->
+    <main id="main-content" class="app-container">
+      
+      <!-- [DESKTOP ONLY] Card Esquerdo: Formulário WhatsApp -->
+      <section class="profile-card desktop-only">
+        <div class="card-header anim-el" style="text-align: left; align-items: flex-start; padding-bottom: 2rem;">
+          <h1 class="profile-name" style="font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 400;">Vamos Conversar</h1>
+        </div>
+        
+        <!-- Links em Pílula [DESKTOP] -->
+        <nav class="links-section anim-el" aria-label="Links Sociais Desktop" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; gap: 0.8rem; margin-top: -1rem; margin-bottom: 2rem;">
+          <a href="https://victorcardoso.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-item" style="width: auto; padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+            Portfólio
+          </a>
+          <a href="https://github.com/VictorCardosoOl" target="_blank" rel="noopener noreferrer" class="link-item" style="width: auto; padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+            Repositório
+          </a>
+          <a href="https://www.linkedin.com/in/victor-card-cunha/" target="_blank" rel="noopener noreferrer" class="link-item" style="width: auto; padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+            LinkedIn
+          </a>
+        </nav>
+
+        <form id="whatsapp-form" class="contact-form anim-el">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="firstName" name="firstName" placeholder="Nome" required />
+            </div>
+            <div class="form-group">
+              <input type="text" id="lastName" name="lastName" placeholder="Sobrenome" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Mensagem" rows="1" required></textarea>
+          </div>
+
+          <div class="form-submit-container">
+            <button type="submit" class="submit-btn">Enviar</button>
+          </div>
+        </form>
+
+        <footer class="contact-footer anim-el">
+          <div class="contact-info">
+            <span class="info-label">ENDEREÇO</span>
+            <p>123 Balboa Boulevard Newport<br>Beach, CA 92662</p>
+          </div>
+          <div class="contact-info">
+            <span class="info-label">E-MAIL</span>
+            <p>hello@sasha.com</p>
+          </div>
+        </footer>
+        
+        <!-- Grade de Ícones Sociais [DESKTOP] -->
+        <div class="social-icons-grid anim-el" style="margin-top: 2rem; justify-content: flex-start; gap: 1.5rem;">
+          <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram">
+            <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+          </a>
+          <a href="mailto:victorcardosovc1@gmail.com" aria-label="Enviar Email">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </a>
+          <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+            <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+      </section>
+
+      <!-- HERO COVER: Usado no mobile (topo) e no desktop (direita) -->
+      <section class="hero-cover">
+        <!-- Circular Badge [DESKTOP ONLY] -->
+        <div class="circular-badge desktop-only">
+          <svg viewBox="0 0 100 100">
+            <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+            <text>
+              <textPath href="#circlePath" startOffset="0%" textLength="215" font-family="sans-serif" font-size="8.5" font-weight="bold" letter-spacing="0.1em">VAMOS TRABALHAR • VAMOS TRABALHAR • </textPath>
+            </text>
+          </svg>
+        </div>
+        <img
+          src="/src/assets/avatar.jpg"
+          alt="Retrato de Victor Cardoso"
+          loading="eager"
+          width="420"
+          height="480"
+        />
+      </section>
+
+      <!-- [MOBILE ONLY] LinkTree Clássico -->
+      <section class="profile-card mobile-only">
+        <div class="card-header anim-el">
+          <h1 class="profile-name">Victor Cardoso</h1>
+          <p class="profile-subtitle">Engenheiro de Software & UI Designer</p>
+        </div>
+
+        <!-- Links Minimalistas -->
+        <nav class="links-section anim-el" aria-label="Links Sociais">
+          <a href="https://victorcardoso.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-item">
+            Portfólio
+          </a>
+          <a href="https://github.com/VictorCardosoOl" target="_blank" rel="noopener noreferrer" class="link-item">
+            Repositório
+          </a>
+          <a href="https://www.linkedin.com/in/victor-card-cunha/" target="_blank" rel="noopener noreferrer" class="link-item">
+            LinkedIn
+          </a>
+        </nav>
+
+        <!-- Grade de Ícones Sociais -->
+        <div class="social-icons-grid anim-el">
+          <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram">
+            <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+          </a>
+          <a href="mailto:victorcardosovc1@gmail.com" aria-label="Enviar Email">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </a>
+          <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+            <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+
+        <footer class="anim-el text-center">
+          <a href="https://victor-cardoso-dev.vercel.app" rel="noopener noreferrer">
+            &copy; 2026 Victor Cardoso
+          </a>
+        </footer>
+      </section>
+
+    </main>
+
+    <!-- IonIcons CDN (Resolve problema de SVGs não injetados no build do Vite) -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
