@@ -5,7 +5,7 @@
 
 export function initLiquidGlass() {
   const elements = document.querySelectorAll('.link-item');
-  const cleanupFunctions = [];
+  const cleanupFunctions: Array<() => void> = [];
 
   elements.forEach((el) => {
     if (el.dataset.hasLiquidGlass) {
@@ -141,7 +141,7 @@ export function initLiquidGlass() {
         el.style.transform = `translate(${deltaX * elasticity * 0.1}px, ${deltaY * elasticity * 0.1}px) scaleX(${Math.max(0.8, scaleX)}) scaleY(${Math.max(0.8, scaleY)})`;
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
         targetX = e.clientX;
         targetY = e.clientY;
 
