@@ -22,6 +22,7 @@ const PortfolioItemComponent: React.FC<PortfolioItemProps> = ({ item, onClick, i
         onClick={() => onClick(item)}
         type="button"
         aria-label={`Ver detalhes do projeto ${item.title} no ${item.placement.toLowerCase()}`}
+        data-tracking={`portfolio-item-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
     >
         <div className={`relative overflow-hidden w-full bg-gray-200 dark:bg-gray-800 transition-all duration-700 ${isLarge ? 'aspect-[16/9]' : 'aspect-[4/5] md:aspect-[3/4]'}`}>
             <ProgressiveImage 

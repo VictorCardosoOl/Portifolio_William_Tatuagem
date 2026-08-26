@@ -448,33 +448,44 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
       <aside id="staggered-menu-panel" ref={panelRef} className="staggered-menu-panel" aria-hidden={!open}>
         <div className="sm-panel-inner">
-          <ul className="sm-panel-list" role="list" data-numbering={displayItemNumbering || undefined}>
-            {items.map((it, idx) => (
-                <li className="sm-panel-itemWrap" key={it.label + idx}>
-                  <a 
-                    className="sm-panel-item" 
-                    href={it.link} 
-                    aria-label={it.ariaLabel} 
-                    data-index={idx + 1}
-                    onClick={handleLinkClick}
-                  >
-                    <span className="sm-panel-itemLabel">{it.label}</span>
-                  </a>
-                </li>
-            ))}
-          </ul>
+          <nav aria-label="Navegação principal">
+            <ul className="sm-panel-list" role="list" data-numbering={displayItemNumbering || undefined}>
+              {items.map((it, idx) => (
+                  <li className="sm-panel-itemWrap" key={it.label + idx}>
+                    <a 
+                      className="sm-panel-item" 
+                      href={it.link} 
+                      aria-label={it.ariaLabel} 
+                      data-index={idx + 1}
+                      data-tracking={`menu-principal-${it.label.toLowerCase()}`}
+                      onClick={handleLinkClick}
+                    >
+                      <span className="sm-panel-itemLabel">{it.label}</span>
+                    </a>
+                  </li>
+              ))}
+            </ul>
+          </nav>
           {displaySocials && socialItems && socialItems.length > 0 && (
             <div className="sm-socials" aria-label="Redes Sociais">
               <h3 className="sm-socials-title">Redes Sociais</h3>
-              <ul className="sm-socials-list" role="list">
-                {socialItems.map((s, i) => (
-                  <li key={s.label + i} className="sm-socials-item">
-                    <a href={s.link} target="_blank" rel="noopener noreferrer" className="sm-socials-link">
-                      {s.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <nav aria-label="Navegação de redes sociais">
+                <ul className="sm-socials-list" role="list">
+                  {socialItems.map((s, i) => (
+                    <li key={s.label + i} className="sm-socials-item">
+                      <a 
+                        href={s.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="sm-socials-link"
+                        data-tracking={`menu-social-${s.label.toLowerCase()}`}
+                      >
+                        {s.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
           )}
         </div>

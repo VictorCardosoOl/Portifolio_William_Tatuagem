@@ -61,6 +61,7 @@ const ChatWidget: React.FC = () => {
         aria-label="Abrir Chat de Atendimento"
         aria-haspopup="dialog"
         aria-expanded={isOpen}
+        data-tracking="chat-widget-open"
       >
         <MessageSquare className="w-6 h-6" strokeWidth={1.5} />
       </button>
@@ -152,10 +153,11 @@ const ChatWidget: React.FC = () => {
                     href={generateWhatsAppLink()}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-tracking="chat-widget-whatsapp"
                     className="w-full bg-ink-black hover:bg-ink-dark text-paper-light py-3 px-4 rounded-sm flex items-center justify-center gap-2 font-sans text-xs font-bold uppercase tracking-widest transition-all duration-300"
                 >
                     Continuar no WhatsApp
-                    <ArrowRight size={14} />
+                    <ArrowRight size={14} aria-hidden="true" />
                 </a>
             )}
         </div>
