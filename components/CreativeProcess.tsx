@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef } from 'react';
 import { PROCESSO_CRIATIVO } from '@/data';
 import gsap from 'gsap';

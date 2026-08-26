@@ -1,11 +1,39 @@
 import React from 'react';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
+import { ITENS_FAQ, WHATSAPP_PHONE } from '@/data';
+
+const cormorant = Cormorant_Garamond({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '700', '900'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F5F5F0' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+};
 
 export const metadata: Metadata = {
-  title: 'William Siqueira - Tatuador em Pinheiros, SP | Fine Line & Blackwork',
-  description: 'William Siqueira é tatuador em Pinheiros, São Paulo, especialista em Fine Line, Blackwork e Neotradicional. Agende sua sessão para projetos exclusivos.',
+  title: 'William Siqueira Tattoo | Tatuador em Pinheiros e Vila Madalena, SP',
+  description: 'Estúdio de tatuagem privado em São Paulo. Arte exclusiva com especialidade em Neotradicional, Blackwork, Fine Line e Pontilhismo. Agende sua sessão.',
   metadataBase: new URL('https://wsiqueira.com'),
+  manifest: '/manifest.json',
   alternates: {
     canonical: '/',
   },
@@ -14,15 +42,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'William Siqueira - Estúdio de Tatuagem em Pinheiros, SP',
-    description: 'Especialista em tatuagens neotradicionais, blackwork e fine line em São Paulo. Projetos exclusivos.',
+    title: 'William Siqueira Tattoo | Estúdio em Pinheiros, SP',
+    description: 'Arte exclusiva com especialidade em Neotradicional, Blackwork, Fine Line e Pontilhismo em São Paulo. Projetos 100% autorais.',
     url: 'https://wsiqueira.com',
     siteName: 'William Siqueira Tattoo',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1550625624-2c49c71607a9?q=80&w=1200&auto=format&fit=crop',
+        url: 'https://wsiqueira.com/about/centro.webp',
         width: 1200,
         height: 630,
+        alt: 'William Siqueira Tattoo Studio em São Paulo',
       },
     ],
     locale: 'pt_BR',
@@ -30,8 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'William Siqueira - Tatuador em Pinheiros, SP',
-    description: 'Especialista em tatuagens neotradicionais, blackwork e fine line em São Paulo.',
+    title: 'William Siqueira Tattoo | Estúdio em Pinheiros, SP',
+    description: 'Estúdio privado de tatuagem em SP. Arte exclusiva e especializada.',
   }
 };
 
@@ -41,22 +70,36 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "name": "William Siqueira Tattoo",
-      "image": "https://images.unsplash.com/photo-1550625624-2c49c71607a9?q=80&w=1200&auto=format&fit=crop",
+      "image": "https://wsiqueira.com/about/centro.webp",
       "@id": "https://wsiqueira.com/#localbusiness",
       "url": "https://wsiqueira.com",
+      "telephone": `+${WHATSAPP_PHONE}`,
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Rua Baltazar Carrasco, 70",
         "addressLocality": "São Paulo",
         "addressRegion": "SP",
-        "addressCountry": "BR",
-        "neighborhood": "Vila Madalena, Pinheiros"
+        "postalCode": "05426-060",
+        "addressCountry": "BR"
       }
     },
     {
       "@type": "Person",
       "name": "William Siqueira",
-      "jobTitle": "Tatuador",
+      "jobTitle": "Tatuador Especialista",
       "url": "https://wsiqueira.com"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": ITENS_FAQ.map(item => ({
+        "@type": "Question",
+        "name": item.pergunta,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.resposta + (item.detalhes?.length ? " " + item.detalhes.join(" ") : "")
+        }
+      }))
     }
   ]
 };
@@ -67,18 +110,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning className={`${cormorant.variable} ${inter.variable}`}>
       <head>
-        <link href="https://fonts.googleapis.com" rel="preconnect"/>
-        <link crossOrigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet"/>
-        <link href="https://images.unsplash.com" rel="preconnect" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Adicione o Google Tag Manager / Analytics aqui depois de obter os IDs */}
       </head>
-      <body className="bg-paper-light dark:bg-paper-dark text-ink-black dark:text-gray-200 transition-colors duration-500 antialiased selection:bg-ink-black selection:text-paper-light dark:selection:bg-paper-light dark:selection:text-ink-black overflow-x-hidden">
+      <body className="bg-paper-light dark:bg-paper-dark text-ink-black dark:text-gray-200 transition-colors duration-500 antialiased selection:bg-ink-black selection:text-paper-light dark:selection:bg-paper-light dark:selection:text-ink-black overflow-x-hidden font-sans">
         {children}
       </body>
     </html>

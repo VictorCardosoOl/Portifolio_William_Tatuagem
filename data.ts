@@ -24,7 +24,9 @@ export const TEXTOS_GERAIS = {
   rodapeBotao: "Falar com o Especialista",
   endereco: [
     "Studio W. Siqueira",
-    "Vila Madalena - São Paulo, SP",
+    "Rua Baltazar Carrasco, 70",
+    "Pinheiros, São Paulo - SP",
+    "CEP: 05426-060",
     "Apenas com agendamento"
   ],
   manifesto: {
@@ -43,15 +45,15 @@ export const TEXTOS_GERAIS = {
     paragrafo2: "Especialização em Neo Tradicional e Pontilhismo, com projetos autorais desenvolvidos a partir da sua narrativa, respeitando a anatomia do corpo e a essência de cada cliente.\nAqui, suas ideias ganham forma e passam a fazer parte de você.",
     imagens: [
       {
-        url: "/about/esquerda.png",
+        url: "/about/esquerda.webp",
         alt: "Artista tatuando em estúdio com iluminação focada"
       },
       {
-        url: "/about/centro.png",
+        url: "/about/centro.webp",
         alt: "Detalhe de tatuagem geométrica em processo"
       },
       {
-        url: "/about/direita.jpg",
+        url: "/about/direita.webp",
         alt: "Ambiente do estúdio com arte na parede e atmosfera calma"
       }
     ]
@@ -86,77 +88,77 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
         id: 1,
         title: "Black works",
         placement: "Antebraço",
-        image: "/black-work/jaguar.jpg",
+        image: "/black-work/jaguar.webp",
         description: "Um estilo que usa e abusa apenas da tinta preta para criar diversos desenhos que podem variar de padrões a ilustrações elaboradas. Trabalhando o contraste do espaço pintado e o negativo, criando uma profundidade e complexidade na arte. o projeto não precisa ser necessariamente grande, a meta aqui é ele ser especial, pensado para seguir o formato do seu corpo,eternizado pela tinta",
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
-            "/black-work/jaguar.jpg",
-            "/black-work/Copy-of-06.jpg",
-            "/black-work/Copy-of-20260207_195712.jpg",
-            "/black-work/Copy-of-20260207_220529.jpg"
+            "/black-work/jaguar.webp",
+            "/black-work/Copy-of-06.webp",
+            "/black-work/Copy-of-20260207_195712.webp",
+            "/black-work/Copy-of-20260207_220529.webp"
         ]
     },
     {
         id: 2,
         title: "Neotradicional",
         placement: "Costas",
-        image: "/Neotradicional/Copy-of-IMG_20260210_222305.jpg",
+        image: "/Neotradicional/Copy-of-IMG_20260210_222305.webp",
         description: "Um estilo que ainda está sendo escrito na história da tatuagem, um estilo que bebe do estilo Old school (linhas grossas e cores primárias) e traz consigo os avanços tecnológicos, como agulhas mais delicadas e uma paleta de cores diversificada, com isso o neotradicional não tem limitações, o estilo perfeito para tirar a ideia da sua cabeça e aplicarmos na sua pele.",
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
-            "/Neotradicional/Copy-of-Srexer.jpg",
-            "/Neotradicional/Copy-of-4.jpg",
-            "/Neotradicional/Copy-of-IMG_20260210_222305.jpg",
-            "/Neotradicional/WhatsApp-Image-2026-06-22-at-23.59.24.jpeg"
+            "/Neotradicional/Copy-of-Srexer.webp",
+            "/Neotradicional/Copy-of-4.webp",
+            "/Neotradicional/Copy-of-IMG_20260210_222305.webp",
+            "/Neotradicional/WhatsApp-Image-2026-06-22-at-23.59.24.webp"
         ]
     },
     {
         id: 3,
         title: "Pontilhismo",
         placement: "Ombro",
-        image: "/Pontilhismo/3362fab3998990d7a91d11d6a156342e.jpg",
+        image: "/Pontilhismo/3362fab3998990d7a91d11d6a156342e.webp",
         description: "O estilo perfeito para a primeira tatuagem pois o estilo exige uma técnica menos agressiva, machucando menos a pele. Em vez de riscar a pele do cliente, cada ponto é feito um de cada vez, de ponto em ponto surge o desenho.\n\nUma experiência vendo de longe e outra vendo de perto, um estilo sofisticado e de grande impacto visual. A técnica permite uma abrangência de representações desde figuras geométricas, animais, símbolos, minimalistas, um estilo versátil e marcante.",
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
-            "/Pontilhismo/Copy-of-05.jpg",
-            "/Pontilhismo/Copy-of-IMG_20250308_183730.jpg",
-            "/Pontilhismo/32fe2662abee44eb7c4a716000540853.jpg",
-            "/Pontilhismo/3362fab3998990d7a91d11d6a156342e.jpg",
-            "/Pontilhismo/WhatsApp-Image-2026-06-23-at-00.07.13.jpeg"
+            "/Pontilhismo/Copy-of-05.webp",
+            "/Pontilhismo/Copy-of-IMG_20250308_183730.webp",
+            "/Pontilhismo/32fe2662abee44eb7c4a716000540853.webp",
+            "/Pontilhismo/3362fab3998990d7a91d11d6a156342e.webp",
+            "/Pontilhismo/WhatsApp-Image-2026-06-23-at-00.07.13.webp"
         ]
     },
     {
         id: 4,
         title: "Poke tattoo",
         placement: "Braço",
-        image: "/Poke-tattoo/20-Sem-Título6_20260623001035.jpg",
+        image: "/Poke-tattoo/20-Sem-Título6_20260623001035.webp",
         description: "O estilo perfeito para a primeira tatuagem pois o estilo exige uma técnica menos agressiva, machucando menos a pele. Em vez de riscar a pele do cliente, cada ponto é feito um de cada vez, de ponto em ponto surge o desenho.\n\nUma experiência vendo de longe e outra vendo de perto, um estilo sofisticado e de grande impacto visual. A técnica permite uma abrangência de representações desde figuras geométricas, animais, símbolos, minimalistas, um estilo versátil e marcante.",
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
-            "/Poke-tattoo/15-Sem-Título2_20260623001111.jpg",
-            "/Poke-tattoo/20-Sem-Título5_20260623001212.jpg",
-            "/Poke-tattoo/20-Sem-Título6_20260623001035.jpg",
-            "/Poke-tattoo/20-Sem-Título7_20260623000938.jpg",
-            "/Poke-tattoo/Copy-of-Copy-of-IMG_20250308_183730.jpg",
-            "/Poke-tattoo/Copy-of-WhatsApp-Image-2026-06-23-at-00.07.13.jpeg"
+            "/Poke-tattoo/15-Sem-Título2_20260623001111.webp",
+            "/Poke-tattoo/20-Sem-Título5_20260623001212.webp",
+            "/Poke-tattoo/20-Sem-Título6_20260623001035.webp",
+            "/Poke-tattoo/20-Sem-Título7_20260623000938.webp",
+            "/Poke-tattoo/Copy-of-Copy-of-IMG_20250308_183730.webp",
+            "/Poke-tattoo/Copy-of-WhatsApp-Image-2026-06-23-at-00.07.13.webp"
         ]
     },
     {
         id: 5,
         title: "Flashes",
         placement: "Peito",
-        image: "/Flashes/Copy-of-03.jpg",
+        image: "/Flashes/Copy-of-03.webp",
         description: "Você chega com a vontade de tatuar e nós chegamos com o desenho.\nFlashes são desenhos prontos a disposição para quem chegar e escolher, pronto vamos tatuar.\nVenha conhecer nosso cardápio de desenhos, servimos conceito, humor e o que mais você quiser, mesmo que você esteja lá para uma tatuagem planejada, sempre vale a pena dar aquela conferida nosso ‘’cardápio’’.\n\nse você for uma pessoa gulosa hehehe o Flash day é para você.\nO dia inteiro dedicado ao seu dispor para tatuar quantas tattoos couberem nas 6 horas do flash day, claro com intervalos para descanso e pausa para o café, (não contabilizados nas 6 horas), fazemos a lista e a ordem de execução para sair do estúdio como um gibi humano rsrsrs.",
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
-            "/Flashes/Copy-of-03.jpg",
-            "/Flashes/Copy-of-01.jpg",
-            "/Flashes/Copy-of-IMG_20250203_205253.jpg",
-            "/Flashes/Copy-of-IMG_20250324_002943.jpg",
-            "/Flashes/Copy-of-IMG_20250324_003006.jpg",
-            "/Flashes/Copy-of-IMG_20250324_003041.jpg",
-            "/Flashes/Copy-of-IMG_20250909_220640_1.jpg",
-            "/Flashes/Copy-of-IMG_20251119_210511.jpg"
+            "/Flashes/Copy-of-03.webp",
+            "/Flashes/Copy-of-01.webp",
+            "/Flashes/Copy-of-IMG_20250203_205253.webp",
+            "/Flashes/Copy-of-IMG_20250324_002943.webp",
+            "/Flashes/Copy-of-IMG_20250324_003006.webp",
+            "/Flashes/Copy-of-IMG_20250324_003041.webp",
+            "/Flashes/Copy-of-IMG_20250909_220640_1.webp",
+            "/Flashes/Copy-of-IMG_20251119_210511.webp"
         ]
     }
 ];
@@ -347,7 +349,7 @@ export const ITENS_FAQ: FAQItem[] = [
 ];
 
 
-export const WHATSAPP_PHONE = "5511999999999";
+export const WHATSAPP_PHONE = "5511977797131";
 
 // ==========================================
 // REDES SOCIAIS
@@ -355,5 +357,5 @@ export const WHATSAPP_PHONE = "5511999999999";
 export const REDES_SOCIAIS: LinkSocial[] = [
   { nome: 'WhatsApp', url: `https://wa.me/${WHATSAPP_PHONE}?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento.` },
   { nome: 'Instagram', url: 'https://instagram.com/' },
-  { nome: 'E-mail', url: 'mailto:contato@wsiqueira.com' },
+  { nome: 'E-mail', url: 'mailto:willtintamais@gmail.com' },
 ];

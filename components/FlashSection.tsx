@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef } from 'react';
 import { Zap, Crown, CheckCircle2, Calendar, ArrowRight } from 'lucide-react';
 import { TEXTOS_GERAIS } from '@/data';

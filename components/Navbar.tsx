@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { REDES_SOCIAIS } from '@/data';
 import { StaggeredMenu } from './StaggeredMenu';
@@ -29,20 +31,22 @@ const Navbar: React.FC = () => {
   }));
 
   return (
-    <StaggeredMenu
-      position="right"
-      items={menuItems}
-      socialItems={socialItems}
-      displaySocials={true}
-      displayItemNumbering={true}
-      menuButtonColor="#1A1A1A"
-      openMenuButtonColor="#1A1A1A"
-      changeMenuColorOnOpen={false} 
-      colors={['#1a1a1a', '#333333']}
-      accentColor="#1A1A1A"
-      isFixed={true}
-      closeOnClickAway={true}
-    />
+    <nav aria-label="Navegação Principal">
+        <StaggeredMenu
+        position="right"
+        items={menuItems}
+        socialItems={socialItems}
+        displaySocials={true}
+        displayItemNumbering={true}
+        menuButtonColor="#1A1A1A"
+        openMenuButtonColor="#1A1A1A"
+        changeMenuColorOnOpen={false} 
+        colors={['#1a1a1a', '#333333']}
+        accentColor="#1A1A1A"
+        isFixed={true}
+        closeOnClickAway={true}
+        />
+    </nav>
   );
 };
 

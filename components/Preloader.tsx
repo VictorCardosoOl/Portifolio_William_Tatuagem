@@ -1,29 +1,26 @@
+"use client";
+
 import React, { useRef, useState, useEffect } from 'react';
 import { TEXTOS_GERAIS } from '@/data';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-interface PreloaderProps {
-  onComplete: () => void;
-}
-
-const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
+const Preloader: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
   const svgPathRef = useRef<SVGPathElement>(null);
   const [counter, setCounter] = useState(0);
-  const onCompleteRef = useRef(onComplete);
-  onCompleteRef.current = onComplete;
+  const [isVisible, setIsVisible] = useState(true);
 
   useGSAP(() => {
     const failsafe = setTimeout(() => {
-        onCompleteRef.current();
+        setIsVisible(false);
     }, 4000);
 
     const tl = gsap.timeline({
         onComplete: () => {
             clearTimeout(failsafe);
-            onCompleteRef.current();
+            setIsVisible(false);
         }
     });
 
@@ -81,10 +78,12 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
     };
   }, []);
 
+  if (!isVisible) return null;
+
   return (
     <div 
         ref={containerRef}
-        className="fixed inset-0 z-[100] w-full h-screen bg-[#111111] text-[#F4F4F0] flex flex-col justify-between p-6 md:p-12 overflow-hidden"
+        className="fixed inset-0 z-[100] w-full h-screen bg-[#111111] text-[#F4F4F0] flex flex-col justify-between p-6 md:p-12 overflow-hidden pointer-events-none"
     >
         {/* Top: Brand */}
         <div className="preloader-element flex justify-between items-start">
@@ -92,7 +91,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
                 {TEXTOS_GERAIS.marca}
             </span>
             <span className="font-sans text-[10px] tracking-[0.3em] uppercase font-bold opacity-50">
-                Portfolio 2024
+                Portfolio
             </span>
         </div>
 

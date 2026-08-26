@@ -1,0 +1,16 @@
+{
+  "name": "William Siqueira Tattoo",
+  "short_name": "WS Tattoo",
+  "description": "Estúdio de tatuagem privado em São Paulo. Arte exclusiva com especialidade em Neotradicional, Blackwork, Fine Line e Pontilhismo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EBE9E4",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

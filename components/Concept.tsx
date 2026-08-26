@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef } from 'react';
 import { TEXTOS_GERAIS } from '@/data';
 import gsap from 'gsap';

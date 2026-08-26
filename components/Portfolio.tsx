@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef } from 'react';
 import { PORTFOLIO_ITEMS } from '@/data';
 import { PortfolioItem } from '@/types';
@@ -17,19 +19,19 @@ interface PortfolioItemProps {
 
 const PortfolioItemComponent: React.FC<PortfolioItemProps> = ({ item, onClick, isLarge }) => {
   return (
-    <button 
-        className="portfolio-item-anim group relative mb-8 w-full block text-left outline-none"
-        onClick={() => onClick(item)}
-        type="button"
-        aria-label={`Ver detalhes do projeto ${item.title} no ${item.placement.toLowerCase()}`}
-        data-tracking={`portfolio-item-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-    >
-        <div className={`relative overflow-hidden w-full bg-gray-200 dark:bg-gray-800 transition-all duration-700 ${isLarge ? 'aspect-[16/9]' : 'aspect-[4/5] md:aspect-[3/4]'}`}>
-            <ProgressiveImage 
-                src={item.image.startsWith('http') ? `${item.image}&auto=format&fit=crop` : item.image}
-                srcSet={item.image.startsWith('http') ? `${item.image}&w=400&auto=format&fit=crop 400w, ${item.image}&w=800&auto=format&fit=crop 800w, ${item.image}&w=1200&auto=format&fit=crop 1200w` : undefined}
-                sizes={isLarge ? "(max-width: 1024px) 100vw, 80vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
-                alt={`${item.title} tattoo on ${item.placement}`}
+    <article className="w-full">
+      <button 
+          className="portfolio-item-anim group relative mb-8 w-full block text-left outline-none"
+          onClick={() => onClick(item)}
+          type="button"
+          aria-label={`Ver detalhes do projeto ${item.title} no ${item.placement.toLowerCase()}`}
+          data-tracking={`portfolio-item-${item.title.toLowerCase().replace(/\\s+/g, '-')}`}
+      >
+          <div className={`relative overflow-hidden w-full bg-gray-200 dark:bg-gray-800 transition-all duration-700 ${isLarge ? 'aspect-[16/9]' : 'aspect-[4/5] md:aspect-[3/4]'}`}>
+              <ProgressiveImage 
+                  src={item.image.startsWith('http') ? `${item.image}&auto=format&fit=crop` : item.image}
+                  sizes={isLarge ? "(max-width: 1024px) 100vw, 80vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
+                  alt={`Tatuagem ${item.title} no ${item.placement} feita por William Siqueira em SP`}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] scale-100 group-hover:scale-105 will-change-transform"
             />
             
@@ -51,6 +53,7 @@ const PortfolioItemComponent: React.FC<PortfolioItemProps> = ({ item, onClick, i
             </h3>
         </div>
     </button>
+    </article>
   );
 };
 
@@ -59,19 +62,22 @@ const Portfolio: React.FC = () => {
   const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
-    ScrollTrigger.batch(".portfolio-item-anim", {
-        onEnter: (batch) => {
-            gsap.fromTo(batch, 
-                { opacity: 0, y: 80, scale: 0.98 }, 
-                { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 1.2, ease: "power2.out", overwrite: true }
-            );
-        },
-        start: "top 95%"
+    let mm = gsap.matchMedia();
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+        ScrollTrigger.batch(".portfolio-item-anim", {
+            onEnter: (batch) => {
+                gsap.fromTo(batch, 
+                    { opacity: 0, y: 80, scale: 0.98 }, 
+                    { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 1.2, ease: "power2.out", overwrite: true }
+                );
+            },
+            start: "top 95%"
+        });
     });
   }, { scope: containerRef });
 
   return (
-    <section id="work" ref={containerRef} className="w-full bg-paper-light dark:bg-paper-dark py-20 md:py-28 px-8 md:px-12 lg:px-16 relative border-t border-ink-light dark:border-white/5">
+    <section id="work" ref={containerRef} className="w-full bg-paper-light dark:bg-paper-dark pt-16 md:pt-20 pb-12 md:pb-16 px-8 md:px-12 lg:px-16 relative">
       
       {/* Title / Section Header */}
       <div className="max-w-screen-3xl mx-auto mb-20 border-b border-ink-light dark:border-white/5 pb-6 flex flex-col md:flex-row justify-between items-end">

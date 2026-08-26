@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { PORTFOLIO_ITEMS } from '@/data';
 import { PortfolioItem } from '@/types';
@@ -139,7 +141,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
               <div className="modal-text-anim flex justify-between items-start mb-12 lg:mb-0">
                 <div>
                   <p className="font-sans text-[10px] tracking-[0.3em] uppercase font-bold text-ink-medium mb-2">Exhibition 0{item.id}</p>
-                  <h1 id="project-title" className="font-serif italic text-5xl md:text-6xl font-light leading-none">{item.title}</h1>
+                  <h2 id="project-title" className="font-serif italic text-5xl md:text-6xl font-light leading-none">{item.title}</h2>
                 </div>
                 <button 
                     onClick={handleClose} 
@@ -195,7 +197,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
                     >
                       <ProgressiveImage 
                         src={imgUrl.startsWith('http') ? `${imgUrl}&auto=format&fit=crop` : imgUrl} 
-                        srcSet={imgUrl.startsWith('http') ? `${imgUrl}&w=400&auto=format&fit=crop 400w, ${imgUrl}&w=800&auto=format&fit=crop 800w, ${imgUrl}&w=1200&auto=format&fit=crop 1200w` : undefined}
                         sizes="(max-width: 1024px) 100vw, 33vw"
                         alt={`${item.title} gallery image ${idx + 1}`} 
                         loading="lazy"
@@ -220,7 +221,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
                   >
                       <ProgressiveImage 
                         src={item.image.startsWith('http') ? `${item.image}&auto=format&fit=crop` : item.image} 
-                        srcSet={item.image.startsWith('http') ? `${item.image}&w=600&auto=format&fit=crop 600w, ${item.image}&w=1200&auto=format&fit=crop 1200w, ${item.image}&w=2000&auto=format&fit=crop 2000w` : undefined}
                         sizes="(max-width: 1024px) 100vw, 65vw"
                         alt={`${item.title} main view`} 
                         loading="lazy"
@@ -243,7 +243,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
                       >
                         <ProgressiveImage 
                           src={item.image.startsWith('http') ? `${item.image}&auto=format&fit=crop` : item.image} 
-                          srcSet={item.image.startsWith('http') ? `${item.image}&w=400&auto=format&fit=crop 400w, ${item.image}&w=800&auto=format&fit=crop 800w, ${item.image}&w=1200&auto=format&fit=crop 1200w` : undefined}
                           sizes="(max-width: 768px) 100vw, 50vw"
                           loading="lazy" 
                           decoding="async" 
@@ -266,7 +265,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
                   >
                       <ProgressiveImage 
                         src={item.image.startsWith('http') ? `${item.image}&auto=format&fit=crop` : item.image} 
-                        srcSet={item.image.startsWith('http') ? `${item.image}&w=600&auto=format&fit=crop 600w, ${item.image}&w=1200&auto=format&fit=crop 1200w, ${item.image}&w=2000&auto=format&fit=crop 2000w` : undefined}
                         sizes="(max-width: 1024px) 100vw, 65vw"
                         loading="lazy" 
                         decoding="async" 

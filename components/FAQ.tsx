@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState, useRef } from 'react';
 import { ITENS_FAQ, WHATSAPP_PHONE } from '@/data';
-import { Plus, ArrowRight } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -17,33 +19,34 @@ const FAQ: React.FC = () => {
   };
 
   useGSAP(() => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 75%"
-        }
-    });
+    let mm = gsap.matchMedia();
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top 75%"
+            }
+        });
 
-    tl.from(".faq-sticky-content", {
-        y: 80,
-        opacity: 0,
-        duration: 1.4,
-        ease: "power4.out"
-    });
+        tl.from(".faq-sticky-content", {
+            y: 80,
+            opacity: 0,
+            duration: 1.4,
+            ease: "power4.out"
+        });
 
-    tl.from(".faq-item", {
-        y: 40,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: "power3.out"
-    }, "-=1.0");
+        tl.from(".faq-item", {
+            y: 40,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out"
+        }, "-=1.0");
+    });
   }, { scope: containerRef });
 
-  const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=Olá%2C%20gostaria%20de%20tirar%20uma%20dúvida.`;
-
   return (
-    <section id="faq" ref={containerRef} className="py-16 md:py-20 px-8 md:px-12 lg:px-16 bg-[#EBE9E4] dark:bg-[#0a0a0a] transition-colors duration-1000 ease-in-out" itemScope itemType="https://schema.org/FAQPage">
+    <section id="faq" ref={containerRef} className="py-16 md:py-20 px-8 md:px-12 lg:px-16 bg-[#EBE9E4] dark:bg-[#0a0a0a] transition-colors duration-1000 ease-in-out">
       <div className="max-w-screen-3xl mx-auto flex flex-col gap-10 lg:gap-16">
         
         {/* CENTERED HEADER */}
@@ -84,7 +87,7 @@ interface FaqAccordionItemProps {
 
 const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({ item, index, isOpen, toggleAccordion }) => {
     return (
-    <div className="faq-item border-b border-ink-black/10 dark:border-white/10 overflow-hidden" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+    <div className="faq-item border-b border-ink-black/10 dark:border-white/10 overflow-hidden">
         <button 
             id={`faq-btn-${item.id}`}
             onClick={() => toggleAccordion(index)}
@@ -93,7 +96,7 @@ const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({ item, index, isOpen
             aria-controls={`faq-panel-${item.id}`}
             data-tracking={`faq-abrir-${item.id}`}
         >
-            <h3 itemProp="name" className={`font-serif text-3xl md:text-4xl transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] transform ${
+            <h3 className={`font-serif text-3xl md:text-4xl transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] transform ${
                 isOpen 
                 ? 'text-ink-black dark:text-white translate-x-4' 
                 : 'text-ink-dark/70 dark:text-gray-500 group-hover:text-ink-black dark:group-hover:text-white group-hover:translate-x-2'
@@ -112,7 +115,6 @@ const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({ item, index, isOpen
             id={`faq-panel-${item.id}`}
             role="region"
             aria-labelledby={`faq-btn-${item.id}`}
-            itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"
             className={`grid transition-[grid-template-rows] duration-[800ms] ease-[cubic-bezier(0.19,1,0.22,1)] ${
                 isOpen ? 'grid-rows-[1fr] mb-12' : 'grid-rows-[0fr] mb-0'
             }`}
@@ -122,7 +124,7 @@ const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({ item, index, isOpen
                     isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
                 }`}>
                     
-                    <div itemProp="text">
+                    <div>
                         <p className="mb-8 whitespace-pre-line">{item.resposta}</p>
                         
                         {item.detalhes && item.detalhes.length > 0 && (
