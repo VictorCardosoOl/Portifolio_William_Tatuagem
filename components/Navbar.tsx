@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     { label: 'Início', ariaLabel: 'Ir para o início', link: '#home' },
     { label: 'Portfólio', ariaLabel: 'Ver trabalhos', link: '#work' },
     { label: 'Sobre', ariaLabel: 'Sobre o artista', link: '#about' },
-    { label: 'Método', ariaLabel: 'Nosso processo', link: '#concept' },
+
     { label: 'Agenda', ariaLabel: 'Eventos e Flash Day', link: '#flash' },
     { label: 'Contato', ariaLabel: 'Entrar em contato', link: '#contact' }
   ];

@@ -4,7 +4,7 @@ import Hero from '@/components/Hero';
 import Portfolio from '@/components/Portfolio';
 import Manifesto from '@/components/Manifesto';
 import About from '@/components/About';
-import Concept from '@/components/Concept';
+
 import CreativeProcess from '@/components/CreativeProcess';
 import PreparationAndAftercare from '@/components/Preparation';
 import FlashSection from '@/components/FlashSection';
@@ -29,7 +29,7 @@ export default function Home() {
           <Hero />
           <Portfolio />
           <Manifesto />
-          <Concept />
+
           <CreativeProcess />
           <PreparationAndAftercare />
           <FlashSection />

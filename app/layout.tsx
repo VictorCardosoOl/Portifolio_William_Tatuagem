@@ -68,13 +68,31 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://wsiqueira.com/#website",
+      "url": "https://wsiqueira.com",
+      "name": "William Siqueira Tattoo",
+      "description": "Estúdio de tatuagem privado em São Paulo. Especialidade em Neotradicional, Blackwork, Fine Line e Pontilhismo.",
+      "publisher": { "@id": "https://wsiqueira.com/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://wsiqueira.com/#person",
+      "name": "William Siqueira",
+      "jobTitle": "Tatuador Artista",
+      "url": "https://wsiqueira.com",
+      "sameAs": [
+        "https://instagram.com/wsiqueira"
+      ]
+    },
+    {
       "@type": "ProfessionalService",
+      "@id": "https://wsiqueira.com/#localbusiness",
       "name": "William Siqueira Tattoo",
       "image": "https://wsiqueira.com/about/centro.webp",
-      "@id": "https://wsiqueira.com/#localbusiness",
       "url": "https://wsiqueira.com",
       "telephone": `+${WHATSAPP_PHONE}`,
-      "priceRange": "$$",
+      "email": "willtintamais@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Baltazar Carrasco, 70",
@@ -82,16 +100,26 @@ const jsonLd = {
         "addressRegion": "SP",
         "postalCode": "05426-060",
         "addressCountry": "BR"
+      },
+      "areaServed": [
+        "Pinheiros",
+        "Vila Madalena",
+        "São Paulo"
+      ],
+      "founder": { "@id": "https://wsiqueira.com/#person" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Especialidades de Tatuagem",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tatuagem Neotradicional" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tatuagem Blackwork" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pontilhismo e Fine Line" } }
+        ]
       }
     },
     {
-      "@type": "Person",
-      "name": "William Siqueira",
-      "jobTitle": "Tatuador Especialista",
-      "url": "https://wsiqueira.com"
-    },
-    {
       "@type": "FAQPage",
+      "@id": "https://wsiqueira.com/#faq",
       "mainEntity": ITENS_FAQ.map(item => ({
         "@type": "Question",
         "name": item.pergunta,

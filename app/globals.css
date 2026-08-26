@@ -8,17 +8,11 @@
     text-orientation: mixed;
 }
 ::-webkit-scrollbar {
-    width: 8px;
+    display: none;
 }
-::-webkit-scrollbar-track {
-    background: #F6F5F0;
-}
-::-webkit-scrollbar-thumb {
-    background: #8C8C8C;
-    border-radius: 4px;
-}
-.dark ::-webkit-scrollbar-track {
-    background: #0F0F0F;
+html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .sticky-title {
     position: sticky;
