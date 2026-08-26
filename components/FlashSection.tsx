@@ -128,10 +128,10 @@ const FlashSection: React.FC = () => {
                 </div>
               </div>
 
-              <button className="bg-white text-black px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
+              <a href="/404" className="bg-white text-black px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
                 Ver Designs
                 <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -185,10 +185,10 @@ const FlashSection: React.FC = () => {
                 </div>
               </div>
 
-              <button className="bg-transparent border border-white text-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
+              <a href="/404" className="bg-transparent border border-white text-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
                 Solicitar Orçamento
                 <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
 

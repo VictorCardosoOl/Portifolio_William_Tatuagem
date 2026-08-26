@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
   const navLinks = [
     { label: 'Início', href: '#home' },
     { label: 'Portfólio', href: '#work' },
-    { label: 'O Processo', href: '#concept' },
+    { label: 'Protocolo', href: '#cuidados' },
     { label: 'Flash Day', href: '#flash' },
   ];
 
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                <div className="flex items-start gap-3 text-[#685A4F] dark:text-[#a8a29e]">
                   <MapPin size={18} className="mt-1 shrink-0" aria-hidden="true" />
                   <address className="not-italic font-sans text-base leading-relaxed text-[#3D3D3D] dark:text-[#d6d3d1]">
-                    Vila Madalena<br/>
+                    Pinheiros<br/>
                     São Paulo - SP<br/>
                     Brasil
                   </address>
