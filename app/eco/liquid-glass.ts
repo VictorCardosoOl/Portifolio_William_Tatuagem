@@ -4,7 +4,7 @@
  */
 
 export function initLiquidGlass() {
-  const elements = document.querySelectorAll('.link-item');
+  const elements = document.querySelectorAll<HTMLElement>('.link-item');
   const cleanupFunctions: Array<() => void> = [];
 
   elements.forEach((el) => {
