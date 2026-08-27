@@ -112,7 +112,7 @@
   width: 100%;
   max-width: var(--app-max-width);
   height: 100dvh; /* Garante que nǜo ultrapasse a tela */
-  background-color: #ffffff;
+  background-color: #e2dfd8; /* Mudado de white para bege, evitando faixas brancas sobrando no fim da tela */
   position: relative;
   overflow: hidden; /* MantǸm a imagem fixa no mobile */
   box-shadow: 0 2.5rem 6.25rem rgba(0, 0, 0, 0.1);
@@ -547,7 +547,7 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
-  justify-content: flex-start; /* Alterado de space-between para agrupar os itens */
+  justify-content: center; /* Centraliza verticalmente o bloco inteiro */
 }
 
 .mobile-social-row {
@@ -649,9 +649,9 @@
 .mobile-footer {
   width: 100%;
   text-align: center;
-  margin-top: auto; /* Empurra o rodapé para o final da tela */
-  padding-top: 2rem; /* Garante que tenha um espaço se a tela for pequena */
-  padding-bottom: 0.5rem; /* Rodapé bem colado embaixo */
+  margin-top: 2rem; /* Mantém próximo aos ícones */
+  padding-top: 0;
+  padding-bottom: 2rem; /* Margem de respiro no final da página */
   font-family: var(--font-sans);
   font-size: 0.8rem; /* Reduzido para caber melhor */
   font-weight: 800; /* Mais grosso */
