@@ -181,13 +181,13 @@ export default function EcoPage() {
           {/* Grade de Ícones Sociais [DESKTOP] */}
           <div className="social-icons-grid anim-el" style={{ marginTop: '2rem', justifyContent: 'flex-start', gap: '1.5rem' }}>
             <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram">
-              <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+              {React.createElement("ion-icon", { name: "logo-instagram", "aria-hidden": "true" })}
             </a>
             <a href="mailto:victorcardosovc1@gmail.com" aria-label="Enviar Email">
-              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+              {React.createElement("ion-icon", { name: "mail", "aria-hidden": "true" })}
             </a>
             <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
-              <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+              {React.createElement("ion-icon", { name: "logo-whatsapp", "aria-hidden": "true" })}
             </a>
           </div>
         </section>
@@ -259,9 +259,9 @@ export default function EcoPage() {
 
             {/* Ícones Sociais (Movidos para debaixo dos links) */}
             <div className="mobile-social-row anim-el" style={{ marginTop: '3rem' }}>
-              <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
-              <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-whatsapp"></ion-icon></a>
-              <a href="mailto:victorcardosovc1@gmail.com"><ion-icon name="mail"></ion-icon></a>
+              <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "logo-instagram" })}</a>
+              <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "logo-whatsapp" })}</a>
+              <a href="mailto:victorcardosovc1@gmail.com">{React.createElement("ion-icon", { name: "mail" })}</a>
             </div>
 
             {/* Copyright */}
