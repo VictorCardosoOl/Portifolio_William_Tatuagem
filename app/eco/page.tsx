@@ -204,18 +204,18 @@ export default function EcoPage() {
           />
         </section>
 
-        {/* [MOBILE ONLY] Novo LinkTree Estilo Miss Mystik */}
+        {/* [MOBILE ONLY] Novo LinkTree Estilo Artístico (Tatuador) */}
         <div className="mobile-layout mobile-only">
           {/* Header Banner com Textos */}
           <div className="mobile-header">
             <div className="mobile-header-bg">
-              <img src="/eco/avatar.jpg" alt="Background Texture" />
+              <img src="/black-work/Copy-of-06.webp" alt="Tattoo Background" />
             </div>
             <div className="mobile-header-content anim-el">
-              <p className="mobile-subtitle">EP 'CURRAGH' DROPPING SOON</p>
+              <p className="mobile-subtitle">ESTÚDIO DE TATUAGEM</p>
               <h1 className="mobile-title">
-                <span>MISS</span>
-                <span>MYSTIK</span>
+                <span>WILLIAM</span>
+                <span>TATTOO</span>
               </h1>
             </div>
           </div>
@@ -223,57 +223,43 @@ export default function EcoPage() {
           {/* Foto de Perfil Circular (sobreposta) */}
           <div className="mobile-profile-container anim-el">
             <div className="mobile-profile-pic">
-              <img src="/eco/avatar.jpg" alt="Profile" />
+              <img src="/about/direita.webp" alt="William Tatuador" />
             </div>
           </div>
 
           {/* Conteúdo Abaixo */}
           <div className="mobile-content-area">
-            
-            {/* Ícones Sociais */}
-            <div className="mobile-social-row anim-el">
-              <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
-              <a href="#"><ion-icon name="cloud-outline"></ion-icon></a>
-              <a href="#"><ion-icon name="logo-soundcloud"></ion-icon></a>
-              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-              <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-              <a href="#"><ion-icon name="musical-notes-outline"></ion-icon></a>
-            </div>
-
-            {/* Card em Destaque (Player) */}
-            <div className="mobile-featured-card anim-el">
-              <div className="featured-cover">
-                <img src="/eco/avatar.jpg" alt="Cover" />
-                <div className="play-button"><ion-icon name="play"></ion-icon></div>
-              </div>
-              <div className="featured-details">
-                <h4>Heart Plains</h4>
-                <p>Miss Mystik</p>
-                <div className="progress-bar-mock"></div>
-              </div>
-              <div className="featured-brand">
-                <ion-icon name="logo-soundcloud"></ion-icon>
-              </div>
-            </div>
 
             {/* Lista de Links */}
             <div className="mobile-links-list">
               <a href="https://victorcardoso.vercel.app/" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
-                <div className="item-thumb"><img src="/eco/avatar.jpg" alt="Thumb" /></div>
-                <div className="item-text">WEBSITE</div>
+                <div className="item-thumb"><img src="/black-work/jaguar.webp" alt="Thumb" /></div>
+                <div className="item-text">SITE OFICIAL</div>
                 <div className="item-number">01</div>
               </a>
-              <a href="https://github.com/VictorCardosoOl" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
-                <div className="item-thumb"><img src="/eco/avatar.jpg" alt="Thumb" /></div>
-                <div className="item-text">TOUR</div>
+              <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
+                <div className="item-thumb"><img src="/about/centro.webp" alt="Thumb" /></div>
+                <div className="item-text">AGENDA / ORÇAMENTO</div>
                 <div className="item-number">02</div>
               </a>
-              <a href="https://www.linkedin.com/in/victor-card-cunha/" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
-                <div className="item-thumb"><img src="/eco/avatar.jpg" alt="Thumb" /></div>
-                <div className="item-text">MERCH</div>
+              <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
+                <div className="item-thumb"><img src="/about/esquerda.webp" alt="Thumb" /></div>
+                <div className="item-text">LOJA / MERCH</div>
                 <div className="item-number">03</div>
               </a>
             </div>
+
+            {/* Ícones Sociais (Movidos para debaixo dos links) */}
+            <div className="mobile-social-row anim-el" style={{ marginTop: '3rem' }}>
+              <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+              <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-whatsapp"></ion-icon></a>
+              <a href="mailto:victorcardosovc1@gmail.com"><ion-icon name="mail"></ion-icon></a>
+            </div>
+
+            {/* Copyright */}
+            <footer className="mobile-footer anim-el">
+              <p>&copy; {new Date().getFullYear()} William Tatuagem. Todos os direitos reservados.</p>
+            </footer>
 
           </div>
         </div>
@@ -282,3 +268,4 @@ export default function EcoPage() {
     </div>
   );
 }
+
