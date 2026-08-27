@@ -39,7 +39,7 @@ export function initLiquidGlass() {
     warpLayer.style.borderRadius = radius;
     // Removido o SVG filter problemático que causa distorções no Chromium/Arc
     warpLayer.style.backdropFilter = `blur(12px) saturate(160%)`;
-    warpLayer.style.WebkitBackdropFilter = `blur(12px) saturate(160%)`;
+    warpLayer.style.setProperty('-webkit-backdrop-filter', `blur(12px) saturate(160%)`);
     warpLayer.style.background = 'transparent';
     warpLayer.style.boxShadow = '0px 10px 40px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(255,255,255,0.5)';
 
@@ -63,8 +63,8 @@ export function initLiquidGlass() {
         b.style.borderRadius = radius;
         b.style.pointerEvents = 'none';
         b.style.padding = '1.5px';
-        b.style.WebkitMask = 'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)';
-        b.style.WebkitMaskComposite = 'xor';
+        b.style.setProperty('-webkit-mask', 'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)');
+        b.style.setProperty('-webkit-mask-composite', 'xor');
         b.style.maskComposite = 'exclude';
     });
     

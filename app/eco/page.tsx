@@ -7,6 +7,14 @@ import './eco.css';
 import gsap from 'gsap';
 import Lenis from 'lenis';
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'ion-icon': any;
+    }
+  }
+}
+
 export default function EcoPage() {
   useEffect(() => {
     // Lenis / AppManager logic from main.ts
@@ -20,7 +28,7 @@ export default function EcoPage() {
 
     const bootstrap = () => {
       // Init Scroll
-      const prefersReduced = mediaQueries.prefersReducedMotion?.matches ?? false;
+      const prefersReduced = mediaQueries.reducedMotion?.matches ?? false;
       const isMobile = mediaQueries.mobile?.matches ?? false;
 
       if (prefersReduced || isMobile) {
