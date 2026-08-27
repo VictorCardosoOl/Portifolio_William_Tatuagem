@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
-import { ITENS_FAQ, WHATSAPP_PHONE } from '@/data';
+import { ITENS_FAQ, WHATSAPP_PHONE } from '@/config/data';
 
 const cormorant = Cormorant_Garamond({ 
   subsets: ['latin'],

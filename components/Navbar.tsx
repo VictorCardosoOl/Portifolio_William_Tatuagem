@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { REDES_SOCIAIS } from '@/data';
+import { REDES_SOCIAIS } from '@/config/data';
 import { StaggeredMenu } from './StaggeredMenu';
 
 interface MenuItem {

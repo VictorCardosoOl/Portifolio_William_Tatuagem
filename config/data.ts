@@ -93,23 +93,23 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
             "/black-work/jaguar.webp",
-            "/black-work/Copy-of-06.webp",
-            "/black-work/Copy-of-20260207_195712.webp",
-            "/black-work/Copy-of-20260207_220529.webp"
+            "/black-work/black-work-01.webp",
+            "/black-work/black-work-02.webp",
+            "/black-work/black-work-03.webp"
         ]
     },
     {
         id: 2,
         title: "Neotradicional",
         placement: "Costas",
-        image: "/Neotradicional/Copy-of-IMG_20260210_222305.webp",
+        image: "/Neotradicional/neotradicional-01.webp",
         description: "Um estilo que ainda está sendo escrito na história da tatuagem, um estilo que bebe do estilo Old school (linhas grossas e cores primárias) e traz consigo os avanços tecnológicos, como agulhas mais delicadas e uma paleta de cores diversificada, com isso o neotradicional não tem limitações, o estilo perfeito para tirar a ideia da sua cabeça e aplicarmos na sua pele.",
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
-            "/Neotradicional/Copy-of-Srexer.webp",
-            "/Neotradicional/Copy-of-4.webp",
-            "/Neotradicional/Copy-of-IMG_20260210_222305.webp",
-            "/Neotradicional/WhatsApp-Image-2026-06-22-at-23.59.24.webp"
+            "/Neotradicional/neotradicional-01.webp",
+            "/Neotradicional/neotradicional-02.webp",
+            "/Neotradicional/neotradicional-03.webp",
+            "/Neotradicional/neotradicional-05.webp"
         ]
     },
     {
@@ -120,11 +120,11 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
         description: "O estilo perfeito para a primeira tatuagem pois o estilo exige uma técnica menos agressiva, machucando menos a pele. Em vez de riscar a pele do cliente, cada ponto é feito um de cada vez, de ponto em ponto surge o desenho.\n\nUma experiência vendo de longe e outra vendo de perto, um estilo sofisticado e de grande impacto visual. A técnica permite uma abrangência de representações desde figuras geométricas, animais, símbolos, minimalistas, um estilo versátil e marcante.",
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
-            "/Pontilhismo/Copy-of-05.webp",
-            "/Pontilhismo/Copy-of-IMG_20250308_183730.webp",
+            "/Pontilhismo/pontilhismo-01.webp",
+            "/Pontilhismo/pontilhismo-02.webp",
             "/Pontilhismo/32fe2662abee44eb7c4a716000540853.webp",
             "/Pontilhismo/3362fab3998990d7a91d11d6a156342e.webp",
-            "/Pontilhismo/WhatsApp-Image-2026-06-23-at-00.07.13.webp"
+            "/Pontilhismo/pontilhismo-03.webp"
         ]
     },
     {
@@ -139,26 +139,26 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
             "/Poke-tattoo/20-Sem-Título5_20260623001212.webp",
             "/Poke-tattoo/20-Sem-Título6_20260623001035.webp",
             "/Poke-tattoo/20-Sem-Título7_20260623000938.webp",
-            "/Poke-tattoo/Copy-of-Copy-of-IMG_20250308_183730.webp",
-            "/Poke-tattoo/Copy-of-WhatsApp-Image-2026-06-23-at-00.07.13.webp"
+            "/Poke-tattoo/poke-tattoo-01.webp",
+            "/Poke-tattoo/poke-tattoo-02.webp"
         ]
     },
     {
         id: 5,
         title: "Flashes",
         placement: "Peito",
-        image: "/Flashes/Copy-of-03.webp",
+        image: "/Flashes/flashes-01.webp",
         description: "Você chega com a vontade de tatuar e nós chegamos com o desenho.\nFlashes são desenhos prontos a disposição para quem chegar e escolher, pronto vamos tatuar.\nVenha conhecer nosso cardápio de desenhos, servimos conceito, humor e o que mais você quiser, mesmo que você esteja lá para uma tatuagem planejada, sempre vale a pena dar aquela conferida nosso ‘’cardápio’’.\n\nse você for uma pessoa gulosa hehehe o Flash day é para você.\nO dia inteiro dedicado ao seu dispor para tatuar quantas tattoos couberem nas 6 horas do flash day, claro com intervalos para descanso e pausa para o café, (não contabilizados nas 6 horas), fazemos a lista e a ordem de execução para sair do estúdio como um gibi humano rsrsrs.",
         quote: "O contraste perfeito revela a essência oculta do corpo.",
         gallery: [
-            "/Flashes/Copy-of-03.webp",
-            "/Flashes/Copy-of-01.webp",
-            "/Flashes/Copy-of-IMG_20250203_205253.webp",
-            "/Flashes/Copy-of-IMG_20250324_002943.webp",
-            "/Flashes/Copy-of-IMG_20250324_003006.webp",
-            "/Flashes/Copy-of-IMG_20250324_003041.webp",
-            "/Flashes/Copy-of-IMG_20250909_220640_1.webp",
-            "/Flashes/Copy-of-IMG_20251119_210511.webp"
+            "/Flashes/flashes-01.webp",
+            "/Flashes/flashes-02.webp",
+            "/Flashes/flashes-03.webp",
+            "/Flashes/flashes-04.webp",
+            "/Flashes/flashes-05.webp",
+            "/Flashes/flashes-06.webp",
+            "/Flashes/flashes-07.webp",
+            "/Flashes/flashes-08.webp"
         ]
     }
 ];

@@ -5,7 +5,7 @@ import { initLiquidGlass } from './liquid-glass';
 import './eco.css';
 import gsap from 'gsap';
 import Lenis from 'lenis';
-import { REDES_SOCIAIS } from '@/data';
+import { REDES_SOCIAIS } from '@/config/data';
 
 declare global {
   namespace JSX {
@@ -97,7 +97,7 @@ export default function EcoPage() {
           {/* Header Banner com Textos */}
           <div className="mobile-header">
             <div className="mobile-header-bg">
-              <img src="/black-work/Copy-of-06.webp" alt="Tattoo Background" />
+              <img src="/black-work/black-work-01.webp" alt="Tattoo Background" />
             </div>
             <div className="mobile-header-content anim-el">
               <p className="mobile-subtitle">ESTÚDIO DE TATUAGEM</p>

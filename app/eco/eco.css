@@ -81,7 +81,7 @@
 }
 
 .eco-page-body {
-  background-color: var(--color-bg-body);
+  background-color: #e2dfd8; /* Força o fundo da página inteira a ser bege */
   font-family: var(--font-sans);
   color: var(--color-text-main);
   line-height: 1.5;
@@ -111,10 +111,9 @@
 .app-container {
   width: 100%;
   max-width: var(--app-max-width);
-  height: 100dvh; /* Garante que nǜo ultrapasse a tela */
-  background-color: #e2dfd8; /* Mudado de white para bege, evitando faixas brancas sobrando no fim da tela */
+  min-height: 100dvh; /* Permite crescer com o conteúdo */
+  background-color: #e2dfd8; /* Bege para unificar */
   position: relative;
-  overflow: hidden; /* MantǸm a imagem fixa no mobile */
   box-shadow: 0 2.5rem 6.25rem rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -437,17 +436,14 @@
   pointer-events: none;
 }
 
-/* NEW MOBILE LAYOUT (AWWWARDS STYLE) */
 .mobile-layout {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
   flex: 1;
   background-color: #e2dfd8; /* Slightly deeper, more elegant beige */
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
   position: relative;
-  overflow-y: auto;
   z-index: 10;
 }
 

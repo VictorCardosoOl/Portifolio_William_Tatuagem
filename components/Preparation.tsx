@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import { CUIDADOS_PRE, CUIDADOS_POS } from '@/data';
+import { CUIDADOS_PRE, CUIDADOS_POS } from '@/config/data';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

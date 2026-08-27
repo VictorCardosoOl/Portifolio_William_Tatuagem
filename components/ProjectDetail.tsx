@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { PORTFOLIO_ITEMS } from '@/data';
-import { PortfolioItem } from '@/types';
+import { PORTFOLIO_ITEMS } from '@/config/data';
+import { PortfolioItem } from '@/config/types';
 import { X, ArrowRight, ArrowDown } from 'lucide-react';
 import Lenis from 'lenis';
 import gsap from 'gsap';

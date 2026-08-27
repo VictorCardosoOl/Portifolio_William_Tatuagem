@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { Zap, Crown, CheckCircle2, Calendar, ArrowRight } from 'lucide-react';
-import { TEXTOS_GERAIS } from '@/data';
+import { TEXTOS_GERAIS } from '@/config/data';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';

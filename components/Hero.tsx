@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
-import { TEXTOS_GERAIS } from '@/data';
+import { TEXTOS_GERAIS } from '@/config/data';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';

@@ -3,7 +3,7 @@
 import React, { useCallback, useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { TEXTOS_GERAIS } from '@/data';
+import { TEXTOS_GERAIS } from '@/config/data';
 import { useScroll } from '@/context/ScrollContext';
 
 interface MenuItem {
