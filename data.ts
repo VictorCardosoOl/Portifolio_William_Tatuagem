@@ -356,6 +356,6 @@ export const WHATSAPP_PHONE = "5511977797131";
 // ==========================================
 export const REDES_SOCIAIS: LinkSocial[] = [
   { nome: 'WhatsApp', url: `https://wa.me/${WHATSAPP_PHONE}?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento.` },
-  { nome: 'Instagram', url: 'https://instagram.com/' },
+  { nome: 'Instagram', url: 'https://instagram.com/wsiqueira' },
   { nome: 'E-mail', url: 'mailto:willtintamais@gmail.com' },
 ];

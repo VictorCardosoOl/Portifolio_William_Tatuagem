@@ -1,11 +1,11 @@
 'use client';
-
 import React, { useEffect } from 'react';
 import Script from 'next/script';
 import { initLiquidGlass } from './liquid-glass';
 import './eco.css';
 import gsap from 'gsap';
 import Lenis from 'lenis';
+import { REDES_SOCIAIS } from '@/data';
 
 declare global {
   namespace JSX {
@@ -49,31 +49,7 @@ export default function EcoPage() {
       };
 
       const timeline = gsap.timeline({ delay: 0.3 });
-      const heroCover = document.querySelector('.hero-cover');
-      const profileName = document.querySelector('.profile-name');
       const animatedElements = document.querySelectorAll('.anim-el');
-
-      if (heroCover && !prefersReduced) {
-        timeline.from(heroCover, {
-          opacity: 0,
-          scale: 1.05,
-          duration: 1.5,
-          ease: ANIMATION_CONFIG.EASE_EXPO,
-        });
-      }
-
-      if (profileName) {
-        const headerElements = document.querySelectorAll('.card-header > *');
-        if (headerElements.length > 0) {
-          timeline.from(headerElements, {
-            opacity: 0,
-            y: 15,
-            stagger: 0.1,
-            duration: 1.5,
-            ease: ANIMATION_CONFIG.EASE_ELASTIC,
-          }, heroCover ? '-=1.2' : 0);
-        }
-      }
 
       if (animatedElements.length > 0) {
         gsap.set(animatedElements, { visibility: 'visible' });
@@ -85,7 +61,7 @@ export default function EcoPage() {
             stagger: ANIMATION_CONFIG.STAGGER,
             duration: 1.5,
             ease: ANIMATION_CONFIG.EASE_ELASTIC,
-          }, '-=1.2');
+          });
         }
       }
 
@@ -106,19 +82,6 @@ export default function EcoPage() {
     };
   }, []);
 
-  const handleWhatsAppSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const firstName = formData.get('firstName');
-    const lastName = formData.get('lastName');
-    const message = formData.get('message');
-    const targetNumber = '5511977440146';
-    const text = `Olá! Meu nome é ${firstName} ${lastName}.\n\n${message}`;
-    const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/${targetNumber}?text=${encodedText}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
   return (
     <div className="eco-page-body">
       {/* IonIcons CDN */}
@@ -129,91 +92,8 @@ export default function EcoPage() {
 
       <main id="main-content" className="app-container" style={{ margin: '0 auto' }}>
         
-        {/* [DESKTOP ONLY] Card Esquerdo: Formulário WhatsApp */}
-        <section className="profile-card desktop-only">
-          <div className="card-header anim-el" style={{ textAlign: 'left', alignItems: 'flex-start', paddingBottom: '2rem' }}>
-            <h1 className="profile-name" style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 400 }}>Vamos Conversar</h1>
-          </div>
-          
-          {/* Links em Pílula [DESKTOP] */}
-          <nav className="links-section anim-el" aria-label="Links Sociais Desktop" style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'flex-start', gap: '0.8rem', marginTop: '-1rem', marginBottom: '2rem' }}>
-            <a href="https://victorcardoso.vercel.app/" target="_blank" rel="noopener noreferrer" className="link-item" style={{ width: 'auto', padding: '0.6rem 1.2rem', fontSize: '0.85rem' }}>
-              Portfólio
-            </a>
-            <a href="https://github.com/VictorCardosoOl" target="_blank" rel="noopener noreferrer" className="link-item" style={{ width: 'auto', padding: '0.6rem 1.2rem', fontSize: '0.85rem' }}>
-              Repositório
-            </a>
-            <a href="https://www.linkedin.com/in/victor-card-cunha/" target="_blank" rel="noopener noreferrer" className="link-item" style={{ width: 'auto', padding: '0.6rem 1.2rem', fontSize: '0.85rem' }}>
-              LinkedIn
-            </a>
-          </nav>
-
-          <form id="whatsapp-form" className="contact-form anim-el" onSubmit={handleWhatsAppSubmit}>
-            <div className="form-row">
-              <div className="form-group">
-                <input type="text" id="firstName" name="firstName" placeholder="Nome" required />
-              </div>
-              <div className="form-group">
-                <input type="text" id="lastName" name="lastName" placeholder="Sobrenome" required />
-              </div>
-            </div>
-
-            <div className="form-group">
-              <textarea id="message" name="message" placeholder="Mensagem" rows={1} required></textarea>
-            </div>
-
-            <div className="form-submit-container">
-              <button type="submit" className="submit-btn">Enviar</button>
-            </div>
-          </form>
-
-          <footer className="contact-footer anim-el">
-            <div className="contact-info">
-              <span className="info-label">ENDEREÇO</span>
-              <p>123 Balboa Boulevard Newport<br/>Beach, CA 92662</p>
-            </div>
-            <div className="contact-info">
-              <span className="info-label">E-MAIL</span>
-              <p>hello@sasha.com</p>
-            </div>
-          </footer>
-          
-          {/* Grade de Ícones Sociais [DESKTOP] */}
-          <div className="social-icons-grid anim-el" style={{ marginTop: '2rem', justifyContent: 'flex-start', gap: '1.5rem' }}>
-            <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram">
-              {React.createElement("ion-icon", { name: "logo-instagram", "aria-hidden": "true" })}
-            </a>
-            <a href="mailto:victorcardosovc1@gmail.com" aria-label="Enviar Email">
-              {React.createElement("ion-icon", { name: "mail", "aria-hidden": "true" })}
-            </a>
-            <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
-              {React.createElement("ion-icon", { name: "logo-whatsapp", "aria-hidden": "true" })}
-            </a>
-          </div>
-        </section>
-
-        {/* HERO COVER: Usado no desktop (direita) */}
-        <section className="hero-cover desktop-only">
-          {/* Circular Badge [DESKTOP ONLY] */}
-          <div className="circular-badge desktop-only">
-            <svg viewBox="0 0 100 100">
-              <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
-              <text>
-                <textPath href="#circlePath" startOffset="0%" textLength="215" fontFamily="sans-serif" fontSize="8.5" fontWeight="bold" letterSpacing="0.1em">VAMOS TRABALHAR • VAMOS TRABALHAR • </textPath>
-              </text>
-            </svg>
-          </div>
-          <img
-            src="/eco/avatar.jpg"
-            alt="Retrato de Victor Cardoso"
-            loading="eager"
-            width="420"
-            height="480"
-          />
-        </section>
-
-        {/* [MOBILE ONLY] Novo LinkTree Estilo Artístico (Tatuador) */}
-        <div className="mobile-layout mobile-only">
+        {/* Hub de Links Estilo Artístico (Tatuador) */}
+        <div className="mobile-layout">
           {/* Header Banner com Textos */}
           <div className="mobile-header">
             <div className="mobile-header-bg">
@@ -240,28 +120,28 @@ export default function EcoPage() {
 
             {/* Lista de Links */}
             <div className="mobile-links-list">
-              <a href="https://victorcardoso.vercel.app/" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
-                <div className="item-thumb"><img src="/black-work/jaguar.webp" alt="Thumb" /></div>
-                <div className="item-text">SITE OFICIAL</div>
+              <a href="/" className="mobile-list-item anim-el">
+                <div className="item-thumb"><img src="/black-work/jaguar.webp" alt="Site Oficial" /></div>
+                <div className="item-text">SITE OFICIAL / PORTFÓLIO</div>
                 <div className="item-number">01</div>
               </a>
-              <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
-                <div className="item-thumb"><img src="/about/centro.webp" alt="Thumb" /></div>
+              <a href={REDES_SOCIAIS.find(r => r.nome === 'WhatsApp')?.url || '#'} target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
+                <div className="item-thumb"><img src="/about/centro.webp" alt="WhatsApp" /></div>
                 <div className="item-text">AGENDA / ORÇAMENTO</div>
                 <div className="item-number">02</div>
               </a>
-              <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
-                <div className="item-thumb"><img src="/about/esquerda.webp" alt="Thumb" /></div>
-                <div className="item-text">LOJA / MERCH</div>
+              <a href={REDES_SOCIAIS.find(r => r.nome === 'Instagram')?.url || '#'} target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
+                <div className="item-thumb"><img src="/about/esquerda.webp" alt="Instagram" /></div>
+                <div className="item-text">INSTAGRAM</div>
                 <div className="item-number">03</div>
               </a>
             </div>
 
             {/* Ícones Sociais (Movidos para debaixo dos links) */}
-            <div className="mobile-social-row anim-el" style={{ marginTop: '3rem' }}>
-              <a href="https://instagram.com/abaxu_artes" target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "logo-instagram" })}</a>
-              <a href="https://wa.me/5511977440146" target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "logo-whatsapp" })}</a>
-              <a href="mailto:victorcardosovc1@gmail.com">{React.createElement("ion-icon", { name: "mail" })}</a>
+            <div className="mobile-social-row anim-el">
+              <a href={REDES_SOCIAIS.find(r => r.nome === 'Instagram')?.url || '#'} target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "logo-instagram" })}</a>
+              <a href={REDES_SOCIAIS.find(r => r.nome === 'WhatsApp')?.url || '#'} target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "logo-whatsapp" })}</a>
+              <a href={REDES_SOCIAIS.find(r => r.nome === 'E-mail')?.url || '#'} target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "mail" })}</a>
             </div>
 
             {/* Copyright */}

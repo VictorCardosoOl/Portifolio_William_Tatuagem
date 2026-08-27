@@ -416,68 +416,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* DESKTOP SPLIT LAYOUT - Content-Driven Breakpoint */
-@media (min-width: 48rem) {
-  .mobile-only { display: none !important; }
-  .desktop-only { display: flex !important; }
-  .circular-badge.desktop-only { display: block !important; }
 
-  body {
-    align-items: stretch;
-    padding: 0;
-    margin: 0;
-  }
-
-  .app-container {
-    display: grid;
-    max-width: 100%;
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    grid-template-columns: 50% 50%; /* Equal split looks more balanced for full screen */
-    grid-template-rows: 1fr;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .hero-cover {
-    width: 100%;
-    height: 100vh;
-    min-height: 100vh;
-    border-radius: 0;
-    overflow: hidden;
-  }
-
-  .hero-cover img {
-    width: 100%;
-    height: 100vh; /* Garante que a foto cubra tudo */
-    object-fit: cover;
-  }
-
-  .profile-card {
-    width: 100%;
-    height: 100vh;
-    margin-top: 0;
-    border-radius: 0;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center; /* Centraliza horizontalmente */
-    border: none;
-    box-shadow: none;
-    background: #ffffff;
-  }
-  
-  /* Restringe a largura do conteúdo para manter elegância no widescreen */
-  .profile-card.desktop-only > * {
-    width: 100%;
-    max-width: 34rem;
-  }
-  
-  /* Ajusta o padding inferior do Header para grudar melhor no form */
-  .profile-card.desktop-only .card-header {
-    padding-bottom: 3rem !important;
-  }
-}
 
 .anim-el {
   visibility: hidden;
@@ -608,20 +547,20 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
-  justify-content: space-between; /* Distribui os itens para encaixar perfeitamente */
+  justify-content: flex-start; /* Alterado de space-between para agrupar os itens */
 }
 
 .mobile-social-row {
   display: flex;
   justify-content: center;
-  gap: 2.5rem; /* Aumentei o espaço entre eles já que não tem mais círculo em volta */
+  gap: 2rem; /* Espaço um pouco menor entre eles */
   margin-bottom: 0;
-  margin-top: 1rem; /* Subiu os ícones um pouquinho */
+  margin-top: 1.5rem; /* Um espaço confortável, sem ficar exagerado */
 }
 
 .mobile-social-row a {
   color: #000;
-  font-size: 2.2rem; /* Ícones menores, apenas o glifo preto */
+  font-size: 1.6rem; /* Ícones menores, apenas o glifo preto */
   width: auto;
   height: auto;
   border: none; /* Remover o botão circular */
@@ -648,13 +587,13 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 0.5rem; /* Subiu a lista de botões/fotos um pouquinho */
+  margin-top: 0; /* Subiu a lista de botões/fotos um pouquinho */
 }
 
 .mobile-list-item {
   display: flex;
   align-items: center;
-  padding: 1.2rem 0; /* Menos padding vertical para botões */
+  padding: 0.7rem 0; /* Menos padding vertical para botões */
   border-top: 1px solid rgba(0,0,0,0.1);
   text-decoration: none;
   color: #000;
@@ -671,8 +610,8 @@
 }
 
 .item-thumb {
-  width: 70px; /* Levemente menor mas ainda grande */
-  height: 70px;
+  width: 55px; /* Reduzido para caber na tela */
+  height: 55px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 1.2rem;
@@ -693,14 +632,14 @@
   flex: 1;
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 0.95rem; /* Fonte um pouco menor */
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .item-number {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.3rem; /* Menor */
   font-weight: 300;
   font-style: italic;
   color: rgba(0, 0, 0, 0.25);
@@ -710,10 +649,11 @@
 .mobile-footer {
   width: 100%;
   text-align: center;
-  margin-top: 1rem; 
+  margin-top: auto; /* Empurra o rodapé para o final da tela */
+  padding-top: 2rem; /* Garante que tenha um espaço se a tela for pequena */
   padding-bottom: 0.5rem; /* Rodapé bem colado embaixo */
   font-family: var(--font-sans);
-  font-size: 1.1rem; /* Aumentado para máxima legibilidade */
+  font-size: 0.8rem; /* Reduzido para caber melhor */
   font-weight: 800; /* Mais grosso */
   color: rgba(0, 0, 0, 1); /* Preto absoluto para contraste total */
   text-transform: uppercase;
