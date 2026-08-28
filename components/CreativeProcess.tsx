@@ -23,9 +23,9 @@ const CreativeProcess: React.FC = () => {
         <div className="max-w-screen-3xl mx-auto">
             <div className="flex items-center gap-4 mb-8 md:mb-10">
                 <div className="w-2.5 h-2.5 border border-ink-medium dark:border-white/60 rounded-full"></div> 
-                <h3 className="font-sans text-xs tracking-[0.3em] uppercase font-bold text-ink-medium dark:text-white/80">
+                <h2 className="font-sans text-xs tracking-[0.3em] uppercase font-bold text-ink-medium dark:text-white/80">
                     O Processo Criativo
-                </h3>
+                </h2>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
@@ -44,13 +44,13 @@ const CreativeProcess: React.FC = () => {
                                 
                                 <div className="flex justify-between items-baseline">
                                     <div className="pr-4">
-                                        <h4 className={`text-fluid-h3 transition-all duration-500 ${
+                                        <h3 className={`text-fluid-h3 transition-all duration-500 ${
                                             isActive 
                                             ? 'font-serif italic font-light text-ink-black dark:text-white translate-x-3' 
-                                            : 'font-serif font-thin text-ink-medium/40 dark:text-gray-500 group-hover:text-ink-black'
+                                            : 'font-serif font-thin text-ink-medium/60 dark:text-gray-400 group-hover:text-ink-black'
                                         }`}>
                                             {item.titulo}
-                                        </h4>
+                                        </h3>
                                         <p className={`font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase mt-1 transition-all duration-300 ${
                                             isActive ? 'opacity-100 text-ink-medium dark:text-gray-300 translate-x-3' : 'opacity-0'
                                         }`}>

@@ -101,22 +101,22 @@ const Manifesto: React.FC = () => {
                     
                     {/* Item 1 */}
                     <div className="manifesto-card pb-12">
-                        <h4 className="font-sans text-[9px] md:text-[10px] tracking-[0.3em] uppercase font-bold text-ink-black dark:text-white mb-6 flex items-center gap-3">
-                            <span className="text-ink-medium/60">01</span> {manifesto.card1Titulo}
-                        </h4>
-                        <p className="font-serif italic text-lg md:text-xl leading-relaxed text-ink-dark/80 dark:text-gray-400 font-light">
+                        <h3 className="font-sans text-[9px] md:text-[10px] tracking-[0.3em] uppercase font-bold text-ink-black dark:text-white mb-6 flex items-center gap-3">
+                            <span className="text-ink-medium">01</span> {manifesto.card1Titulo}
+                        </h3>
+                        <p className="font-serif italic text-lg md:text-xl leading-relaxed text-ink-dark/90 dark:text-gray-300 font-light">
                             {manifesto.card1Texto}
                         </p>
                     </div>
 
-                    <div className="w-full h-px bg-ink-black/5 dark:bg-white/5 mb-12"></div>
+                    <div className="w-full h-px bg-ink-black/10 dark:bg-white/10 mb-12"></div>
 
                     {/* Item 2 */}
                     <div className="manifesto-card">
-                        <h4 className="font-sans text-[9px] md:text-[10px] tracking-[0.3em] uppercase font-bold text-ink-black dark:text-white mb-6 flex items-center gap-3">
-                            <span className="text-ink-medium/60">02</span> {manifesto.card2Titulo}
-                        </h4>
-                        <p className="font-serif italic text-lg md:text-xl leading-relaxed text-ink-dark/80 dark:text-gray-400 font-light">
+                        <h3 className="font-sans text-[9px] md:text-[10px] tracking-[0.3em] uppercase font-bold text-ink-black dark:text-white mb-6 flex items-center gap-3">
+                            <span className="text-ink-medium">02</span> {manifesto.card2Titulo}
+                        </h3>
+                        <p className="font-serif italic text-lg md:text-xl leading-relaxed text-ink-dark/90 dark:text-gray-300 font-light">
                             {manifesto.card2Texto}
                         </p>
                     </div>

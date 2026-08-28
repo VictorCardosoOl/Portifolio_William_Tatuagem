@@ -448,7 +448,13 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         </button>
       </header>
 
-      <aside id="staggered-menu-panel" ref={panelRef} className="staggered-menu-panel" aria-hidden={!open}>
+      <aside 
+        id="staggered-menu-panel" 
+        ref={panelRef} 
+        className="staggered-menu-panel" 
+        aria-hidden={!open}
+        inert={!open ? true : undefined}
+      >
         <div className="sm-panel-inner">
           <nav aria-label="Navegação principal">
             <ul className="sm-panel-list" role="list" data-numbering={displayItemNumbering || undefined}>
@@ -461,6 +467,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                       data-index={idx + 1}
                       data-tracking={`menu-principal-${it.label.toLowerCase()}`}
                       onClick={handleLinkClick}
+                      tabIndex={open ? 0 : -1}
                     >
                       <span className="sm-panel-itemLabel">{it.label}</span>
                     </a>
@@ -481,6 +488,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                         rel="noopener noreferrer" 
                         className="sm-socials-link"
                         data-tracking={`menu-social-${s.label.toLowerCase()}`}
+                        tabIndex={open ? 0 : -1}
                       >
                         {s.label}
                       </a>

@@ -13,9 +13,10 @@ const Preloader: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useGSAP(() => {
+    // Redução drástica para não prender o LCP em conexões móveis e Lighthouse
     const failsafe = setTimeout(() => {
         setIsVisible(false);
-    }, 4000);
+    }, 1500);
 
     const tl = gsap.timeline({
         onComplete: () => {
@@ -30,7 +31,7 @@ const Preloader: React.FC = () => {
         
         tl.to(svgPathRef.current, {
             strokeDashoffset: 0,
-            duration: 1.8,
+            duration: 0.8,
             ease: "power2.inOut"
         }, 0);
     }
@@ -38,24 +39,23 @@ const Preloader: React.FC = () => {
     if (barRef.current) {
          tl.to(barRef.current, {
             width: '100%',
-            duration: 2,
+            duration: 0.8,
             ease: 'power2.inOut'
         }, 0);
     }
 
     tl.to('.preloader-element', {
         opacity: 0,
-        y: -20,
-        duration: 0.5,
+        y: -15,
+        duration: 0.3,
         ease: 'power2.in'
-    }, "-=0.3");
+    }, "-=0.2");
 
     if (containerRef.current) {
          tl.to(containerRef.current, {
             yPercent: -100,
-            duration: 1.2,
-            ease: 'expo.inOut',
-            delay: 0.1
+            duration: 0.6,
+            ease: 'expo.inOut'
         });
     }
 
@@ -67,11 +67,11 @@ const Preloader: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
         setCounter(prev => {
-            if (prev < 100) return prev + 1;
+            if (prev < 100) return prev + 4;
             clearInterval(interval);
             return 100;
         });
-    }, 20);
+    }, 15);
 
     return () => {
         clearInterval(interval);

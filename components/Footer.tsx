@@ -35,13 +35,11 @@ const Footer: React.FC = () => {
             </filter>
             <rect width="100%" height="100%" filter="url(#noiseFilterFooter)" />
         </svg>
-      </div>
-
-      {/* 2. BACKGROUND TYPOGRAPHY - Raised and Darkened */}
-      <div className="absolute bottom-16 md:bottom-12 left-0 w-full overflow-hidden leading-none select-none pointer-events-none z-0 flex justify-center">
-         <h1 className="font-serif font-bold text-fluid-hero text-[#1A1A1A] opacity-[0.08] dark:opacity-[0.1] text-center whitespace-nowrap tracking-tighter leading-[0.8]">
+      </div>      {/* 2. BACKGROUND TYPOGRAPHY - Raised and Darkened */}
+      <div className="absolute bottom-16 md:bottom-12 left-0 w-full overflow-hidden leading-none select-none pointer-events-none z-0 flex justify-center" aria-hidden="true">
+         <span className="font-serif font-bold text-fluid-hero text-[#1A1A1A] opacity-[0.08] dark:opacity-[0.1] text-center whitespace-nowrap tracking-tighter leading-[0.8] block">
             SIQUEIRA
-         </h1>
+         </span>
       </div>
 
       {/* 3. MAIN GRID CONTENT */}
@@ -54,24 +52,24 @@ const Footer: React.FC = () => {
               <h2 className="font-serif text-fluid-h3 text-[#1A1A1A] dark:text-[#fafaf9] tracking-tight mb-2">
                 Studio <br /> W. Siqueira
               </h2>
-              <span className="font-serif italic text-xl text-[#685A4F] dark:text-[#a8a29e]">
+              <span className="font-serif italic text-xl text-[#52453B] dark:text-[#d6d3d1]">
                 Fine Line & Art
               </span>
             </div>
             <div className="mt-8">
-               <p className="font-sans text-xs tracking-[0.25em] uppercase text-[#8C8C8C] dark:text-[#78716c] font-bold mb-2">
+               <p className="font-sans text-xs tracking-[0.25em] uppercase text-[#595959] dark:text-[#a8a29e] font-bold mb-2">
                  Estabelecido
                </p>
-               <p className="font-sans text-sm md:text-base text-[#3D3D3D] dark:text-[#d6d3d1]">São Paulo, BR, {currentYear}</p>
+               <p className="font-sans text-sm md:text-base text-[#1A1A1A] dark:text-[#d6d3d1]">São Paulo, BR, {currentYear}</p>
             </div>
           </div>
 
           {/* COL 2: LOCATION & CTA */}
           <div className="p-10 md:p-14 lg:p-16 border-b md:border-b-0 lg:border-r border-[#1A1A1A]/10 dark:border-white/10 flex flex-col justify-between min-h-[320px] group hover:bg-[#E8E6E1]/50 dark:hover:bg-[#1c1917]/30 transition-colors duration-500 cursor-pointer">
             <div className="flex flex-col gap-4">
-               <div className="flex items-start gap-3 text-[#685A4F] dark:text-[#a8a29e]">
+               <div className="flex items-start gap-3 text-[#52453B] dark:text-[#d6d3d1]">
                   <MapPin size={18} className="mt-1 shrink-0" aria-hidden="true" />
-                  <address className="not-italic font-sans text-base leading-relaxed text-[#3D3D3D] dark:text-[#d6d3d1]">
+                  <address className="not-italic font-sans text-base leading-relaxed text-[#1A1A1A] dark:text-[#d6d3d1]">
                     Pinheiros<br/>
                     São Paulo - SP<br/>
                     Brasil
@@ -91,7 +89,7 @@ const Footer: React.FC = () => {
 
           {/* COL 3: SOCIALS */}
           <div className="p-10 md:p-14 lg:p-16 border-b md:border-b-0 border-r-0 md:border-r border-[#1A1A1A]/10 dark:border-white/10 flex flex-col min-h-[320px] hover:bg-[#E8E6E1]/50 dark:hover:bg-[#1c1917]/30 transition-colors duration-500">
-             <span className="font-sans text-xs tracking-[0.25em] uppercase text-[#8C8C8C] dark:text-[#78716c] font-bold mb-8" id="footer-social-heading">
+             <span className="font-sans text-xs tracking-[0.25em] uppercase text-[#595959] dark:text-[#a8a29e] font-bold mb-8" id="footer-social-heading">
                Conexões
              </span>
              <nav aria-labelledby="footer-social-heading">
@@ -104,12 +102,12 @@ const Footer: React.FC = () => {
                        rel="noopener noreferrer"
                        data-tracking={`footer-social-${social.nome.toLowerCase()}`}
                        aria-label={`Acessar ${social.nome}`}
-                       className="group/link flex items-center justify-between py-2 border-b border-[#1A1A1A]/10 dark:border-[#292524] hover:border-[#685A4F] dark:hover:border-[#a8a29e] transition-colors duration-300"
+                       className="group/link flex items-center justify-between py-2 border-b border-[#1A1A1A]/10 dark:border-[#292524] hover:border-[#52453B] dark:hover:border-[#d6d3d1] transition-colors duration-300"
                      >
-                       <span className="font-sans text-xs uppercase tracking-widest text-[#3D3D3D] dark:text-[#d6d3d1] group-hover/link:text-[#1A1A1A] dark:group-hover/link:text-white transition-colors">
+                       <span className="font-sans text-xs uppercase tracking-widest text-[#1A1A1A] dark:text-[#d6d3d1] group-hover/link:text-[#1A1A1A] dark:group-hover/link:text-white transition-colors">
                          {social.nome}
                        </span>
-                       <span className="text-[#8C8C8C] dark:text-[#57534e] group-hover/link:text-[#1A1A1A] dark:group-hover/link:text-white transition-colors duration-300 transform group-hover/link:rotate-45" aria-hidden="true">
+                       <span className="text-[#595959] dark:text-[#a8a29e] group-hover/link:text-[#1A1A1A] dark:group-hover/link:text-white transition-colors duration-300 transform group-hover/link:rotate-45" aria-hidden="true">
                           {getIcon(social.nome)}
                        </span>
                      </a>
@@ -122,16 +120,16 @@ const Footer: React.FC = () => {
           {/* COL 4: NAVIGATION & CREDITS */}
           <div className="p-10 md:p-14 lg:p-16 flex flex-col justify-between min-h-[320px] hover:bg-[#E8E6E1]/50 dark:hover:bg-[#1c1917]/30 transition-colors duration-500">
              <div>
-               <span className="font-sans text-xs tracking-[0.25em] uppercase text-[#8C8C8C] dark:text-[#78716c] font-bold mb-8 block" id="footer-nav-heading">
+               <span className="font-sans text-xs tracking-[0.25em] uppercase text-[#595959] dark:text-[#a8a29e] font-bold mb-8 block" id="footer-nav-heading">
                  Menu
                </span>
                <nav className="flex flex-col gap-3" aria-labelledby="footer-nav-heading">
                  {navLinks.map((link, i) => (
                    <a 
                      key={i} 
-                     href={link.href}
+                     href={link.href} 
                      data-tracking={`footer-nav-${link.label.toLowerCase()}`}
-                     className="font-serif text-2xl text-[#685A4F] dark:text-[#a8a29e] hover:text-[#1A1A1A] dark:hover:text-[#fafaf9] hover:translate-x-2 transition-all duration-300 block w-fit"
+                     className="font-serif text-2xl text-[#52453B] dark:text-[#d6d3d1] hover:text-[#1A1A1A] dark:hover:text-[#fafaf9] hover:translate-x-2 transition-all duration-300 block w-fit"
                    >
                      {link.label}
                    </a>
@@ -141,18 +139,18 @@ const Footer: React.FC = () => {
              
              <div className="mt-12 pt-6 border-t border-[#1A1A1A]/10 dark:border-[#292524] flex justify-between items-end">
                 <div className="flex flex-col gap-1">
-                   <span className="font-sans text-xs uppercase tracking-widest text-[#8C8C8C] dark:text-[#57534e]">Dev & Design</span>
+                   <span className="font-sans text-xs uppercase tracking-widest text-[#595959] dark:text-[#a8a29e]">Dev & Design</span>
                    <a 
                      href="https://victor-cardoso-dev.vercel.app/"
                      target="_blank"
                      rel="noopener noreferrer"
                      aria-label="Portfólio de Victor Cardoso"
-                     className="font-sans text-xs font-bold uppercase tracking-widest text-[#1A1A1A] dark:text-[#a8a29e] hover:opacity-60 transition-opacity"
+                     className="font-sans text-xs font-bold uppercase tracking-widest text-[#1A1A1A] dark:text-[#fafaf9] hover:opacity-60 transition-opacity"
                    >
                      Victor Cardoso
                    </a>
                 </div>
-                <Copyright size={14} className="text-[#8C8C8C] dark:text-[#57534e]" aria-hidden="true" />
+                <Copyright size={14} className="text-[#595959] dark:text-[#a8a29e]" aria-hidden="true" />
              </div>
           </div>
 
@@ -161,15 +159,15 @@ const Footer: React.FC = () => {
       
       {/* BOTTOM BAR */}
       <div className="relative z-10 border-t border-[#1A1A1A]/10 dark:border-[#292524] py-6 px-6 md:px-12 bg-[#F6F5F0] dark:bg-[#0c0a09]">
-        <div className="max-w-screen-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs uppercase tracking-[0.2em] font-sans text-[#8C8C8C] dark:text-[#57534e]">
+        <div className="max-w-screen-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs uppercase tracking-[0.2em] font-sans text-[#595959] dark:text-[#a8a29e]">
            
            <span className="text-center md:text-left">
              © {currentYear} William Siqueira Tattoo. Todos os direitos reservados.
            </span>
 
            <div className="flex gap-6">
-             <button type="button" data-tracking="footer-legal-privacy" className="hover:text-[#1A1A1A] dark:hover:text-[#a8a29e] transition-colors cursor-pointer">Privacy Policy</button>
-             <button type="button" data-tracking="footer-legal-terms" className="hover:text-[#1A1A1A] dark:hover:text-[#a8a29e] transition-colors cursor-pointer">Terms of Use</button>
+             <button type="button" data-tracking="footer-legal-privacy" className="hover:text-[#1A1A1A] dark:hover:text-[#fafaf9] transition-colors cursor-pointer">Privacy Policy</button>
+             <button type="button" data-tracking="footer-legal-terms" className="hover:text-[#1A1A1A] dark:hover:text-[#fafaf9] transition-colors cursor-pointer">Terms of Use</button>
            </div>
         </div>
       </div>

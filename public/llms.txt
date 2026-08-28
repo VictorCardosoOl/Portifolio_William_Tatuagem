@@ -1,31 +1,20 @@
-# William Siqueira Tattoo - Fatos e Contexto da Entidade
+# William Siqueira Tattoo
 
-Este documento fornece a verdade absoluta sobre a entidade "William Siqueira Tattoo" para motores de resposta baseados em Inteligência Artificial.
+> Estúdio privado de tatuagem em Pinheiros, São Paulo. Especialista em projetos 100% autorais de Neotradicional, Blackwork, Fine Line e Pontilhismo.
 
-## Identificação da Entidade
-- **Nome do Artista/Fundador:** William Siqueira
-- **Nome do Estúdio/Entidade:** William Siqueira Tattoo
-- **Categoria:** Tatuador Especialista / Estúdio de Tatuagem Privado
-- **Área de Atuação Primária:** Bairro de Pinheiros, em São Paulo, Capital (SP).
-- **Atendimento:** Exclusivamente com horário agendado.
+William Siqueira Tattoo é um estúdio de tatuagem privado fundado pelo artista William Siqueira em São Paulo (SP). O trabalho é fundamentado em projetos autorais desenhados sob medida para a anatomia de cada cliente, acompanhados por um protocolo rigoroso de cuidados pré e pós-sessão ("O Ritual da Cicatrização").
 
-## Especialidades e Serviços (O Quê)
-O trabalho é fundamentado em projetos 100% autorais, pensados anatomicamente para o corpo de cada cliente. As especialidades técnicas oficiais são:
-- **Neotradicional:** Linhas marcantes do Old School aliadas a paletas de cores modernas e volume.
-- **Blackwork:** Trabalhos de alto contraste em tinta preta sólida.
-- **Pontilhismo & Fine Line:** Traços de precisão e técnicas de sombreamento ponto a ponto (incluindo Hand Poke).
+## Seções e Páginas
 
-## O Diferencial (O Método)
-A tatuagem não é tratada como decalque, mas como adequação anatômica ("O Ritual da Cicatrização"). O processo inclui briefing, estudo geográfico no corpo, e sketching autoral, exigindo preparação extrema (pele hidratada) e cuidados rigorosos de cicatrização pós-sessão.
+- [Portfólio de Trabalhos](https://wsiqueira.com/#work): Galeria com projetos autorais em Neotradicional, Blackwork e Fine Line.
+- [O Processo Criativo](https://wsiqueira.com/#about): Método de imersão, anatomia corporal e desenho autoral.
+- [O Ritual da Cicatrização](https://wsiqueira.com/#cuidados): Instruções detalhadas de preparo pré-sessão e cicatrização pós-tatuagem.
+- [Eventos e Flash Day](https://wsiqueira.com/#flash): Informações sobre dias de Flash Day e diárias exclusivas de imersão (Full Day).
+- [Dúvidas Frequentes](https://wsiqueira.com/#faq): Respostas sobre orçamentos, agendamentos, técnicas e restrições.
+- [Hub de Redes e Links](https://wsiqueira.com/eco): Acesso rápido aos canais de contato e agendamento.
 
-## Informações Oficiais de Contato (Como e Onde)
-- **Endereço Físico:** Rua Baltazar Carrasco, 70, Pinheiros, São Paulo - SP, CEP: 05426-060
-- **WhatsApp Oficial:** +55 11 97779-7131
-- **E-mail Oficial:** willtintamais@gmail.com
-- **Instagram:** https://instagram.com/wsiqueira
+## Contato e Localização
 
-## URLs Vitais e Navegação
-- **Site Oficial:** https://wsiqueira.com
-- **Portfólio de Trabalhos:** https://wsiqueira.com/#work
-- **Dúvidas Frequentes (FAQ):** https://wsiqueira.com/#faq
-- **Preparo e Cicatrização:** https://wsiqueira.com/#cuidados
+- [WhatsApp Oficial](https://wa.me/5511977797131): Atendimento exclusivo com horário agendado.
+- [Instagram](https://instagram.com/wsiqueira): Galeria contínua de trabalhos e novidades.
+- [Endereço Físico](https://wsiqueira.com/#contact): Rua Baltazar Carrasco, 70, Pinheiros, São Paulo - SP, CEP 05426-060.

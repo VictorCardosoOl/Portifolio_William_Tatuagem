@@ -1,4 +1,36 @@
+# ==========================================
+# Regras Gerais de Indexação (Motores de Busca)
+# ==========================================
 User-agent: *
 Allow: /
 
+# Bloqueio de rotas internas, APIs, build e lixo de query strings
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*?*
+
+# ==========================================
+# Permissões Explícitas para Agentes e Crawlers de IA
+# ==========================================
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# ==========================================
+# Localização do Sitemap
+# ==========================================
 Sitemap: https://wsiqueira.com/sitemap.xml

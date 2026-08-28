@@ -97,10 +97,10 @@ const FlashSection: React.FC = () => {
                 Flash Day
               </div>
 
-              <h2 className="font-serif font-light text-fluid-h3 leading-[0.9] text-white mb-4 drop-shadow-lg">
+              <h3 className="font-serif font-light text-fluid-h3 leading-[0.9] text-white mb-4 drop-shadow-lg">
                 Sessões Rápidas <br />
                 <span className="italic font-thin text-gray-200">Catálogo Pronto</span>
-              </h2>
+              </h3>
 
               <p className="font-sans text-sm text-gray-100 leading-relaxed tracking-wide max-w-sm mb-8 font-light drop-shadow-md">
                 O estúdio abre as portas para o público. Desenhos autorais pré-definidos, 
@@ -128,7 +128,7 @@ const FlashSection: React.FC = () => {
                 </div>
               </div>
 
-              <a href="/404" className="bg-white text-black px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
+              <a href="#contact" className="bg-white text-black px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
                 Ver Designs
                 <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
               </a>
@@ -154,10 +154,10 @@ const FlashSection: React.FC = () => {
                 Experiência VIP
               </div>
 
-              <h2 className="font-serif font-light text-4xl md:text-5xl leading-[0.9] text-white mb-4">
+              <h3 className="font-serif font-light text-4xl md:text-5xl leading-[0.9] text-white mb-4">
                 Full Day <br />
                 <span className="italic font-thin text-gray-400">& Imersão Total</span>
-              </h2>
+              </h3>
 
               <p className="font-sans text-sm text-gray-300 leading-relaxed tracking-wide max-w-sm mb-8 font-light">
                 "Aluga" o artista por um dia inteiro. Foco absoluto no seu projeto, sem pressa. 
@@ -185,7 +185,7 @@ const FlashSection: React.FC = () => {
                 </div>
               </div>
 
-              <a href="/404" className="bg-transparent border border-white text-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
+              <a href="#contact" className="bg-transparent border border-white text-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
                 Solicitar Orçamento
                 <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
               </a>

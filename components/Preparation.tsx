@@ -63,9 +63,9 @@ const PreparationAndAftercare: React.FC = () => {
             <div className="lg:w-5/12 flex flex-col gap-8 lg:sticky lg:top-32 h-max">
                 <div className="prep-anim flex items-center gap-4">
                     <div className="w-2.5 h-2.5 border border-ink-medium dark:border-white/60 rounded-full shrink-0"></div> 
-                    <h3 className="font-sans text-xs tracking-[0.3em] uppercase font-bold text-ink-medium dark:text-white/80">
+                    <span className="font-sans text-xs tracking-[0.3em] uppercase font-bold text-ink-medium dark:text-white/80">
                         Protocolo do Estúdio
-                    </h3>
+                    </span>
                 </div>
                 
                 <h2 className="prep-anim font-serif italic font-light text-5xl md:text-6xl text-ink-black dark:text-white leading-[1.1]">
@@ -113,9 +113,9 @@ const PreparationAndAftercare: React.FC = () => {
                         0{activeTab === 'pre' ? '1' : '2'}
                     </div>
 
-                    <h4 className="tab-content-anim opacity-0 font-sans text-xs tracking-[0.25em] uppercase font-bold text-ink-black dark:text-white mb-12 border-b border-ink-black/10 dark:border-white/10 pb-6 relative z-10">
+                    <h3 className="tab-content-anim opacity-0 font-sans text-xs tracking-[0.25em] uppercase font-bold text-ink-black dark:text-white mb-12 border-b border-ink-black/10 dark:border-white/10 pb-6 relative z-10">
                         {activeTab === 'pre' ? 'A Base (Preparação da Tela)' : 'O Ritual (Cicatrização e Reparo)'}
-                    </h4>
+                    </h3>
 
                     <div className="flex flex-col gap-8 relative z-10">
                         {activeData.map((item, idx) => (
