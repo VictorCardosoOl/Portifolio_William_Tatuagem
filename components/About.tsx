@@ -100,7 +100,7 @@ const About: React.FC = () => {
 
             {/* CTA Button */}
             <div className="about-cta flex justify-end">
-                <a href="#concept" data-tracking="about-cta-processo" className="group inline-flex items-center gap-3 font-sans text-xs font-bold tracking-[0.2em] uppercase text-accent-sepia dark:text-gray-400 hover:text-ink-black dark:hover:text-white transition-colors">
+                <a href="#about" data-tracking="about-cta-processo" className="group inline-flex items-center gap-3 font-sans text-xs font-bold tracking-[0.2em] uppercase text-accent-sepia dark:text-gray-400 hover:text-ink-black dark:hover:text-white transition-colors">
                     Entenda o Processo 
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </a>

@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
 import Script from 'next/script';
-import { initLiquidGlass } from './liquid-glass';
 import './eco.css';
 import gsap from 'gsap';
 import Lenis from 'lenis';
@@ -17,17 +16,14 @@ declare global {
 
 export default function EcoPage() {
   useEffect(() => {
-    // Lenis / AppManager logic from main.ts
     const mediaQueries = {
       mobile: window.matchMedia('(max-width: 768px)'),
       reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
     };
 
-    let lenisInstance: any = null;
-    let cleanupLiquidGlass: any = null;
+    let lenisInstance: Lenis | null = null;
 
     const bootstrap = () => {
-      // Init Scroll
       const prefersReduced = mediaQueries.reducedMotion?.matches ?? false;
       const isMobile = mediaQueries.mobile?.matches ?? false;
 
@@ -41,9 +37,7 @@ export default function EcoPage() {
         gsap.ticker.lagSmoothing(0);
       }
 
-      // Entrance Sequence
       const ANIMATION_CONFIG = {
-        EASE_EXPO: 'power4.out',
         EASE_ELASTIC: 'elastic.out(1, 0.85)',
         STAGGER: 0.12,
       };
@@ -64,8 +58,6 @@ export default function EcoPage() {
           });
         }
       }
-
-      cleanupLiquidGlass = initLiquidGlass();
     };
 
     bootstrap();
@@ -74,9 +66,6 @@ export default function EcoPage() {
       if (lenisInstance) {
         gsap.ticker.remove((time) => lenisInstance?.raf(time * 1000));
         lenisInstance.destroy();
-      }
-      if (cleanupLiquidGlass) {
-        cleanupLiquidGlass();
       }
       document.documentElement.classList.remove('fallback-scroll', 'eco-page-html');
     };
