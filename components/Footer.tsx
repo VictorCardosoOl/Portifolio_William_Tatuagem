@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { TEXTOS_GERAIS, REDES_SOCIAIS } from '@/config/data';
+import { TEXTOS_GERAIS, REDES_SOCIAIS, getWhatsAppUrl } from '@/config/data';
 import { ArrowUpRight, Instagram, Mail, MessageCircle, MapPin, Copyright } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -78,7 +78,14 @@ const Footer: React.FC = () => {
             </div>
             
             <div className="mt-8">
-               <a href="#contact" data-tracking="cta-footer-agendar" aria-label="Agendar Visita com William Siqueira" className="flex items-center justify-between group-hover:px-2 transition-all duration-500 w-full">
+               <a 
+                 href={getWhatsAppUrl("Olá, William! Gostaria de agendar uma visita ao seu estúdio em Pinheiros.")} 
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 data-tracking="cta-footer-agendar" 
+                 aria-label="Agendar Visita com William Siqueira no WhatsApp" 
+                 className="flex items-center justify-between group-hover:px-2 transition-all duration-500 w-full"
+               >
                  <span className="font-serif italic text-2xl text-[#1A1A1A] dark:text-[#fafaf9]">Agendar Visita</span>
                  <div className="w-10 h-10 rounded-full border border-[#1A1A1A]/20 dark:border-[#44403c] flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-white dark:group-hover:bg-[#fafaf9] dark:group-hover:text-black transition-all duration-300">
                     <ArrowUpRight size={18} aria-hidden="true" />

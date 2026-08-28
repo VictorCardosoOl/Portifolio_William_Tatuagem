@@ -1,18 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
-import Script from 'next/script';
 import './eco.css';
 import gsap from 'gsap';
 import Lenis from 'lenis';
-import { REDES_SOCIAIS } from '@/config/data';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'ion-icon': any;
-    }
-  }
-}
+import { REDES_SOCIAIS, getWhatsAppUrl } from '@/config/data';
+import { Instagram, MessageCircle, Mail } from 'lucide-react';
 
 export default function EcoPage() {
   useEffect(() => {
@@ -73,10 +65,6 @@ export default function EcoPage() {
 
   return (
     <div className="eco-page-body">
-      {/* IonIcons CDN */}
-      <Script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" strategy="afterInteractive" />
-      <Script noModule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" strategy="afterInteractive" />
-      
       <a href="#main-content" className="skip-link">Pular para o conteúdo principal</a>
 
       <main id="main-content" className="app-container" style={{ margin: '0 auto' }}>
@@ -114,23 +102,39 @@ export default function EcoPage() {
                 <div className="item-text">SITE OFICIAL / PORTFÓLIO</div>
                 <div className="item-number">01</div>
               </a>
-              <a href={REDES_SOCIAIS.find(r => r.nome === 'WhatsApp')?.url || '#'} target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
+              <a 
+                href={getWhatsAppUrl("Olá, William! Vim pelo link da bio e gostaria de consultar a agenda e fazer um orçamento.")} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mobile-list-item anim-el"
+              >
                 <div className="item-thumb"><img src="/about/centro.webp" alt="WhatsApp" /></div>
                 <div className="item-text">AGENDA / ORÇAMENTO</div>
                 <div className="item-number">02</div>
               </a>
-              <a href={REDES_SOCIAIS.find(r => r.nome === 'Instagram')?.url || '#'} target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
+              <a href="https://instagram.com/wsiqueira" target="_blank" rel="noopener noreferrer" className="mobile-list-item anim-el">
                 <div className="item-thumb"><img src="/about/esquerda.webp" alt="Instagram" /></div>
                 <div className="item-text">INSTAGRAM</div>
                 <div className="item-number">03</div>
               </a>
             </div>
 
-            {/* Ícones Sociais (Movidos para debaixo dos links) */}
+            {/* Ícones Sociais Nativos */}
             <div className="mobile-social-row anim-el">
-              <a href={REDES_SOCIAIS.find(r => r.nome === 'Instagram')?.url || '#'} target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "logo-instagram" })}</a>
-              <a href={REDES_SOCIAIS.find(r => r.nome === 'WhatsApp')?.url || '#'} target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "logo-whatsapp" })}</a>
-              <a href={REDES_SOCIAIS.find(r => r.nome === 'E-mail')?.url || '#'} target="_blank" rel="noopener noreferrer">{React.createElement("ion-icon", { name: "mail" })}</a>
+              <a href="https://instagram.com/wsiqueira" target="_blank" rel="noopener noreferrer" aria-label="Instagram de William Siqueira">
+                <Instagram size={24} strokeWidth={1.5} />
+              </a>
+              <a 
+                href={getWhatsAppUrl("Olá, William! Gostaria de conversar sobre uma tatuagem.")} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="WhatsApp de William Siqueira"
+              >
+                <MessageCircle size={24} strokeWidth={1.5} />
+              </a>
+              <a href="mailto:willtintamais@gmail.com" aria-label="E-mail de William Siqueira">
+                <Mail size={24} strokeWidth={1.5} />
+              </a>
             </div>
 
             {/* Copyright */}

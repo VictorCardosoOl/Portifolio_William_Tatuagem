@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
-import { TEXTOS_GERAIS } from '@/config/data';
+import { TEXTOS_GERAIS, getWhatsAppUrl } from '@/config/data';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -73,7 +73,9 @@ const Hero: React.FC = () => {
          <div className="mt-6 h-px w-1/2 bg-primary dark:bg-white ml-auto anim-line"></div>
          <div className="hero-anim-text mt-8 flex justify-end">
             <a 
-              href="#contact" 
+              href={getWhatsAppUrl("Olá, William! Gostaria de agendar uma sessão de tatuagem.")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-ink-black dark:bg-white text-paper-light dark:text-ink-black px-6 py-3 font-sans text-xs uppercase tracking-widest font-bold hover:bg-ink-dark transition-colors"
               data-tracking="hero-cta-agendamento"
             >

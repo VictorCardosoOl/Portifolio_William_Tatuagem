@@ -17,7 +17,7 @@ export const TEXTOS_GERAIS = {
   },
   citacaoImagem: "\"O corpo não é uma tela, mas uma paisagem.\"",
   tituloFlash: "Flash\nDay",
-  dataProximoEvento: "16 de Novembro, 2024",
+  dataProximoEvento: "Agenda aberta neste mês",
   tituloPosCuidado: "A longevidade da sua arte depende da sua dedicação.",
   rodapeChamada: "Vamos conversar sobre a próxima marca que você quer carregar para sempre.", 
   rodapeTexto: "O suporte pós-tatuagem é vitalício. Se notar qualquer anormalidade, entre em contato imediatamente.",
@@ -55,22 +55,6 @@ export const TEXTOS_GERAIS = {
       {
         url: "/about/direita.webp",
         alt: "Ambiente do estúdio com arte na parede e atmosfera calma"
-      }
-    ]
-  },
-  concept: {
-    titulo: "CONCEPT",
-    subtitulo: "O Manifesto do Processo",
-    textoPrincipal: "Não imponho formas. Descubro formas. Cada corpo tem sua geografia, curvas, texturas, cicatrizes, histórias. Minha tatuagem é um mapa que respeita o território.",
-    textoSecundario: "A pele me conta uma história. Eu apenas a traduzo em linhas. Escuto o silêncio entre as palavras do cliente para encontrar a imagem que já existe, latente, esperando para emergir.",
-    imagens: [
-      {
-        url: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop",
-        alt: "Esboço artístico em papel texturizado"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?q=80&w=800&auto=format&fit=crop",
-        alt: "Textura detalhada de tinta preta sobre pele"
       }
     ]
   }
@@ -351,11 +335,18 @@ export const ITENS_FAQ: FAQItem[] = [
 
 export const WHATSAPP_PHONE = "5511977797131";
 
+/**
+ * Constrói a URL do WhatsApp com mensagem contextual codificada em UTF-8
+ */
+export function getWhatsAppUrl(mensagem: string = 'Olá, William! Gostaria de tirar dúvidas sobre o seu trabalho.'): string {
+  return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(mensagem)}`;
+}
+
 // ==========================================
 // REDES SOCIAIS
 // ==========================================
 export const REDES_SOCIAIS: LinkSocial[] = [
-  { nome: 'WhatsApp', url: `https://wa.me/${WHATSAPP_PHONE}?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento.` },
+  { nome: 'WhatsApp', url: getWhatsAppUrl('Olá, William! Gostaria de fazer um orçamento para minha tatuagem.') },
   { nome: 'Instagram', url: 'https://instagram.com/wsiqueira' },
   { nome: 'E-mail', url: 'mailto:willtintamais@gmail.com' },
 ];

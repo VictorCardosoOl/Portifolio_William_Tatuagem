@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { PORTFOLIO_ITEMS } from '@/config/data';
+import { PORTFOLIO_ITEMS, getWhatsAppUrl } from '@/config/data';
 import { PortfolioItem } from '@/config/types';
 import { X, ArrowRight, ArrowDown } from 'lucide-react';
 import Lenis from 'lenis';
@@ -175,10 +175,15 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ item, onClose }) =
               </div>
 
               <div className="pt-12 lg:pt-0 modal-text-anim">
-                <button className="w-full bg-ink-black dark:bg-white text-paper-light dark:text-ink-black py-4 px-6 flex justify-between items-center group hover:bg-[#333] dark:hover:bg-[#ccc] transition-colors" type="button">
+                <a 
+                  href={getWhatsAppUrl(`Olá, William! Vi o projeto "${item.title}" (${item.placement}) no portfólio e gostaria de solicitar um agendamento.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-ink-black dark:bg-white text-paper-light dark:text-ink-black py-4 px-6 flex justify-between items-center group hover:bg-[#333] dark:hover:bg-[#ccc] transition-colors"
+                >
                     <span className="font-sans text-xs font-bold uppercase tracking-[0.2em]">Solicitar Agendamento</span>
                     <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-                </button>
+                </a>
               </div>
             </div>
 

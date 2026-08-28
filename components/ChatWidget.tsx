@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
-import { WHATSAPP_PHONE } from '@/config/data';
+import { getWhatsAppUrl } from '@/config/data';
 
 const ChatWidget: React.FC = () => {
-  const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=Olá%2C%20gostaria%20de%20fazer%20um%20orçamento.`;
+  const whatsappUrl = getWhatsAppUrl('Olá, William! Gostaria de fazer um orçamento para minha tatuagem.');
 
   return (
     <a

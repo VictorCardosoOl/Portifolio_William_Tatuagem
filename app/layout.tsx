@@ -134,7 +134,7 @@ const jsonLd = {
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-2MN936M2BK";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export default function RootLayout({
   children,
@@ -146,7 +146,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
         />
       </head>
       <body className="bg-paper-light dark:bg-paper-dark text-ink-black dark:text-gray-200 transition-colors duration-500 antialiased selection:bg-ink-black selection:text-paper-light dark:selection:bg-paper-light dark:selection:text-ink-black overflow-x-hidden font-sans">

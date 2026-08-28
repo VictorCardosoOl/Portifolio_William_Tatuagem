@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { Zap, Crown, CheckCircle2, Calendar, ArrowRight } from 'lucide-react';
-import { TEXTOS_GERAIS } from '@/config/data';
+import { TEXTOS_GERAIS, getWhatsAppUrl } from '@/config/data';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -121,14 +121,19 @@ const FlashSection: React.FC = () => {
               <div>
                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-300 mb-1 drop-shadow-md">
                   <Calendar size={12} />
-                  Próxima Data:
+                  Status:
                 </div>
                 <div className="font-serif italic text-2xl text-white drop-shadow-lg">
-                  15 . OUT
+                  Agenda Aberta
                 </div>
               </div>
 
-              <a href="#contact" className="bg-white text-black px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
+              <a 
+                href={getWhatsAppUrl("Olá, William! Gostaria de consultar os desenhos e informações para o Flash Day.")} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors flex items-center gap-3 group w-full md:w-auto justify-center"
+              >
                 Ver Designs
                 <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
               </a>
@@ -185,7 +190,12 @@ const FlashSection: React.FC = () => {
                 </div>
               </div>
 
-              <a href="#contact" className="bg-transparent border border-white text-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors flex items-center gap-3 group w-full md:w-auto justify-center">
+              <a 
+                href={getWhatsAppUrl("Olá, William! Gostaria de solicitar um orçamento para uma experiência Full Day (imersão/fechamento).")} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-transparent border border-white text-white px-5 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors flex items-center gap-3 group w-full md:w-auto justify-center"
+              >
                 Solicitar Orçamento
                 <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
               </a>

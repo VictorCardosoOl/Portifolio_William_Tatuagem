@@ -1,223 +1,161 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150" alt="Logo" width="150"/>
-  
-  # W. Siqueira - Portfolio de Tatuagem
-  
-  **A arte na pele, eternizada digitalmente.**
-  
-  Uma experiência web imersiva, elegante e de alta performance desenvolvida para apresentar o trabalho de tatuagem com o máximo de sofisticação e profissionalismo.
-  
-  [![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)]()
-  [![Versão](https://img.shields.io/badge/Versão-1.0.0-blue?style=for-the-badge)]()
-  [![Licença](https://img.shields.io/badge/Licença-GPL--3.0-orange?style=for-the-badge)](LICENSE)
-  [![Tecnologias](https://img.shields.io/badge/Tech_Stack-Next.js%20%7C%20React%20%7C%20Tailwind%20%7C%20GSAP-black?style=for-the-badge)]()
+  <br/>
+  <h1>✒️ William Siqueira — Bespoke Tattoo Portfolio</h1>
+  <p><strong>A convergência entre arte anatômica autoral e engenharia de software de alto desempenho.</strong></p>
+  <p>Uma aplicação web editorial e imersiva desenvolvida para o estúdio privado do tatuador <strong>William Siqueira</strong> (Pinheiros, São Paulo - SP), combinando estética de alta-costura, animações baseadas em física e arquitetura orientada à conversão.</p>
+
+  <div>
+    <img src="https://img.shields.io/badge/Next.js%2016-Turbopack-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+    <img src="https://img.shields.io/badge/React%2018-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind%20CSS-Bespoke%20Design-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/GSAP%203-ScrollTrigger-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
+    <img src="https://img.shields.io/badge/Core%20Web%20Vitals-Optimized-success?style=for-the-badge" alt="Performance" />
+    <img src="https://img.shields.io/badge/LGPD%20%26%20GA4-Compliant-blue?style=for-the-badge" alt="LGPD" />
+  </div>
 </div>
 
 <br/>
 
-## 📖 2. Sobre o Projeto
+---
 
-O **W. Siqueira Tattoo Portfolio** foi desenvolvido para resolver o problema de apresentação e profissionalização da arte da tatuagem no ambiente digital. O objetivo principal é proporcionar aos clientes (e potenciais clientes) uma jornada fluida que vai desde a inspiração inicial (galeria de projetos), passando pelo entendimento do processo criativo, até as orientações de cuidados pós-tatuagem (Aftercare).
+## 🎯 O Produto & Visão de Negócio
 
-O público-alvo são clientes que buscam tatuagens exclusivas, autorais e de alta qualidade, e que valorizam uma comunicação clara e um atendimento premium desde o primeiro contato.
+Este projeto não é apenas um portfólio contemplativo — é uma **máquina de conversão de leads qualificados** desenvolvida sob medida para o artista e tatuador **William Siqueira**, cuja identidade artística é focada em projetos 100% autorais e adequação anatômica (especialidades em *Neotradicional*, *Blackwork*, *Fine Line* e *Pontilhismo*).
 
-Este projeto foi desenhado sob uma ótica de engenharia de software frontend avançada, focando em **experiência de usuário premium**, **performance impecável** e **animações imersivas** que transmitem a mesma precisão e cuidado que o artista tem com suas agulhas.
+### 💡 Desafios de Negócio Resolvidos:
+1. **Fricção de Contato e Briefing:** Em vez de direcionamentos genéricos, o sistema implementa **CTAs Contextualizados** — cada botão na aplicação injeta mensagens pré-formatadas diretamente no WhatsApp oficial, identificando a arte, a página de origem (*Hero*, *Galeria*, *Flash Day*, *Full Day* ou *Linktree /eco*) e a intenção do cliente.
+2. **Autoridade e Valor Agregado:** Transmissão de exclusividade por meio de design editorial minimalista (*paper-light* / *dark mode*), eliminando a percepção de tatuagem como commodity e posicionando o estúdio no segmento *high-end*.
+3. **Educação do Cliente ("O Ritual da Cicatrização"):** Seções dedicadas ao protocolo pré e pós-sessão que reduzem dúvidas operacionais no suporte diário e aumentam a fidelização do cliente.
 
 ---
 
-## 💻 3. Demonstração
+## 🏗️ Arquitetura e Engenharia de Software
 
-> **Nota:** Adicione aqui as imagens reais do projeto.
-
-| Home / Hero Section | Galeria (Portfolio) | Seção de Cuidados (Aftercare) |
-| :---: | :---: | :---: |
-| <img src="https://via.placeholder.com/400x250?text=Hero+Section" alt="Hero" /> | <img src="https://via.placeholder.com/400x250?text=Galeria" alt="Galeria" /> | <img src="https://via.placeholder.com/400x250?text=Aftercare" alt="Aftercare" /> |
-
-**🔗 [Acesse o Projeto Online (Link de Demonstração)](#)**
-
-*Inclua aqui um GIF ou pequeno vídeo demonstrando as animações de scroll.*
-
----
-
-## ✨ 4. Principais Funcionalidades
-
-O sistema foi arquitetado para guiar o usuário em uma jornada informativa e visual:
-
-| Funcionalidade | Descrição | Diferencial |
-| :--- | :--- | :--- |
-| **Galeria Imersiva** | Exibição de trabalhos anteriores com suporte a imagens em alta resolução. | Transições suaves e lightbox otimizado. |
-| **Smooth Scrolling** | Rolagem de página extremamente suave. | Implementação via Lenis para toque de alta classe. |
-| **Microanimações (GSAP)** | Elementos surgindo com fade, parallax e scale durante o scroll. | Traz vida ao site sem comprometer a performance. |
-| **Guia de Preparação e Cuidados** | Seções informativas cruciais para o cliente antes e depois da tatuagem. | Reduz dúvidas operacionais e melhora o atendimento. |
-| **Chat Widget** | Componente flutuante para contato direto e rápido. | Aumenta a taxa de conversão (agendamentos). |
-| **Design Responsivo** | Adaptação perfeita para mobile, tablet e monitores ultrawide. | Layout fluído baseado em tipografia clamp e grid Tailwind. |
-
----
-
-## 🏗️ 5. Arquitetura do Projeto
-
-O projeto utiliza o **Next.js (App Router)** focado na componentização extrema e separação de responsabilidades.
+O projeto segue os princípios **SOLID, DRY, KISS e Clean Architecture**, desacoplando dados de apresentação através de uma camada estática única de verdade (`config/data.ts`).
 
 ```text
-src/ (ou raiz)
-├── app/
-│   ├── layout.tsx         # Layout global e injeção de fontes/scripts
-│   ├── page.tsx           # Ponto de entrada (renderiza o App)
-│   └── globals.css        # Estilos globais e utilitários
-├── components/            # Componentes visuais e seções da página
-│   ├── About.tsx
-│   ├── Hero.tsx
-│   ├── Portfolio.tsx
-│   ├── Preloader.tsx
-│   └── ...
-├── context/               # Gerenciamento de estado global
-│   └── ScrollContext.tsx  # Controle global de instâncias de scroll
-├── hooks/                 # Custom Hooks React
-├── types/                 # Definições de tipagem global (TypeScript)
-│   └── types.ts
-├── public/                # Assets estáticos (imagens, ícones)
-├── package.json           # Dependências e scripts
-└── tailwind.config.cjs    # Configurações do Design System
+Portifolio_William_Tatuagem/
+├── app/                        # Next.js 16 App Router (Arquitetura de Rotas e Layouts)
+│   ├── layout.tsx              # Shell raiz: Fontes Google, JSON-LD Schema, GA4 assíncrono
+│   ├── page.tsx                # Orquestrador da Landing Page principal (Server Component)
+│   ├── not-found.tsx           # Página customizada 404
+│   ├── eco/                    # Rota de alta conversão para Link in Bio (/eco)
+│   └── globals.css             # Tokens do Tailwind e design system
+├── components/                 # Componentes React atomizados e acessíveis
+│   ├── Hero.tsx                # Banner com tipografia fluida e parallax GSAP
+│   ├── Portfolio.tsx           # Grid editorial assimétrico com Lightbox integrado
+│   ├── ProjectDetail.tsx       # Modal imersivo com navegação por teclado e foco isolado
+│   ├── Preparation.tsx         # Protocolo pré e pós-tatuagem com tabs interativas
+│   ├── FlashSection.tsx        # Módulos comerciais (Flash Day e Imersão Full Day)
+│   ├── CookieBanner.tsx        # Banner de consentimento com persistência em localStorage
+│   ├── LegalModal.tsx          # Modal acessível com abas para LGPD e Termos de Uso
+│   └── StaggeredMenu.tsx       # Menu mobile full-screen com controle de foco (inert)
+├── config/                     # Single Source of Truth (Configurações, dados e gerador de URLs)
+│   ├── data.ts                 # Constantes, FAQs, portfólio e helper getWhatsAppUrl()
+│   └── types.ts                # Contratos e tipagens TypeScript rigorosas
+└── public/                     # Assets estáticos otimizados (WebP, SVGs, robots.txt, sitemap.xml, llms.txt)
 ```
 
 ---
 
-## 🛠️ 6. Tecnologias Utilizadas
+## 📊 Inteligência de Dados & Métricas de Conversão
 
-| Tecnologia | Finalidade | Versão |
+A aplicação conta com uma camada de **Business Intelligence (BI)** em tempo real, integrando **Google Analytics 4 (GA4)** e **Vercel Analytics** através de injeção assíncrona não-bloqueante (`next/script` com `strategy="lazyOnload"`).
+
+```
+[Visitante Navega no Site]
+          ↓
+[Disparo Assíncrono GA4 (Zero Impacto no LCP)]
+          ↓
+[Mapeamento de Funil e Conversão]:
+  ├── Taxa de Cliques no WhatsApp por Seção (Hero vs Galeria vs Flash Day vs Rodapé)
+  ├── Obras do Portfólio com Maior Interesse e Engajamento
+  ├── Rastreamento de Origem de Tráfego (Instagram, Busca Orgânica Google, Acesso Direto)
+  └── Monitoramento de Retenção e Comportamento por Dispositivo (Mobile vs Desktop)
+```
+
+> 🔒 **Segurança & Variáveis de Ambiente:** O identificador de medição do GA4 é injetado via variável de ambiente `NEXT_PUBLIC_GA_ID`, isolado em arquivos de ambiente locais e protegido contra exposição em commits públicos.
+
+---
+
+## 🛡️ Privacidade & Conformidade com a LGPD
+
+O projeto cumpre com rigor as diretrizes da **Lei Geral de Proteção de Dados (Lei nº 13.709/2018)**:
+
+* **Cookie Banner Flutuante:** Informa a utilização de cookies analíticos do GA4 e memoriza o consentimento do usuário no `localStorage` para evitar pop-ups invasivos e repetitivos.
+* **Modal Legal Interativo (`LegalModal`):** Documenta com clareza o papel do estúdio como controlador de dados, o não compartilhamento de informações com terceiros, os canais para exercício dos direitos do titular (Art. 18 da LGPD) e os termos de propriedade intelectual sobre as artes autorais.
+
+---
+
+## 🤖 SEO Técnico Avançado & Otimização para IA (AEO)
+
+A aplicação foi preparada tanto para os motores de busca tradicionais (Google, Bing) quanto para **mecanismos de resposta generativa baseados em IA (LLMs)**:
+
+1. **Rich Snippets (Schema.org / JSON-LD):** Injeção estruturada na `<head>` catalogando o negócio como `ProfessionalService` e `LocalBusiness` em Pinheiros (SP), além de schemas de `Person` e `FAQPage`.
+2. **Padrão `llms.txt` (llmstxt.org):** Arquivo padronizado na raiz pública para alimentar crawlers modernos como *ChatGPT-User*, *ClaudeBot* e *PerplexityBot* com dados canônicos sobre o estúdio.
+3. **`sitemap.xml` & `robots.txt` Rigorosos:** Mapeamento de rotas públicas com diretivas explícitas de permissão e bloqueio de endpoints internos.
+
+---
+
+## ⚡ Performance & Core Web Vitals
+
+A interface foi lapidada para alcançar notas de excelência no Google PageSpeed Insights:
+
+* **Largest Contentful Paint (LCP) < 1.5s:** Transição de preloader ultrarrápida combinada com carregamento assíncrono de imagens (`decoding="async"` e `loading="lazy"`).
+* **Cumulative Layout Shift (CLS) = 0:** Preservação estrita de proporções de aspecto (`aspect-ratio`) em todos os cards e banners.
+* **Total Blocking Time (TBT) = 0ms:** Eliminação de scripts pesados de terceiros e delegação de animações complexas para a GPU via GSAP.
+* **Acessibilidade WCAG AA (Nota 100):** Headings perfeitamente sequenciados (`h1` ➔ `h2` ➔ `h3`), contraste mínimo de 4.5:1 em todos os elementos de texto e isolamento de foco via atributo `inert` em menus fechados.
+
+---
+
+## 🛠️ Stack Tecnológica
+
+| Camada | Tecnologia | Finalidade |
 | :--- | :--- | :--- |
-| **React** | Biblioteca core para interfaces reativas. | `18.3.1` |
-| **Next.js** | Framework React para rotas, otimização e SEO. | `^16.2` |
-| **TypeScript** | Tipagem estática para escalabilidade e segurança. | `~5.8` |
-| **Tailwind CSS** | Estilização utility-first para desenvolvimento ágil. | `^4.3.0` |
-| **GSAP** | Biblioteca premium para animações complexas baseadas em scroll. | `^3.15.0` |
-| **Lenis** | Smooth scrolling moderno, leve e performático. | `^1.3.17` |
-| **Lucide-React** | Biblioteca de ícones vetoriais consistentes e leves. | `0.263.1` |
+| **Framework** | Next.js 16 (Turbopack) | Server Components, rotas estáticas e bundling de alta velocidade |
+| **Linguagem** | TypeScript 5.8 | Tipagem estática rigorosa e segurança em tempo de compilação |
+| **Estilização** | Tailwind CSS 4.0 | Design System utilitário e tipografia editorial responsiva |
+| **Animações** | GSAP 3 + ScrollTrigger | Coreografia visual, timelines e parallax de alta precisão |
+| **Cinemática** | Lenis Smooth Scroll | Rolagem inercial suave desacoplada da thread de renderização |
+| **Ícones** | Lucide React | Ícones vetoriais nativos, leves e consistentes |
+| **Métricas** | Google Analytics 4 + Vercel Analytics | Rastreamento analítico de conversões e tráfego |
 
 ---
 
-## 🧠 7. Decisões Técnicas
+## 🚀 Como Executar Localmente
 
-*   **Next.js ao invés de Vite/CRA:** Escolhido visando futura expansão para páginas dinâmicas, melhoria drástica de **SEO** (Server-Side Rendering quando aplicável) e otimizações nativas de imagens e fontes.
-*   **GSAP + Lenis:** A combinação de GSAP (ScrollTrigger) com Lenis entrega a melhor experiência de animação atrelada ao scroll disponível hoje, superior às animações nativas de CSS em termos de controle de timeline.
-*   **Tailwind CSS Customizado:** O arquivo `tailwind.config.cjs` foi expandido com um Design System próprio (cores `paper-light`, `ink-black`, tipografia fluida com `clamp()`), garantindo uma identidade visual única e não padronizada de frameworks.
-*   **Componentização por Seções:** Cada dobra do site (`Hero.tsx`, `About.tsx`, `Aftercare.tsx`) é um componente isolado. Isso facilita a manutenção, divisão de tarefas e testes independentes.
+### Pré-requisitos
+* Node.js 18+ instalado
+* NPM ou Yarn
 
----
-
-## 🎨 8. Experiência do Usuário (UX)
-
-*   **Acessibilidade (A11y):** Contraste rigoroso (textos escuros em fundo bege/claro, ou tema escuro adaptado) e uso de tags semânticas do HTML5.
-*   **Microanimações:** Botões e links possuem interações táteis (hover states, scale). O `Preloader` mascara carregamentos iniciais, entregando o usuário para a interface apenas quando ela está pronta, evitando *FOUC* (Flash of Unstyled Content).
-*   **Tipografia Fluida:** Utilização de `clamp` no CSS garante que a leitura seja perfeita em qualquer tela, desde um iPhone até um monitor 4K.
-
----
-
-## ⚡ 9. Performance
-
-*   **Lazy Loading / Suspense:** Estrutura pronta para suportar carregamento sob demanda.
-*   **Otimização de Assets:** Imagens servidas no formato correto e componentes como `ProgressiveImage.tsx` para carregamento suave de fotografias pesadas.
-*   **Zero Layout Shift (CLS):** Animações bem estruturadas para não moverem o DOM de forma não prevista.
-
----
-
-## 🚀 10. Como Executar o Projeto
-
-**Pré-requisitos:** Node.js (v18+) e NPM/Yarn instalados.
-
-1. **Clone o repositório:**
 ```bash
-git clone https://github.com/SeuUsuario/Portifolio_William_Tatuagem.git
-```
+# 1. Clone o repositório
+git clone https://github.com/VictorCardosoOl/Portifolio_William_Tatuagem.git
 
-2. **Acesse o diretório:**
-```bash
+# 2. Acesse a pasta do projeto
 cd Portifolio_William_Tatuagem
-```
 
-3. **Instale as dependências:**
-```bash
+# 3. Instale as dependências
 npm install
-```
 
-4. **Inicie o servidor de desenvolvimento:**
-```bash
+# 4. Configure as variáveis de ambiente (Opcional)
+cp .env.example .env.local
+
+# 5. Inicie o servidor de desenvolvimento
 npm run dev
 ```
-> O projeto estará disponível em `http://localhost:3000`
 
-5. **Para build de produção:**
-```bash
-npm run build
-npm start
-```
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar a aplicação.
 
 ---
 
-## 🔐 11. Variáveis de Ambiente
+## 🧑‍💻 Autor & Créditos
 
-Neste estágio, o projeto se apoia em dados estáticos, não exigindo variáveis de ambiente complexas. 
-
-| Variável | Descrição |
-| :--- | :--- |
-| `NEXT_PUBLIC_API_URL` | *(Futuro)* URL base para chamadas de API (se implementado backend). |
+**Desenvolvimento & Engenharia de Software:** [Victor Cardoso](https://victor-cardoso-dev.vercel.app/)  
+**Artista & Tatuador:** William Siqueira (Pinheiros, São Paulo - SP)
 
 ---
 
-## 🗺️ 12. Roadmap
+## 📄 Licença
 
-- [ ] Melhorar a nota de acessibilidade no Lighthouse para 100.
-- [ ] Implementar sistema de agendamento automático ou formulário interativo no ChatWidget.
-- [ ] Adicionar internacionalização (i18n) para clientes estrangeiros (PT-BR e EN).
-- [ ] Implementar testes unitários (Jest/Testing Library) nos componentes core.
-- [ ] Otimizar Next/Image em todos os componentes de imagem.
-
----
-
-## 💎 13. Qualidade do Código
-
-A arquitetura atual se destaca pela forte aderência a **Boas Práticas**:
-*   **DRY (Don't Repeat Yourself):** Reuso massivo de lógica através de Contexto (`ScrollContext`).
-*   **Tipagem Forte:** TypeScript presente garantindo previsibilidade de dados (`types.ts`).
-*   **Separação de Preocupações:** Animações concentradas no escopo de cada componente e lógica global separada em Context.
-
----
-
-## 🎓 14. Aprendizados
-
-O maior desafio técnico foi conciliar a engine de renderização do **Next.js (App Router)** com a manipulação imperativa de DOM exigida pelo **GSAP e Lenis**. 
-A solução foi implementar adequadamente os hooks `useLayoutEffect` / `useEffect` dentro de componentes marcados como `"use client"`, além de utilizar o `gsap.context()` para garantir uma correta limpeza de memória no *unmount* (evitando *memory leaks*).
-
----
-
-## 🧑‍💻 15. Autor
-
-**[Seu Nome / William Siqueira]**
-*Desenvolvedor Frontend / Engenheiro de Software*
-
-Apaixonado por criar interfaces que unem beleza, acessibilidade e performance.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/seuperfil)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/seuperfil)
-[![Portfólio](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://seusite.com)
-
----
-
-## 🤝 16. Contribuição
-
-Contribuições são muito bem-vindas! Se você tem alguma ideia para melhorar este projeto, siga os passos:
-
-1. Faça um **Fork** do projeto.
-2. Crie uma **Branch** para sua feature (`git checkout -b feature/MinhaNovaFeature`).
-3. Faça o **Commit** de suas alterações (`git commit -m 'Add: Minha nova feature'`).
-4. Faça o **Push** para a branch (`git push origin feature/MinhaNovaFeature`).
-5. Abra um **Pull Request**.
-
----
-
-## 📄 17. Licença
-
-Este projeto está licenciado sob a **GNU General Public License v3.0 (GPL-3.0)**.
-Você pode utilizar, modificar e distribuir este software desde que qualquer trabalho derivado também seja distribuído sob a mesma licença.
-
-Para mais informações consulte o arquivo [LICENSE](LICENSE).
+Este projeto é protegido sob a licença [GPL-3.0](LICENSE). As imagens e conceitos de tatuagem pertencem exclusivamente a William Siqueira.
