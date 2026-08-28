@@ -12,6 +12,8 @@ import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import Preloader from '@/components/Preloader';
 import ChatWidget from '@/components/ChatWidget';
+import CookieBanner from '@/components/CookieBanner';
+import LegalModal from '@/components/LegalModal';
 import { ScrollProvider } from '@/context/ScrollContext';
 
 // Este componente agora é um Server Component orquestrador
@@ -25,6 +27,8 @@ export default function Home() {
       <div className="w-full min-h-screen opacity-100">
         <Navbar />
         <ChatWidget />
+        <CookieBanner />
+        <LegalModal />
         <main>
           <Hero />
           <Portfolio />

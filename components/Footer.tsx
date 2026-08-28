@@ -166,8 +166,22 @@ const Footer: React.FC = () => {
            </span>
 
            <div className="flex gap-6">
-             <button type="button" data-tracking="footer-legal-privacy" className="hover:text-[#1A1A1A] dark:hover:text-[#fafaf9] transition-colors cursor-pointer">Privacy Policy</button>
-             <button type="button" data-tracking="footer-legal-terms" className="hover:text-[#1A1A1A] dark:hover:text-[#fafaf9] transition-colors cursor-pointer">Terms of Use</button>
+             <button 
+               type="button" 
+               data-tracking="footer-legal-privacy" 
+               onClick={() => window.dispatchEvent(new CustomEvent('open-legal-modal', { detail: { tab: 'privacy' } }))}
+               className="hover:text-[#1A1A1A] dark:hover:text-[#fafaf9] transition-colors cursor-pointer"
+             >
+               Privacy Policy (LGPD)
+             </button>
+             <button 
+               type="button" 
+               data-tracking="footer-legal-terms" 
+               onClick={() => window.dispatchEvent(new CustomEvent('open-legal-modal', { detail: { tab: 'terms' } }))}
+               className="hover:text-[#1A1A1A] dark:hover:text-[#fafaf9] transition-colors cursor-pointer"
+             >
+               Terms of Use
+             </button>
            </div>
         </div>
       </div>
