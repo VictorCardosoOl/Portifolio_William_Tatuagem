@@ -151,45 +151,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-paper-light dark:bg-paper-dark text-ink-black dark:text-gray-200 transition-colors duration-500 antialiased selection:bg-ink-black selection:text-paper-light dark:selection:bg-paper-light dark:selection:text-ink-black overflow-x-hidden font-sans">
-        {/* Google Analytics 4 (Carregamento assíncrono não bloqueante) */}
-        {/* Google Analytics 4 + Consent Mode v2 */}
-        {GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== "G-XXXXXXXXXX" && (
-          <>
-            {/* Consent Mode Setup Síncrono */}
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  
-                  // Define configurações padrões do Consent Mode v2 ANTES do script do Google
-                  var isGranted = false;
-                  try {
-                    isGranted = localStorage.getItem('ws_cookie_consent') === 'accepted';
-                  } catch (e) {}
-                  
-                  gtag('consent', 'default', {
-                    'analytics_storage': isGranted ? 'granted' : 'denied',
-                    'ad_storage': 'denied',
-                    'ad_user_data': 'denied',
-                    'ad_personalization': 'denied',
-                    'wait_for_update': 500
-                  });
-                  
-                  gtag('js', new Date());
-                  gtag('config', '${GA_MEASUREMENT_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }}
-            />
-            {/* Tag principal do GA */}
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-              strategy="lazyOnload"
-            />
-          </>
-        )}
+
 
         <AnalyticsListener />
         {children}

@@ -138,66 +138,37 @@ export const LegalModal: React.FC<LegalModalProps> = ({
           {activeTab === 'privacy' ? (
             <>
               <section className="space-y-2">
-                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">1. Controlador dos Dados</h3>
+                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">1. Políticas de Privacidade e Conformidade com a LGPD</h3>
+                <p className="font-bold mt-4">1.1. Coleta e Tratamento de Dados</p>
                 <p>
-                  O estúdio de tatuagem privado <strong>William Siqueira Tattoo</strong> (Rua Baltazar Carrasco, 70 - Pinheiros, São Paulo - SP) atua como controlador de dados nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).
+                  Nosso compromisso com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) é rigoroso. Coletamos apenas os dados estritamente necessários para o funcionamento das aplicações e para a prestação dos serviços contratados.
                 </p>
-              </section>
-
-              <section className="space-y-2">
-                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">2. Dados Coletados e Finalidade</h3>
+                <p className="font-bold mt-4">1.2. Gerenciamento de Cookies e Scripts de Terceiros</p>
                 <p>
-                  • <strong>Navegação:</strong> Nosso site utiliza cookies analíticos por meio do <strong>Google Analytics 4 (GA4)</strong> para fins exclusivamente estatísticos (volume de visitas, páginas populares e desempenho técnico). Nenhum dado que identifique você diretamente é comercializado.
+                  Para garantir a sua privacidade e a conformidade técnica com a LGPD, nossa plataforma utiliza um sistema de gerenciamento de consentimento rígido. Nenhum script de terceiros (como ferramentas de analytics, rastreadores de marketing ou pixels de conversão) é carregado ou executado na aplicação antes que o usuário forneça seu consentimento explícito através do nosso banner de cookies. O usuário pode, a qualquer momento, revogar esse consentimento acessando as configurações de privacidade no rodapé do site.
                 </p>
+                <p className="font-bold mt-4">1.3. Segurança e Limitação de Responsabilidade sobre Vazamentos</p>
                 <p>
-                  • <strong>Atendimento e Orçamentos:</strong> Ao entrar em contato voluntariamente via WhatsApp ou E-mail, você fornece dados como nome, telefone e referências visuais da tatuagem desejada. Esses dados são utilizados unicamente para elaboração de orçamento, briefing e agendamento da sua sessão.
-                </p>
-              </section>
-
-              <section className="space-y-2">
-                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">3. Armazenamento e Segurança</h3>
-                <p>
-                  Adotamos medidas técnicas para manter suas informações protegidas contra acessos não autorizados. Não compartilhamos, vendemos ou alugamos suas informações pessoais a terceiros.
-                </p>
-              </section>
-
-              <section className="space-y-2">
-                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">4. Seus Direitos (Art. 18 da LGPD)</h3>
-                <p>
-                  Você tem o direito de solicitar a qualquer momento a confirmação da existência de tratamento, a correção de dados incompletos ou a exclusão definitiva dos seus dados de atendimento através do nosso e-mail oficial: <a href="mailto:willtintamais@gmail.com" className="underline font-medium hover:text-ink-black dark:hover:text-white">willtintamais@gmail.com</a> ou pelo WhatsApp oficial (+{WHATSAPP_PHONE}).
+                  Empregamos as melhores práticas de desenvolvimento, criptografia e estruturação de banco de dados para garantir a segurança das informações. No entanto, nenhum sistema é imune a ameaças externas. Em caso de ataques cibernéticos de proporções imprevistas, falhas oriundas da infraestrutura dos provedores de hospedagem terceirizados ou vulnerabilidades exploradas por força maior que resultem em vazamento de dados, a responsabilidade do desenvolvedor e da plataforma é limitada às obrigações de notificação tempestiva aos usuários e à Autoridade Nacional de Proteção de Dados (ANPD), não cabendo responsabilização civil ou financeira por danos indiretos decorrentes de atos criminosos de terceiros.
                 </p>
               </section>
             </>
           ) : (
             <>
               <section className="space-y-2">
-                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">1. Direitos Autorais e Propriedade Intelectual</h3>
+                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">2. Termos de Serviço e Uso da Aplicação</h3>
+                <p className="font-bold mt-4">2.1. Disponibilidade do Sistema e SLA</p>
                 <p>
-                  Todas as tatuagens, ilustrações, fotografias de portfólio, projetos e textos exibidos neste site são criações 100% autorais e propriedade intelectual exclusiva de <strong>William Siqueira</strong>. É expressamente proibida a reprodução, cópia comercial ou reutilização não autorizada de qualquer arte aqui exposta.
+                  Buscamos manter nossos sistemas e sites operacionais com a maior taxa de disponibilidade possível. Contudo, para garantir a segurança da infraestrutura e responder a eventuais ataques cibernéticos (como ataques DDoS), manutenções emergenciais ou instabilidades nos servidores de hospedagem e nuvem, reservamo-nos o direito de manter a plataforma indisponível por um período de até 72 (setenta e duas) horas consecutivas. Esta janela de tempo é considerada aceitável e necessária para a contenção de danos e restauração segura dos serviços, não configurando quebra de contrato, falha na prestação de serviço ou motivo para reembolso/multa.
                 </p>
-              </section>
-
-              <section className="space-y-2">
-                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">2. Política de Agendamento e Sessões</h3>
+                <p className="font-bold mt-4">2.2. Propriedade Intelectual e Funcionalidades Sob Medida</p>
                 <p>
-                  • Os atendimentos no estúdio são realizados estritamente com horário pré-agendado.
+                  Todo o código-fonte, arquitetura, design visual e estruturação dos sistemas desenvolvidos são de propriedade intelectual exclusiva do desenvolvedor titular.
+                  Caso o cliente solicite o desenvolvimento de funcionalidades sob medida, integrações específicas ou módulos personalizados, o código e a lógica de programação subjacentes a essas novas funcionalidades permanecem como propriedade intelectual exclusiva do desenvolvedor. O cliente recebe uma licença de uso irrevogável (enquanto durar o contrato) para operar a funcionalidade em seu projeto, mas não detém os direitos autorais para revenda, redistribuição ou reaproveitamento do código em outras plataformas não autorizadas, a menos que uma cessão total de direitos seja expressamente acordada e precificada em contrato apartado.
                 </p>
+                <p className="font-bold mt-4">2.3. Atualizações destes Termos</p>
                 <p>
-                  • A reserva de data pode exigir sinal financeiro para garantia de agenda e início da criação do desenho autoral personalizado.
-                </p>
-              </section>
-
-              <section className="space-y-2">
-                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">3. Responsabilidade no Ritual de Cicatrização</h3>
-                <p>
-                  O estúdio segue rigorosos padrões sanitários e de biossegurança durante a aplicação. O resultado final e a longevidade da tatuagem dependem do cumprimento estrito dos cuidados pré e pós-sessão descritos em nosso protocolo oficial ("O Ritual da Cicatrização").
-                </p>
-              </section>
-
-              <section className="space-y-2">
-                <h3 className="font-serif italic text-lg font-normal text-ink-black dark:text-white">4. Idade Mínima</h3>
-                <p>
-                  Os serviços de tatuagem são prestados exclusivamente a pessoas com idade igual ou superior a 18 anos completos na data da sessão.
+                  Reservamo-nos o direito de atualizar estes Termos e Políticas periodicamente para refletir mudanças tecnológicas ou legais. Recomendamos a revisão constante desta página.
                 </p>
               </section>
             </>
