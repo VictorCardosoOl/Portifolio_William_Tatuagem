@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @config "../tailwind.config.cjs";
 @source "../components";
-@source "../App.tsx";
 
 .text-vertical {
     writing-mode: vertical-lr;

@@ -44,6 +44,10 @@ const FAQ: React.FC = () => {
             ease: "power3.out"
         }, "-=1.0");
     });
+    
+    return () => {
+        mm.revert();
+    };
   }, { scope: containerRef });
 
   return (

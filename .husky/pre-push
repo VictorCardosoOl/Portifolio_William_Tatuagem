@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+echo "[Husky/DevSecOps] Executando Auditoria de Dependências (NPM Audit)..."
+npm audit --audit-level=high || { echo "🚨 ATENÇÃO: Vulnerabilidades de nível ALTO/CRÍTICO detectadas. Cancele o push, rode 'npm audit fix' e tente novamente."; exit 1; }
+
 echo "[Husky] Executando Strict Type Check e Linter antes do push..."
 npm run typecheck
 npm run lint

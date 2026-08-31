@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useCallback, useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useCallback, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { TEXTOS_GERAIS } from '@/config/data';
 import { useScroll } from '@/context/ScrollContext';
+import { TEXTOS_GERAIS } from '@/config/data';
+import { useSmartScroll } from '@/hooks/useSmartScroll';
 
 interface MenuItem {
   label: string;
@@ -19,39 +20,40 @@ interface SocialItem {
 
 interface StaggeredMenuProps {
   items: MenuItem[];
-  socialItems: SocialItem[];
-  position?: 'right' | 'left';
-  colors?: string[];
+  socialItems?: SocialItem[];
   displaySocials?: boolean;
   displayItemNumbering?: boolean;
+  position?: 'left' | 'right';
   menuButtonColor?: string;
   openMenuButtonColor?: string;
-  accentColor?: string;
   changeMenuColorOnOpen?: boolean;
+  colors?: string[];
+  accentColor?: string;
   isFixed?: boolean;
-  closeOnClickAway?: boolean;
   onMenuOpen?: () => void;
   onMenuClose?: () => void;
+  closeOnClickAway?: boolean;
 }
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
-  position = 'right',
-  colors = ['#1A1A1A', '#333333'],
-  items = [],
-  socialItems = [],
+  items,
+  socialItems,
   displaySocials = true,
   displayItemNumbering = true,
-  menuButtonColor = '#1A1A1A',
-  openMenuButtonColor = '#1A1A1A',
-  accentColor = '#1A1A1A',
+  position = 'right',
+  menuButtonColor = '#000000',
+  openMenuButtonColor = '#ffffff',
   changeMenuColorOnOpen = true,
+  colors = ['#1a1a1a', '#333333', '#4d4d4d', '#666666'],
+  accentColor = '#cccccc',
   isFixed = true,
-  closeOnClickAway = true,
   onMenuOpen,
-  onMenuClose
+  onMenuClose,
+  closeOnClickAway = true,
 }) => {
   const [open, setOpen] = useState(false);
-  const panelRef = useRef<HTMLDivElement>(null);
+
+  const panelRef = useRef<HTMLElement>(null);
   const preLayersRef = useRef<HTMLDivElement>(null);
   const preLayerElsRef = useRef<Element[]>([]);
   const plusHRef = useRef<HTMLSpanElement>(null);
@@ -62,8 +64,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   const toggleBtnRef = useRef<HTMLButtonElement>(null);
   const [textLines, setTextLines] = useState(['Menu', 'Fechar']);
 
-  // Smart Navbar State
-  const [isVisible, setIsVisible] = useState(true);
+  // Smart Navbar State encapsulado
+  const isVisible = useSmartScroll({ open });
 
   const openTlRef = useRef<gsap.core.Timeline | null>(null);
   const closeTweenRef = useRef<gsap.core.Tween | null>(null);
@@ -73,45 +75,6 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   const itemEntranceTweenRef = useRef<gsap.core.Tween | null>(null);
 
   const { stopScroll, startScroll } = useScroll();
-
-  // --- SMART NAVBAR LOGIC (Focus Mode) ---
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    const updateNavbar = () => {
-      const currentScrollY = window.scrollY;
-      
-      if (open) {
-        setIsVisible(true);
-        ticking = false;
-        return;
-      }
-
-      if (currentScrollY < 50) {
-        setIsVisible(true);
-      } 
-      else if (currentScrollY > lastScrollY) {
-        setIsVisible(false);
-      } 
-      else {
-        setIsVisible(true);
-      }
-
-      lastScrollY = currentScrollY;
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateNavbar);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [open]);
 
   useGSAP(() => {
     const panel = panelRef.current;
@@ -141,11 +104,10 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     const layers = preLayerElsRef.current;
     if (!panel) return null;
 
+    // Reset de animações anteriores (Guard)
     openTlRef.current?.kill();
-    if (closeTweenRef.current) {
-      closeTweenRef.current.kill();
-      closeTweenRef.current = null;
-    }
+    closeTweenRef.current?.kill();
+    closeTweenRef.current = null;
     itemEntranceTweenRef.current?.kill();
 
     const itemEls = Array.from(panel.querySelectorAll('.sm-panel-itemLabel'));
@@ -156,91 +118,56 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     const layerStates = layers.map(el => ({ el, start: Number(gsap.getProperty(el, 'xPercent')) }));
     const panelStart = Number(gsap.getProperty(panel, 'xPercent'));
 
-    if (itemEls.length) {
-      gsap.set(itemEls, { yPercent: 140, rotate: 10 });
-    }
-    if (numberEls.length) {
-      gsap.set(numberEls, { '--sm-num-opacity': 0 });
-    }
-    if (socialTitle) {
-      gsap.set(socialTitle, { opacity: 0 });
-    }
-    if (socialLinks.length) {
-      gsap.set(socialLinks, { y: 25, opacity: 0 });
-    }
+    // Configuração de estado inicial em lote
+    if (itemEls.length) gsap.set(itemEls, { yPercent: 140, rotate: 10 });
+    if (numberEls.length) gsap.set(numberEls, { '--sm-num-opacity': 0 });
+    if (socialTitle) gsap.set(socialTitle, { opacity: 0 });
+    if (socialLinks.length) gsap.set(socialLinks, { y: 25, opacity: 0 });
 
     const tl = gsap.timeline({ paused: true });
 
+    // 1. Animar camadas (layers)
     layerStates.forEach((ls, i) => {
       tl.fromTo(ls.el, { xPercent: ls.start }, { xPercent: 0, duration: 0.5, ease: 'power4.out' }, i * 0.07);
     });
+
     const lastTime = layerStates.length ? (layerStates.length - 1) * 0.07 : 0;
     const panelInsertTime = lastTime + (layerStates.length ? 0.08 : 0);
     const panelDuration = 0.65;
-    tl.fromTo(
-      panel,
-      { xPercent: panelStart },
-      { xPercent: 0, duration: panelDuration, ease: 'power4.out' },
-      panelInsertTime
-    );
+    
+    // 2. Animar painel principal
+    tl.fromTo(panel, { xPercent: panelStart }, { xPercent: 0, duration: panelDuration, ease: 'power4.out' }, panelInsertTime);
 
+    // 3. Early return se não houver itens para animar internamente
+    if (!itemEls.length && !socialTitle && !socialLinks.length) {
+      openTlRef.current = tl;
+      return tl;
+    }
+
+    const itemsStart = panelInsertTime + panelDuration * 0.15;
+    const socialsStart = panelInsertTime + panelDuration * 0.4;
+
+    // 4. Animar Itens de Menu
     if (itemEls.length) {
-      const itemsStartRatio = 0.15;
-      const itemsStart = panelInsertTime + panelDuration * itemsStartRatio;
-      tl.to(
-        itemEls,
-        {
-          yPercent: 0,
-          rotate: 0,
-          duration: 1,
-          ease: 'power4.out',
-          stagger: { each: 0.1, from: 'start' }
-        },
-        itemsStart
-      );
+      tl.to(itemEls, { yPercent: 0, rotate: 0, duration: 1, ease: 'power4.out', stagger: { each: 0.1, from: 'start' } }, itemsStart);
       if (numberEls.length) {
-        tl.to(
-          numberEls,
-          {
-            duration: 0.6,
-            ease: 'power2.out',
-            '--sm-num-opacity': 1,
-            stagger: { each: 0.08, from: 'start' }
-          },
-          itemsStart + 0.1
-        );
+        tl.to(numberEls, { duration: 0.6, ease: 'power2.out', '--sm-num-opacity': 1, stagger: { each: 0.08, from: 'start' } }, itemsStart + 0.1);
       }
     }
 
-    if (socialTitle || socialLinks.length) {
-      const socialsStart = panelInsertTime + panelDuration * 0.4;
-      if (socialTitle) {
-        tl.to(
-          socialTitle,
-          {
-            opacity: 1,
-            duration: 0.5,
-            ease: 'power2.out'
-          },
-          socialsStart
-        );
-      }
-      if (socialLinks.length) {
-        tl.to(
-          socialLinks,
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.55,
-            ease: 'power3.out',
-            stagger: { each: 0.08, from: 'start' },
-            onComplete: () => {
-              gsap.set(socialLinks, { clearProps: 'opacity' });
-            }
-          },
-          socialsStart + 0.04
-        );
-      }
+    // 5. Animar Redes Sociais
+    if (socialTitle) {
+      tl.to(socialTitle, { opacity: 1, duration: 0.5, ease: 'power2.out' }, socialsStart);
+    }
+    if (socialLinks.length) {
+      tl.to(socialLinks, { 
+        y: 0, 
+        opacity: 1, 
+        duration: 0.55, 
+        ease: 'power3.out', 
+        stagger: { each: 0.08, from: 'start' }, 
+        onComplete: () => gsap.set(socialLinks, { clearProps: 'opacity' }) 
+      }, socialsStart + 0.04);
     }
 
     openTlRef.current = tl;
@@ -346,7 +273,6 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       stopScroll();
       onMenuOpen?.();
       playOpen();
-      setIsVisible(true);
     } else {
       startScroll();
       onMenuClose?.();

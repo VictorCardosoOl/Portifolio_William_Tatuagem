@@ -2,8 +2,12 @@ import React from 'react';
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (
+      command: 'config' | 'event' | 'consent' | 'js',
+      action: string | Date,
+      params?: Record<string, string | number | boolean | undefined>
+    ) => void;
+    dataLayer: Record<string, unknown>[];
   }
   
   namespace JSX {
