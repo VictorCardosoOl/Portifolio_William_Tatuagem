@@ -9,6 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "typecheck": "tsc --noEmit",
+    "optimize:images": "node scripts/optimize-images.mjs",
     "format": "prettier --write .",
     "prepare": "husky"
   },
@@ -37,10 +39,12 @@
     "autoprefixer": "^10.5.0",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.9",
+    "glob": "^13.0.6",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "postcss": "^8.5.15",
     "prettier": "^3.9.4",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.0",
     "typescript": "~5.8.2"
   }

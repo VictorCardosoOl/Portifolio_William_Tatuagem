@@ -20,6 +20,14 @@ export const CookieBanner: React.FC = () => {
 
   const handleAccept = () => {
     localStorage.setItem('ws_cookie_consent', 'accepted');
+    
+    // Atualiza o Consent Mode do Google Analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+    
     setIsVisible(false);
   };
 

@@ -29,7 +29,7 @@ const CreativeProcess: React.FC = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-                {/* LISTA ESQUERDA */}
+                {/* LISTA DE ETAPAS */}
                 <div className="flex-1 w-full flex flex-col">
                     {PROCESSO_CRIATIVO.map((item, index) => {
                         const isActive = activeProcess === index;
@@ -37,39 +37,49 @@ const CreativeProcess: React.FC = () => {
                             <div 
                                 key={item.id}
                                 onMouseEnter={() => setActiveProcess(index)}
-                                className={`relative cursor-pointer py-4 md:py-6 border-b border-ink-black/5 dark:border-white/5 transition-all duration-300 group`}
+                                onClick={() => setActiveProcess(index)}
+                                className={`relative cursor-pointer py-4 md:py-6 border-b border-ink-black/10 dark:border-white/10 transition-all duration-300 group`}
                             >
                                 {/* Active Indicator Line */}
                                 <div className={`absolute left-[-1.5rem] top-4 bottom-4 w-0.5 bg-ink-black dark:bg-white transition-all duration-500 ease-in-out ${isActive ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'}`}></div>
                                 
                                 <div className="flex justify-between items-baseline">
                                     <div className="pr-4">
-                                        <h3 className={`text-fluid-h3 transition-all duration-500 ${
+                                        <h3 className={`text-2xl sm:text-3xl md:text-4xl transition-all duration-500 ${
                                             isActive 
-                                            ? 'font-serif italic font-light text-ink-black dark:text-white translate-x-3' 
+                                            ? 'font-serif italic font-light text-ink-black dark:text-white translate-x-2 md:translate-x-3' 
                                             : 'font-serif font-thin text-ink-medium/60 dark:text-gray-400 group-hover:text-ink-black'
                                         }`}>
                                             {item.titulo}
                                         </h3>
                                         <p className={`font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase mt-1 transition-all duration-300 ${
-                                            isActive ? 'opacity-100 text-ink-medium dark:text-gray-300 translate-x-3' : 'opacity-0'
+                                            isActive ? 'opacity-100 text-ink-medium dark:text-gray-300 translate-x-2 md:translate-x-3' : 'opacity-0'
                                         }`}>
                                             {item.subtitulo}
                                         </p>
                                     </div>
                                     <div className="flex items-center gap-4 shrink-0">
-                                        <span className={`font-sans text-xs font-bold tracking-widest transition-colors duration-300 ${isActive ? 'text-ink-black dark:text-white opacity-100' : 'text-gray-400 opacity-20'}`}>
+                                        <span className={`font-sans text-xs font-bold tracking-widest transition-colors duration-300 ${isActive ? 'text-ink-black dark:text-white opacity-100' : 'text-gray-400 opacity-30'}`}>
                                             0{item.id}
                                         </span>
                                     </div>
+                                </div>
+
+                                {/* Resposta Inline no Mobile (Expande ao toque) */}
+                                <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
+                                    isActive ? 'max-h-96 opacity-100 mt-4 pt-3 border-t border-ink-black/5 dark:border-white/5' : 'max-h-0 opacity-0'
+                                }`}>
+                                    <p className="font-sans text-sm leading-relaxed text-ink-dark dark:text-gray-300 font-light pl-2">
+                                        {item.descricao}
+                                    </p>
                                 </div>
                             </div>
                         );
                     })}
                 </div>
 
-                {/* CONTEÚDO DIREITA */}
-                <div className="flex-1 w-full lg:sticky lg:top-1/3 h-auto min-h-[300px] flex items-center justify-center lg:justify-start lg:pl-8 mt-6 lg:mt-0">
+                {/* CONTEÚDO DIREITA (Exibido no Desktop com sticky) */}
+                <div className="hidden lg:flex flex-1 w-full lg:sticky lg:top-1/3 h-auto min-h-[300px] items-center justify-start lg:pl-8 mt-6 lg:mt-0">
                     <div className="relative w-full max-w-lg" ref={contentRef}>
                         <div className="absolute -top-12 -left-6 text-[10rem] md:text-[12rem] leading-none font-serif text-ink-black opacity-[0.04] dark:text-white dark:opacity-[0.04] select-none pointer-events-none transition-all duration-700 font-thin italic">
                             0{activeProcess + 1}

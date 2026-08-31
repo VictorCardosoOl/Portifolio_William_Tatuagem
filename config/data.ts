@@ -224,110 +224,116 @@ export const ITENS_FAQ: FAQItem[] = [
     pergunta: "Qual o valor da sessão?",
     resposta: "O valor depende do projeto, não do relógio.",
     detalhes: [
-      "Complexidade, região e materiais.",
-      "Sinal de 30% para confirmação da data."
+      "Complexidade, região do corpo e materiais.",
+      "Sinal de reserva para confirmação da data."
     ]
   },
   {
     id: 2,
     pergunta: "Você cria artes exclusivas?",
-    resposta: "A exclusividade é a base do meu trabalho. Não copio tatuagens.",
+    resposta: "A exclusividade é a base do meu trabalho. Não copio tatuagens de outros artistas.",
     detalhes: [
-      "Desenho criado para sua anatomia",
-      "Referências são apenas inspiração",
-      "Projeto apresentado no dia da sessão"
+      "Desenho personalizado para sua anatomia",
+      "Referências visuais servem apenas de inspiração",
+      "Projeto final alinhado para a sua história"
     ]
   },
   {
     id: 3,
-    pergunta: "Dói muito?",
-    resposta: "Cada corpo reage de um jeito. Consulte o mapa de dor para ter uma noção. O mapa é para apenas dar uma ideia, mas não é uma regra há pessoas que tem áreas mais sensíveis que as outras",
+    pergunta: "Dói muito fazer a tatuagem?",
+    resposta: "A sensibilidade varia de acordo com cada organismo e com a região do corpo.",
     detalhes: [
-      "Mãos leves e máquinas modernas",
-      "Anestésicos tópicos disponíveis (opcional)",
-      "Pausas estratégicas durante a sessão"
+      "Mãos leves e máquinas de alta precisão",
+      "Pausas estratégicas de descanso durante a sessão",
+      "Ambiente calmo e focado no seu conforto"
     ]
   },
   {
     id: 4,
     pergunta: "Posso levar acompanhante?",
-    resposta: "O estúdio é um ambiente de foco e intimidade. Permitido um acompanhante por sessão desde que seja maior de 18 anos e avisado com antecedência.",
+    resposta: "O estúdio é um espaço privativo de imersão e foco. Permitido 1 acompanhante maior de idade por sessão, avisando previamente.",
     detalhes: [
-      "Permitido 1 acompanhante maior de idade",
-      "Não permitimos crianças ou animais",
-      "Ambiente privado e seguro"
+      "Permitido 1 acompanhante maior de 18 anos",
+      "Não permitimos animais ou crianças no ambiente de aplicação",
+      "Foco total na segurança e biossegurança"
     ]
   },
   {
     id: 5,
     pergunta: "Uso tinta vegana?",
-    resposta: "Todos os materiais utilizados são aprovados pelas normas da ANVISA, tintas veganas devem ser solicitadas no momento do orçamento.",
+    resposta: "Todos os materiais utilizados são aprovados pelas normas da ANVISA. Tintas 100% veganas devem ser solicitadas no momento do orçamento.",
     detalhes: []
   },
   {
     id: 6,
     pergunta: "Há cobrança para realizar um orçamento?",
-    resposta: "Não, Orçamento tem um prazo de 30 dias corridos, após esse tempo será gerado um novo orçamento",
-    detalhes: []
+    resposta: "Não. A elaboração do orçamento e a conversa inicial de briefing são 100% gratuitas via WhatsApp.",
+    detalhes: [
+      "Validade do orçamento: 30 dias corridos",
+      "Agendamento confirmado após pagamento do sinal"
+    ]
   },
   {
     id: 7,
     pergunta: "Primeira tatuagem?",
-    resposta: "Recomendamos que o desenho seja pequeno, consulte nosso mapa de dor para evitar lugares muito sensíveis na primeira vez",
+    resposta: "Recomendamos que o desenho seja de tamanho moderado e em áreas com menor terminação nervosa para uma primeira experiência tranquila.",
     detalhes: []
   },
   {
     id: 8,
-    pergunta: "Cicatrização",
-    resposta: "A tatuagem leva de 21 a 45 dias para cicatrização total, variando de acordo com parte do corpo, idade e saúde da pessoa.",
-    detalhes: []
+    pergunta: "Quanto tempo leva a cicatrização?",
+    resposta: "A fase superficial cicatriza entre 21 e 45 dias, dependendo da hidratação e dos cuidados pós-sessão descritos no nosso protocolo.",
+    detalhes: [
+      "Suporte e acompanhamento contínuo",
+      "Orientações completas entregues após a sessão"
+    ]
   },
   {
     id: 9,
-    pergunta: "Retoques",
-    resposta: "Nem sempre a necessidade de um retorno, motivos que podem levar a isso são\nCorpo reagindo a tinta\nCuidados com a tatuagem no período de cicatrização",
+    pergunta: "Precisa de retoques?",
+    resposta: "Nem sempre há necessidade de retorno. Fatores que influenciam incluem a resposta da pele à tinta e o cumprimento do protocolo de cicatrização nos primeiros dias.",
     detalhes: []
   },
   {
     id: 10,
-    pergunta: "Cor mudando ao longo do tempo",
-    resposta: "A tattoo pode ficar mais clara depois de cicatrizada,é natural, mudanças maiores se deve por falta de cuidados a longo prazo, falta de hidratação e excessiva exposição solar.",
+    pergunta: "A cor muda ao longo do tempo?",
+    resposta: "A tatuagem assenta na pele e clareia levemente após cicatrizada, o que é natural. A longevidade do contraste depende do uso de protetor solar e hidratação.",
     detalhes: []
   },
   {
     id: 11,
     pergunta: "Depilação a laser e tatuagem",
-    resposta: "Esse tipo de depilação deve ser evitada em regiões tatuadas pois o processo pode acarretar em queimaduras e desbotamento da região tatuada.",
+    resposta: "A depilação a laser deve ser rigorosamente evitada sobre áreas tatuadas, pois o feixe de laser é atraído pelo pigmento e pode causar queimaduras.",
     detalhes: []
   },
   {
     id: 12,
-    pergunta: "Posso doar sangue?",
-    resposta: "Após 12 meses",
+    pergunta: "Posso doar sangue após tatuar?",
+    resposta: "Sim, de acordo com as normas sanitárias brasileiras, a doação pode ser feita após 12 meses da realização da tatuagem.",
     detalhes: []
   },
   {
     id: 13,
-    pergunta: "Tenho diabetes posso tatuar?",
-    resposta: "Consulte seu médico antes de tatuar, de modo geral com diabetes controlada é seguro tatuar.",
+    pergunta: "Tenho diabetes, posso tatuar?",
+    resposta: "Consulte seu médico previamente. Com a taxa glicêmica controlada e autorização médica, o procedimento é seguro.",
     detalhes: []
   },
   {
     id: 14,
-    pergunta: "Pessoas grávidas podem tatuar?",
-    resposta: "Não, apenas autorizado tatuar após o desmame da criança.",
+    pergunta: "Pessoas grávidas ou lactantes podem tatuar?",
+    resposta: "Não é recomendado tatuar durante a gravidez. O procedimento é autorizado com segurança após o período de desmame.",
     detalhes: []
   },
   {
     id: 15,
-    pergunta: "Para sua tattoo ficar sempre impecável",
-    resposta: "Mantenha-se hidratado: beba água e use hidratante regularmente",
+    pergunta: "Como manter a tattoo impecável?",
+    resposta: "Mantenha a pele sempre hidratada bebendo água regularmente e aplicando hidratante corporal neutro diariamente.",
     detalhes: []
   },
   {
     id: 16,
-    pergunta: "Quer realçar a tattoo?",
-    resposta: "Antes de sair, aplique hidratante, protetor solar (durante o dia) e finalize com um toque de vaselina, o resultado é brilho e definição instantânea",
+    pergunta: "Dica para realçar o brilho da arte",
+    resposta: "Antes de sair, aplique hidratante com protetor solar e finalize com um leve toque de pomada ou óleo vegetal para destacar o brilho das linhas.",
     detalhes: []
   }
 ];

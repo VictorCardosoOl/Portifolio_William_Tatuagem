@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                </div>
             </div>
             
-            <div className="mt-8">
+            <div className="mt-8 hidden md:block">
                <a 
                  href={getWhatsAppUrl("Olá, William! Gostaria de agendar uma visita ao seu estúdio em Pinheiros.")} 
                  target="_blank"
@@ -95,12 +95,12 @@ const Footer: React.FC = () => {
           </div>
 
           {/* COL 3: SOCIALS */}
-          <div className="p-10 md:p-14 lg:p-16 border-b md:border-b-0 border-r-0 md:border-r border-[#1A1A1A]/10 dark:border-white/10 flex flex-col min-h-[320px] hover:bg-[#E8E6E1]/50 dark:hover:bg-[#1c1917]/30 transition-colors duration-500">
-             <span className="font-sans text-xs tracking-[0.25em] uppercase text-[#595959] dark:text-[#a8a29e] font-bold mb-8" id="footer-social-heading">
+          <div className="p-8 md:p-14 lg:p-16 border-b md:border-b-0 border-r-0 md:border-r border-[#1A1A1A]/10 dark:border-white/10 flex flex-col min-h-auto md:min-h-[320px] hover:bg-[#E8E6E1]/50 dark:hover:bg-[#1c1917]/30 transition-colors duration-500">
+             <span className="font-sans text-xs tracking-[0.25em] uppercase text-[#595959] dark:text-[#a8a29e] font-bold mb-6 md:mb-8" id="footer-social-heading">
                Conexões
              </span>
              <nav aria-labelledby="footer-social-heading">
-               <ul className="flex flex-col gap-6">
+               <ul className="flex flex-col gap-5 md:gap-6">
                  {REDES_SOCIAIS.map((social, idx) => (
                    <li key={idx}>
                      <a 
@@ -124,9 +124,9 @@ const Footer: React.FC = () => {
              </nav>
           </div>
 
-          {/* COL 4: NAVIGATION & CREDITS */}
-          <div className="p-10 md:p-14 lg:p-16 flex flex-col justify-between min-h-[320px] hover:bg-[#E8E6E1]/50 dark:hover:bg-[#1c1917]/30 transition-colors duration-500">
-             <div>
+          {/* COL 4: NAVIGATION & CREDITS (Menu oculto no mobile, visível no desktop) */}
+          <div className="p-8 md:p-14 lg:p-16 flex flex-col justify-between min-h-auto md:min-h-[320px] hover:bg-[#E8E6E1]/50 dark:hover:bg-[#1c1917]/30 transition-colors duration-500">
+             <div className="hidden md:block">
                <span className="font-sans text-xs tracking-[0.25em] uppercase text-[#595959] dark:text-[#a8a29e] font-bold mb-8 block" id="footer-nav-heading">
                  Menu
                </span>
@@ -144,7 +144,7 @@ const Footer: React.FC = () => {
                </nav>
              </div>
              
-             <div className="mt-12 pt-6 border-t border-[#1A1A1A]/10 dark:border-[#292524] flex justify-between items-end">
+             <div className="md:mt-12 md:pt-6 md:border-t md:border-[#1A1A1A]/10 md:dark:border-[#292524] flex justify-between items-end">
                 <div className="flex flex-col gap-1">
                    <span className="font-sans text-xs uppercase tracking-widest text-[#595959] dark:text-[#a8a29e]">Dev & Design</span>
                    <a 

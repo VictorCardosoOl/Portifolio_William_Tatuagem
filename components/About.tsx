@@ -109,10 +109,15 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section: Image Grid (Maintained) */}
+        {/* Bottom Section: Image Grid (1 foto no mobile, 3 fotos no desktop) */}
         <div className="about-grid grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 3xl:gap-8">
           {sobre.imagens.map((item, index) => (
-            <div key={index} className="about-image-card aspect-[3/4] overflow-hidden w-full relative will-change-transform">
+            <div 
+              key={index} 
+              className={`about-image-card aspect-[3/4] overflow-hidden w-full relative will-change-transform ${
+                index > 0 ? 'hidden md:block' : 'block'
+              }`}
+            >
               
               {/* Image with Parallax Wrapper */}
               <div className="w-full h-[120%] -mt-[10%] relative">

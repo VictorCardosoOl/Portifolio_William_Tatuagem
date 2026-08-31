@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [showAllMobile, setShowAllMobile] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
 
   const toggleAccordion = (index: number) => {
@@ -51,11 +52,11 @@ const FAQ: React.FC = () => {
         
         {/* CENTERED HEADER */}
         <div className="text-center flex flex-col items-center faq-sticky-content will-change-transform">
-            <h2 className="font-serif text-fluid-h2 text-ink-black dark:text-white leading-[0.85] mb-6 md:mb-8">
+            <h2 className="font-serif text-fluid-h2 text-ink-black dark:text-white leading-[0.85] mb-2 md:mb-8">
                 Dúvidas <span className="text-ink-medium/50 italic font-light">Frequentes</span>
             </h2>
 
-            <p className="font-sans text-sm leading-relaxed text-ink-dark dark:text-gray-400 max-w-md mb-4 font-light tracking-wide px-4">
+            <p className="hidden md:block font-sans text-sm leading-relaxed text-ink-dark dark:text-gray-400 max-w-md mb-4 font-light tracking-wide px-4">
                 A transparência é fundamental para um processo criativo fluido. Aqui estão as respostas para as questões mais comuns.
             </p>
         </div>
@@ -63,15 +64,32 @@ const FAQ: React.FC = () => {
         {/* TWO COLUMN ACCORDION LIST */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-24 gap-y-0 faq-list-container">
             {ITENS_FAQ.map((item, index) => (
-                <FaqAccordionItem 
-                    key={item.id} 
-                    item={item} 
-                    index={index} 
-                    isOpen={openIndex === index} 
-                    toggleAccordion={toggleAccordion} 
-                />
+                <div 
+                  key={item.id} 
+                  className={index >= 6 && !showAllMobile ? 'hidden lg:block' : 'block'}
+                >
+                  <FaqAccordionItem 
+                      item={item} 
+                      index={index} 
+                      isOpen={openIndex === index} 
+                      toggleAccordion={toggleAccordion} 
+                  />
+                </div>
             ))}
         </div>
+
+        {/* Botão de Expansão Exclusivo para Mobile (< lg) */}
+        {ITENS_FAQ.length > 6 && (
+          <div className="lg:hidden flex justify-center mt-4">
+            <button
+              onClick={() => setShowAllMobile(!showAllMobile)}
+              type="button"
+              className="inline-flex items-center gap-2 px-6 py-3.5 border border-ink-black/20 dark:border-white/20 rounded-full font-sans text-xs uppercase tracking-widest font-bold text-ink-black dark:text-white hover:bg-ink-black hover:text-paper-light dark:hover:bg-white dark:hover:text-ink-black transition-all shadow-sm"
+            >
+              {showAllMobile ? 'Ver Menos Dúvidas' : `Ver Mais Dúvidas (+${ITENS_FAQ.length - 6})`}
+            </button>
+          </div>
+        )}
 
       </div>
     </section>
@@ -91,14 +109,14 @@ const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({ item, index, isOpen
         <button 
             id={`faq-btn-${item.id}`}
             onClick={() => toggleAccordion(index)}
-            className="w-full py-10 flex items-start justify-between gap-6 group text-left outline-none cursor-pointer"
+            className="w-full py-6 md:py-10 flex items-start justify-between gap-4 md:gap-6 group text-left outline-none cursor-pointer"
             aria-expanded={isOpen}
             aria-controls={`faq-panel-${item.id}`}
             data-tracking={`faq-abrir-${item.id}`}
         >
-            <h3 className={`font-serif text-3xl md:text-4xl transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] transform ${
+            <h3 className={`font-serif text-xl sm:text-2xl md:text-3xl transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] transform ${
                 isOpen 
-                ? 'text-ink-black dark:text-white translate-x-4' 
+                ? 'text-ink-black dark:text-white translate-x-2 md:translate-x-4' 
                 : 'text-ink-dark/70 dark:text-gray-500 group-hover:text-ink-black dark:group-hover:text-white group-hover:translate-x-2'
             }`}>
                 {item.pergunta}
@@ -107,7 +125,7 @@ const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({ item, index, isOpen
             <span className={`mt-1 shrink-0 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] text-ink-black dark:text-white ${
                 isOpen ? 'rotate-45 scale-110' : 'rotate-0 scale-100 group-hover:rotate-90'
             }`} aria-hidden="true">
-                <Plus size={28} strokeWidth={0.8} />
+                <Plus size={24} className="md:w-7 md:h-7" strokeWidth={0.8} />
             </span>
         </button>
 
